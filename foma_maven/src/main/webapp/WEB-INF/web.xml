@@ -34,6 +34,12 @@
   	<description></description>
   	<servlet-class>com.foma_java_mvc_folder.Controller.DeleteCon</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>SelectfdCon</servlet-name>
+  	<display-name>SelectfdCon</display-name>
+  	<description></description>
+  	<servlet-class>com.foma_java_mvc_folder.Controller.SelectfdCon</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
   	<url-pattern>/JoinCon</url-pattern>
@@ -53,6 +59,10 @@
   <servlet-mapping>
   	<servlet-name>DeleteCon</servlet-name>
   	<url-pattern>/DeleteCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SelectfdCon</servlet-name>
+  	<url-pattern>/SelectfdCon</url-pattern>
   </servlet-mapping>
 
  

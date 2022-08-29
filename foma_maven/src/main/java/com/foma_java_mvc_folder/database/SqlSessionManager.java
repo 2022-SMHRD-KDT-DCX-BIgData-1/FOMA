@@ -13,7 +13,7 @@ public class SqlSessionManager {
 	   
 	   static  {
 	      try {
-	         String resource = "com/foma_java_mvc_folder/database/config.xml";
+	         String resource = "com/foma_java_mvc_folder/database/mybartis_config.xml";
 	         InputStream inputStream = Resources.getResourceAsStream(resource);
 	         sqlSessionFactory =
 	           new SqlSessionFactoryBuilder().build(inputStream);

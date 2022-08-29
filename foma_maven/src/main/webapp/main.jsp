@@ -12,10 +12,10 @@
 </head>
 <body>
 	<!--로그인 했을시 멤버를 가져오기위해 멤버 선언  -->
-	<%
+	
+<%
 	Member loginMembr = (Member) session.getAttribute("loginMember");
 	%>
-
 
 	<!-- Banner -->
 	<section id="banner" class="major">
@@ -57,7 +57,7 @@
 
 <br>
 <br>
-      <button type="button" style="background-color:#DF7401;  position:relative; left:130px; height: 40px; width: 100px; "  onclick="location.href='template/test1_foodblog/index.html'"> FOMA 시작!</button>
+      <button type="button" style="background-color:#DF7401;  position:relative; left:130px; height: 40px; width: 100px; "  onclick="location.href='template/test1_foodblog/index.jsp'"> FOMA 시작!</button>
 
 
 				</c:otherwise>
