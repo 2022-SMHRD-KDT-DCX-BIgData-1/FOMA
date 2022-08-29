@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+      <!--selet,insertmupdate,delete 태그들이 존재함  -->
+    <!--namespace: id를 그룹화, 보통 mapper의 경로를 입력  -->
+    <!--resulttype 리턴타입  -->
+    <!--바인드 변수처럼 필드명 컬럼명  -->
+    
+    
+<mapper namespace="com.foma_java_mvc_folder.database.MemberMapper">
+ 
+   
+ <!--resultmap 이용해서 오라클 넘버타입 일치  -->
+ <!-- 
+    <resultMap type="com.foma_java_mvc_folder.domain.Member" id="userResultMap">
+  <result column="username" property="username" />
+  <result column="userpw" property="userpw"/>
+  <result column="useremail" property="useremail" />
+   <result  column="userage" property="userage"  javaType="java.lang.Double"/>
+ 
+   -->
+ 
+<!--  <result column="userheight" property="userheight" javaType="java.lang.Double"/>
+  <result column="userweight" property="userweight" javaType="java.lang.Double"/>
+  <result column="userbmi" property="userbmi" javaType="java.lang.Double"/>
+ 
+
+</resultMap>
+   -->      
+    
+    <insert id="insertMember" parameterType="com.foma_java_mvc_folder.domain.Member">
+  insert into Member values (#{username},#{userpw},#{useremail},#{userage},#{userheight},#{userweight},#{userdiabetes},#{userhbp},#{userbmi})
+  
+  </insert>
+  <select id="selectMember" parameterType="com.foma_java_mvc_folder.domain.Member"  resultType = "com.foma_java_mvc_folder.domain.Member">
+
+ select * from Member where username = #{username} and userpw = #{userpw}
+ 
+  </select>
+  
+  <select id="selectMembernopw" parameterType="com.foma_java_mvc_folder.domain.Member"  resultType = "com.foma_java_mvc_folder.domain.Member">
+
+ select * from Member where username = #{username}
+ 
+  </select>
+  
+    <select id="selectMembecheck" parameterType="com.foma_java_mvc_folder.domain.Member"  resultType = "com.foma_java_mvc_folder.domain.Member">
+
+ select * from Member where username = #{username} and userpw = #{userpw}
+ 
+  </select>
+  
+  
+   <update id="updateMember" parameterType="com.foma_java_mvc_folder.domain.Member"	>
+  update member set useremail=#{useremail}, userage=#{userage},userheight=#{userheight},userweight=#{userweight},userdiabetes=#{userdiabetes},userhbp=#{userhbp},userbmi=#{userbmi}
+  where username=#{username}
+  
+  </update>
+  
+   <delete id="deleteMember" parameterType="com.foma_java_mvc_folder.domain.Member"	>
+ DELETE FROM member WHERE username =#{username}
+  
+  </delete>
+  
+</mapper>
