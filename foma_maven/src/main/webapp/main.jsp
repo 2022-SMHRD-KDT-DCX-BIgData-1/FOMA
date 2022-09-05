@@ -5,6 +5,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
 <meta charset="UTF-8">
 <title>로그인 / 회원가입 폼 템플릿</title>
 <link rel="stylesheet" href="Login.css">
@@ -12,10 +21,10 @@
 </head>
 <body>
 	<!--로그인 했을시 멤버를 가져오기위해 멤버 선언  -->
-	
 	<%
 	Member loginMembr = (Member) session.getAttribute("loginMember");
 	%>
+
 
 	<!-- Banner -->
 	<section id="banner" class="major">
@@ -57,7 +66,7 @@
 
 <br>
 <br>
-      <button type="button" style="background-color:#DF7401;  position:relative; left:130px; height: 40px; width: 100px; "  onclick="location.href='template/test1_foodblog/index.jsp'"> FOMA 시작!</button>
+      <button type="button" style="background-color:#DF7401;  position:relative; left:130px; height: 40px; width: 100px; "  onclick="location.href='template/test1_foodblog/index.html'"> FOMA 시작!</button>
 
 
 				</c:otherwise>
@@ -147,61 +156,49 @@ if(loginMembr==null){//만약 로그인해서 로그인멤버가 있을경우 �
         </div>
     </div>
 </div>
-</form>
-
-
+</form>	
 <%} %>
-<script>
-    /* ------------------------------------ Click on login and Sign Up to  changue and view the effect
----------------------------------------
-*/
+	<script>
+	function cambiar_login() {
+		  document.querySelector('.cont_forms').className = "cont_forms cont_forms_active_login";  
+		document.querySelector('.cont_form_login').style.display = "block";
+		document.querySelector('.cont_form_sign_up').style.opacity = "0";               
 
-    function cambiar_login() {
-        document.querySelector('.cont_forms').className = "cont_forms cont_forms_active_login";
-        document.querySelector('.cont_form_login').style.display = "block";
-        document.querySelector('.cont_form_sign_up').style.opacity = "0";
+		setTimeout(function(){  document.querySelector('.cont_form_login').style.opacity = "1"; },400);  
+		  
+		setTimeout(function(){    
+		document.querySelector('.cont_form_sign_up').style.display = "none";
+		},200);  
+		  }
 
-        setTimeout(function () { document.querySelector('.cont_form_login').style.opacity = "1"; }, 400);
+		function cambiar_sign_up(at) {
+		  document.querySelector('.cont_forms').className = "cont_forms cont_forms_active_sign_up";
+		  document.querySelector('.cont_form_sign_up').style.display = "block";
+		document.querySelector('.cont_form_login').style.opacity = "0";
+		  
+		setTimeout(function(){  document.querySelector('.cont_form_sign_up').style.opacity = "1";
+		},100);  
 
-        setTimeout(function () {
-            document.querySelector('.cont_form_sign_up').style.display = "none";
-        }, 200);
-    }
-
-    function cambiar_sign_up(at) {
-        document.querySelector('.cont_forms').className = "cont_forms cont_forms_active_sign_up";
-        document.querySelector('.cont_form_sign_up').style.display = "block";
-        document.querySelector('.cont_form_login').style.opacity = "0";
-
-        setTimeout(function () {
-            document.querySelector('.cont_form_sign_up').style.opacity = "1";
-        }, 100);
-
-        setTimeout(function () {
-            document.querySelector('.cont_form_login').style.display = "none";
-        }, 400);
+		setTimeout(function(){   document.querySelector('.cont_form_login').style.display = "none";
+		},400);  
 
 
-    }
+		}    
 
 
 
-    function ocultar_login_sign_up() {
+		function ocultar_login_sign_up() {
 
-        document.querySelector('.cont_forms').className = "cont_forms";
-        document.querySelector('.cont_form_sign_up').style.opacity = "0";
-        document.querySelector('.cont_form_login').style.opacity = "0";
+		document.querySelector('.cont_forms').className = "cont_forms";  
+		document.querySelector('.cont_form_sign_up').style.opacity = "0";               
+		document.querySelector('.cont_form_login').style.opacity = "0"; 
 
-        setTimeout(function () {
-            document.querySelector('.cont_form_sign_up').style.display = "none";
-            document.querySelector('.cont_form_login').style.display = "none";
-        }, 500);
-
-    }
-
-
-
-
-</script>
+		setTimeout(function(){
+		document.querySelector('.cont_form_sign_up').style.display = "none";
+		document.querySelector('.cont_form_login').style.display = "none";
+		},500);  
+		  
+		  }
+	</script>
 </body>
 </html>
