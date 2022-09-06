@@ -7,23 +7,48 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"><!-- favicon -->
-  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png"><!-- animate scss -->
-  <link rel="stylesheet" href="assets/css/animate.css"><!-- bootstarp css -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css"><!-- icofont -->
-  <link rel="stylesheet" href="assets/css/icofont.min.css"><!-- lightcase css -->
-  <link rel="stylesheet" href="assets/css/lightcase.css"><!-- swiper css -->
-  <link rel="stylesheet" href="assets/css/swiper.min.css"><!-- custom scss -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <title>Mezban - Food & Resturent HTML Template</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"><!-- favicon -->
+    <meta name="description" content="Magz is a HTML5 & CSS3 magazine template is based on Bootstrap 3.">
+           <meta name="author" content="Kodinger">
+           <meta name="keyword" content="magz, html5, css3, template, magazine template">
+           <!-- Shareable -->
+           <meta property="og:title" content="HTML5 & CSS3 magazine template is based on Bootstrap 3" />
+           <meta property="og:type" content="article" />
+           <meta property="og:url" content="http://github.com/nauvalazhar/Magz" />
+           <meta property="og:image" content="https://raw.githubusercontent.com/nauvalazhar/Magz/master/images/preview.png" />
+           <title>Magz &mdash; Responsive HTML5 &amp; CSS3 Magazine Template</title>
+           <!-- Bootstrap -->
+           <link rel="stylesheet" href="scripts/bootstrap/bootstrap.min.css">
+           <!-- IonIcons -->
+           <link rel="stylesheet" href="scripts/ionicons/css/ionicons.min.css">
+           <!-- Toast -->
+           <link rel="stylesheet" href="scripts/toast/jquery.toast.min.css">
+           <!-- OwlCarousel -->
+           <link rel="stylesheet" href="scripts/owlcarousel/dist/assets/owl.carousel.min.css">
+           <link rel="stylesheet" href="scripts/owlcarousel/dist/assets/owl.theme.default.min.css">
+           <!-- Magnific Popup -->
+           <link rel="stylesheet" href="scripts/magnific-popup/dist/magnific-popup.css">
+           <link rel="stylesheet" href="scripts/sweetalert/dist/sweetalert.css">
+           <!-- Custom style -->
+           <link rel="stylesheet" href="css/style.css">
+           <link rel="stylesheet" href="css/skins/all.css">
+           <link rel="stylesheet" href="css/demo.css">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png"><!-- animate scss -->
+    <link rel="stylesheet" href="assets/css/animate.css"><!-- bootstarp css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"><!-- icofont -->
+    <link rel="stylesheet" href="assets/css/icofont.min.css"><!-- lightcase css -->
+    <link rel="stylesheet" href="assets/css/lightcase.css"><!-- swiper css -->
+    <link rel="stylesheet" href="assets/css/swiper.min.css"><!-- custom scss -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Mezban - Food & Resturent HTML Template</title>
+  </head>
+  
 
 <body>
   <!-- preloader -->
-  
   <div class="preloader">
     <div class="load loade">
       <hr />
@@ -32,7 +57,6 @@
       <hr />
     </div>
   </div><!-- preloader -->
-  
   <!-- Mobile Menu Start Here -->
   <div class="mobile-menu">
     <nav class="mobile-header d-xl-none">
@@ -45,7 +69,6 @@
         <div class="mobile-menu-area-inner scrollbar">
           <div class="mobile-search"><input type="text" placeholder="Search Here........."><button type="submit"><i
                 class="icofont-search-2"></i></button></div>
-           
           <ul>
             <li><a class="active" href="#0">Home</a>
               <ul>
@@ -106,244 +129,69 @@
         <div class="logo"><a href="index.html"><img src="assets/images/logo/01.png" alt="logo"></a></div>
         <div class="main-menu">
           <ul>
-            <li><a class="active" href="#0">Home</a>
+            
+            <li><a href="about.html">친구찾기</a></li>
+            <li><a href="#0">추천식단</a>
               <ul>
-                <li><a class="active" href="index.html">Home Page One</a></li>
-                <li><a href="index-2.html">Home Page Two</a></li>
-                <li><a href="index-3.html">Home Page Three</a></li>
-                <li><a href="index-4.html">Home Page Four</a></li>
+                
+                <li><a href="recepi-single.html">지병에 따른 추천</a></li>
+                <li><a href="404.html">음식 분류별 추천</a></li>
               </ul>
+              <li><a href="about.html">SNS</a></li>
             </li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#0">Pages</a>
-              <ul>
-                <li><a href="#0">Category</a>
-                  <ul>
-                    <li><a href="food-menu.html">Food Category</a></li>
-                    <li><a href="menu-card.html">Category style 1</a></li>
-                    <li><a href="menu-card-2.html">Category style 2</a></li>
-                  </ul>
-                </li>
-                <li><a href="#0">Chef</a>
-                  <ul>
-                    <li><a href="homechef.html">Home Chef</a></li>
-                    <li><a href="homechef-single.html">Home Chef Single</a></li>
-                  </ul>
-                </li>
-                <li><a href="recepi-single.html">Single Recipe</a></li>
-                <li><a href="404.html">404 Page</a></li>
-                <li><a href="coming-soon.html">Coming Soon Page</a></li>
-              </ul>
-            </li>
-            <li><a href="#0">Blog</a>
-              <ul>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="blog-single.html">Blog Single</a></li>
-              </ul>
-            </li>
-            <li><a href="#0">Shop</a>
-              <ul>
-                <li><a href="shop-page.html">Shop Page</a></li>
-                <li><a href="shop-single.html">Shop Single style-1</a></li>
-                <li><a href="shop-single-2.html">Shop Single style-2</a></li>
-                <li><a href="cart-page.html">Cart Page</a></li>
-              </ul>
-            </li>
-            <li><a href="contact-us.html">Contact</a></li>
+            <li><a href="contact-us.html">마이 페이지</a></li>
           </ul>
         </div>
-        <div class="author-option">
-          <div class="author-area">
-            <div class="city-lang"><img src="assets/images/header/01.png" alt="city-lang"><select name="lang" id="lang">
-                <option value="1">ENG</option>
-                <option value="2">BAN</option>
-                <option value="3">ESP</option>
-              </select></div>
-            <div class="cart-option"><img src="assets/images/header/cart.png" alt="shop-cart">
-              <div class="count-item">04</div>
-              <div class="cart-content">
-                <div class="cart-title">
-                  <div class="add-item">4 Items Added</div>
-                  <div class="list-close"><a href="#">Close</a></div>
-                </div>
-                <div class="cart-scr scrollbar">
-                  <div class="cart-con-item">
-                    <div class="cart-item">
-                      <div class="cart-inner">
-                        <div class="cart-top">
-                          <div class="thumb"><a href="#"><img src="assets/images/popular-food/01.jpg" alt=""></a></div>
-                          <div class="content"><a href="#">Split Remedy Split End Shampoo</a></div>
-                          <div class="remove-btn"><a href="#"><i class="icofont-close"></i></a></div>
-                        </div>
-                        <div class="cart-bottom">
-                          <div class="sing-price">Tk. 140</div>
-                          <div class="cart-plus-minus">
-                            <div class="dec qtybutton">-</div>
-                            <div class="dec qtybutton">-</div><input class="cart-plus-minus-box" type="text"
-                              name="qtybutton" value="1">
-                            <div class="inc qtybutton">+</div>
-                            <div class="inc qtybutton">+</div>
-                          </div>
-                          <div class="total-price">Tk. 280.00</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="cart-item">
-                      <div class="cart-inner">
-                        <div class="cart-top">
-                          <div class="thumb"><a href="#"><img src="assets/images/popular-food/02.jpg" alt=""></a></div>
-                          <div class="content"><a href="#">Split Remedy Split End Shampoo</a></div>
-                          <div class="remove-btn"><a href="#"><i class="icofont-close"></i></a></div>
-                        </div>
-                        <div class="cart-bottom">
-                          <div class="sing-price">Tk. 140</div>
-                          <div class="cart-plus-minus">
-                            <div class="dec qtybutton">-</div>
-                            <div class="dec qtybutton">-</div><input class="cart-plus-minus-box" type="text"
-                              name="qtybutton" value="1">
-                            <div class="inc qtybutton">+</div>
-                            <div class="inc qtybutton">+</div>
-                          </div>
-                          <div class="total-price">Tk. 280.00</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="cart-item">
-                      <div class="cart-inner">
-                        <div class="cart-top">
-                          <div class="thumb"><a href="#"><img src="assets/images/popular-food/03.jpg" alt=""></a></div>
-                          <div class="content"><a href="#">Split Remedy Split End Shampoo</a></div>
-                          <div class="remove-btn"><a href="#"><i class="icofont-close"></i></a></div>
-                        </div>
-                        <div class="cart-bottom">
-                          <div class="sing-price">Tk. 140</div>
-                          <div class="cart-plus-minus">
-                            <div class="dec qtybutton">-</div>
-                            <div class="dec qtybutton">-</div><input class="cart-plus-minus-box" type="text"
-                              name="qtybutton" value="1">
-                            <div class="inc qtybutton">+</div>
-                            <div class="inc qtybutton">+</div>
-                          </div>
-                          <div class="total-price">Tk. 280.00</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="cart-item">
-                      <div class="cart-inner">
-                        <div class="cart-top">
-                          <div class="thumb"><a href="#"><img src="assets/images/popular-food/04.jpg" alt=""></a></div>
-                          <div class="content"><a href="#">Split Remedy Split End Shampoo</a></div>
-                          <div class="remove-btn"><a href="#"><i class="icofont-close"></i></a></div>
-                        </div>
-                        <div class="cart-bottom">
-                          <div class="sing-price">Tk. 140</div>
-                          <div class="cart-plus-minus">
-                            <div class="dec qtybutton">-</div>
-                            <div class="dec qtybutton">-</div><input class="cart-plus-minus-box" type="text"
-                              name="qtybutton" value="1">
-                            <div class="inc qtybutton">+</div>
-                            <div class="inc qtybutton">+</div>
-                          </div>
-                          <div class="total-price">Tk. 280.00</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="cart-scr-bottom">
-                  <ul>
-                    <li>
-                      <div class="title">Subtotal</div>
-                      <div class="price">Tk. 1045.00</div>
-                    </li>
-                    <li>
-                      <div class="title">Shipping</div>
-                      <div class="price">Tk. 40.00</div>
-                    </li>
-                    <li>
-                      <div class="title">Cart Total</div>
-                      <div class="price">Tk. 1085.00</div>
-                    </li>
-                  </ul><a href="#" class="food-btn"><span>Place Order</span></a>
-                </div>
-              </div>
-            </div>
-            <div class="author-account">
-              <div class="author-icon"><img src="assets/images/chef/author/08.jpg" alt="author"></div>
-              <div class="author-select"><select name="author-select" id="author-select">
-                  <option value="1">My Account</option>
-                  <option value="2">Log Out</option>
-                </select></div>
+       
+         
+                
             </div>
           </div>
         </div>
       </div>
     </div>
   </header><!-- header section ending -->
+
   <!-- Banner Section Start Here -->
   <section class="banner">
-    <div class="shape-1"><img src="assets/images/banner/shape/01.png" alt="banner"></div>
-    <div class="shape-2"><img src="assets/images/banner/shape/02.png" alt="banner"></div>
+    
     <div class="banner-area">
       <div class="container">
         <div class="row">
           <div class="col-xl-8 col-12">
             <div class="banner-content">
-            
-            <!-- 검색 : selectfdcon으로 데이터 입력데이터와 입력코드 전송 -->
-              <h2>jsp 홈페이지 파일 입니다</h2>
-              <form action="/foma_maven/SelectfdCon" method="post">
-                <div class="codexcoder-selectoption">
-                <select name="selectcode">
-                    <option value="none" >음식 검색</option>
-                    <option value="lowsalt" >저염식 검색</option>
-                     <option value="lowcal">저칼로리 음식 검색</option>
-                      <option value="locarhifat">저탄고지 음식 검색 </option>
-                  </select></div>
-                  <input type="text" name="fd_name" placeholder="Enter your food name">
-                  <button type="submit"><i class="icofont-search-2"></i></button>
+           
+              <form action="/">
+                <div class="codexcoder-selectoption"><select name="text">
+                    <option value="1">음식 검색</option>
+                    <option value="3">저염식 검색</option>
+                     <option value="4">저칼로리 음식 검색</option>
+                      <option value="5">저당 음식 검색 </option>
+                  </select></div><input type="text" name="type" placeholder="Search"><button
+                  type="submit"><i class="icofont-search-2"></i></button>
               </form>
-                               
-                                      
-              <%
-              ArrayList<FMember> selectFMember = (ArrayList<FMember>)session.getAttribute("selectFMember");
-			  %>              
-              <%
-				//세션에서 정보가 있다면 정보를 가져와서 출력하기					
-						if(selectFMember!=null){
-							for (FMember f : selectFMember) {
-								%>
-								<%-- <a href = "shop-single.jsp"> <%=	f.getFd_name()%></a>
-								 --%>
-								 <form action="/foma_maven/SelectfdCon" method="post">
-								 <% String str = f.getFd_name();%>
-           <input type="text" name="fd_name" value ="<%= str %>">
-           <!--같이 값을 보내줄 셀렉트코드를 히든값으로 지정한다. 한개검색  -->
-           <input type="hidden" name="selectcode" value="one" >
-         <label>
-          자세한 정보 클릭!<button type="submit"><i class="icofont-search-2"></i></button>
-     </label>
-        </form>
-								<br>
-								<%}%>
-						<% }else{						
-							%>
-							검색 결과가 출력됩니다
-					<%
-						}				
-				%>                 
-                    
-              <ul>              
-                <li><span>700+</span>Restaurant</li>
-                <li><span>6900+</span>People Served</li>
-                <li><span>6900+</span>Registered Users</li>
-              </ul>
+            
             </div>
           </div>
         </div>
       </div>
     </div>
   </section><!-- Banner Section Ending Here -->
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
   <!-- Food Catagory Section Start here -->
   <section class="food-category padding-tb"
     style="background-image: url(assets/css/bg-image/category-bg.jpg); background-size: cover;">
@@ -1335,6 +1183,18 @@
   <script src="assets/js/lightcase.js"></script>
   <script src="assets/js/jquery.counterup.min.js"></script>
   <script src="assets/js/functions.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.migrate.js"></script>
+  <script src="scripts/bootstrap/bootstrap.min.js"></script>
+  <script>var $target_end=$(".best-of-the-week");</script>
+  <script src="scripts/jquery-number/jquery.number.min.js"></script>
+  <script src="scripts/owlcarousel/dist/owl.carousel.min.js"></script>
+  <script src="scripts/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+  <script src="scripts/easescroll/jquery.easeScroll.js"></script>
+  <script src="scripts/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="scripts/toast/jquery.toast.min.js"></script>
+  <script src="js/demo.js"></script>
+  <script src="js/e-magz.js"></script>
 </body>
 
 </html>

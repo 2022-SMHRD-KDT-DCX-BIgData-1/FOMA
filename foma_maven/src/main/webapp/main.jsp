@@ -15,7 +15,7 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
 <meta charset="UTF-8">
-<title>로그인 / 회원가입 폼 템플릿</title>
+<title>로그인 / 회원가입</title>
 <link rel="stylesheet" href="Login.css">
 
 </head>
@@ -85,7 +85,7 @@ if(loginMembr==null){//만약 로그인해서 로그인멤버가 있을경우 �
 
                         <h2>로그인</h2>
                         <p></p>
-                        <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+                        <button class="btn_login" onclick="cambiar_login()" >LOGIN</button>
                     </div>
                 </div>
                 <div class="col_md_sign_up">
