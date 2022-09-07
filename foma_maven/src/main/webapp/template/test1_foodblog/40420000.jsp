@@ -1,45 +1,45 @@
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"><!-- favicon -->
-    <meta name="description" content="Magz is a HTML5 & CSS3 magazine template is based on Bootstrap 3.">
-    <meta name="author" content="Kodinger">
-    <meta name="keyword" content="magz, html5, css3, template, magazine template">
-    <!-- Shareable -->
-    <meta property="og:title" content="HTML5 & CSS3 magazine template is based on Bootstrap 3" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://github.com/nauvalazhar/Magz" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/nauvalazhar/Magz/master/images/preview.png" />
-    <title>FOMA 내정보</title>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="scripts/bootstrap/bootstrap.min.css">
-    <!-- IonIcons -->
-    <link rel="stylesheet" href="scripts/ionicons/css/ionicons.min.css">
-    <!-- Toast -->
-    <link rel="stylesheet" href="scripts/toast/jquery.toast.min.css">
-    <!-- OwlCarousel -->
-    <link rel="stylesheet" href="scripts/owlcarousel/dist/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="scripts/owlcarousel/dist/assets/owl.theme.default.min.css">
-    <!-- Magnific Popup -->
-    <link rel="stylesheet" href="scripts/magnific-popup/dist/magnific-popup.css">
-    <link rel="stylesheet" href="scripts/sweetalert/dist/sweetalert.css">
-    <!-- Custom style -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/skins/all.css">
-    <link rel="stylesheet" href="css/demo.css">
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png"><!-- animate scss -->
-    <link rel="stylesheet" href="assets/css/animate.css"><!-- bootstarp css -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css"><!-- icofont -->
-    <link rel="stylesheet" href="assets/css/icofont.min.css"><!-- lightcase css -->
-    <link rel="stylesheet" href="assets/css/lightcase.css"><!-- swiper css -->
-    <link rel="stylesheet" href="assets/css/swiper.min.css"><!-- custom scss -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>마이 페이지</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"><!-- favicon -->
+        <meta name="description" content="Magz is a HTML5 & CSS3 magazine template is based on Bootstrap 3.">
+        <meta name="author" content="Kodinger">
+        <meta name="keyword" content="magz, html5, css3, template, magazine template">
+        <!-- Shareable -->
+        <meta property="og:title" content="HTML5 & CSS3 magazine template is based on Bootstrap 3" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="http://github.com/nauvalazhar/Magz" />
+        <meta property="og:image" content="https://raw.githubusercontent.com/nauvalazhar/Magz/master/images/preview.png" />
+        <title>FOMA 회원정보수정</title>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="scripts/bootstrap/bootstrap.min.css">
+        <!-- IonIcons -->
+        <link rel="stylesheet" href="scripts/ionicons/css/ionicons.min.css">
+        <!-- Toast -->
+        <link rel="stylesheet" href="scripts/toast/jquery.toast.min.css">
+        <!-- OwlCarousel -->
+        <link rel="stylesheet" href="scripts/owlcarousel/dist/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="scripts/owlcarousel/dist/assets/owl.theme.default.min.css">
+        <!-- Magnific Popup -->
+        <link rel="stylesheet" href="scripts/magnific-popup/dist/magnific-popup.css">
+        <link rel="stylesheet" href="scripts/sweetalert/dist/sweetalert.css">
+        <!-- Custom style -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/skins/all.css">
+        <link rel="stylesheet" href="css/demo.css">
+        <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png"><!-- animate scss -->
+        <link rel="stylesheet" href="assets/css/animate.css"><!-- bootstarp css -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css"><!-- icofont -->
+        <link rel="stylesheet" href="assets/css/icofont.min.css"><!-- lightcase css -->
+        <link rel="stylesheet" href="assets/css/lightcase.css"><!-- swiper css -->
+        <link rel="stylesheet" href="assets/css/swiper.min.css"><!-- custom scss -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <title>마이 페이지</title>
+    </head>
 
 
 <body>
@@ -166,11 +166,9 @@
                             </div>
 
                             <div class="profile-content">
-                                <div class="profile-name"><<li>접속한 아이디 : ${loginMember.username}</li></div>
+                                <div class="profile-name">아이디</div>
                                 <ul class="profile-info-list">
-                                    <a href="" class="profile-info-list-item"><i class="mdi mdi-eye"></i>회원정보수정</a>
-                                    <a href="" class="profile-info-list-item"><i class="mdi mdi-eye"></i>회원탈퇴</a>
-
+                                    <a href="" class="profile-info-list-item"><i class="mdi mdi-eye"></i>돌아가기</a>
                                 </ul>
                             </div>
                         </div>
@@ -180,43 +178,12 @@
                 <div class="col-md-8 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-                            <p class="card-title font-weight-bold">나의 페이지</p>
+                            <p class="card-title font-weight-bold">회원정보수정</p>
                             <hr>
-                            <img src="assets/images/blog/01.jpg" style="width: 150px; height: 150px;">
-                            <span class="about-item-name">내일 수요일임</span><span class="about-item-detail"> ♥ <input
-                                    type="text" style="width: 100px;"></span><a href="" class="about-item-edit">Edit</a>
-                            </li>
-                            <!-- 좋아요 부분 연동 해야 할듯-->
-                            
-                            <!-- 									
-                       <li class="about-items"><i class="mdi mdi-trophy-variant-outline icon-sm "></i><span class="about-item-name">Badges:</span><span class="about-item-detail">
-                       <button type="button" class="btn btn-success btn-rounded btn-icon">
-                        <i class="mdi mdi-star text-white"></i>
-                      </button>  
-                        <button type="button" class="btn btn-info btn-rounded btn-icon">
-                        <i class="mdi mdi-check text-white"></i>
-                      </button>
-                       <button type="button" class="btn btn-danger btn-rounded btn-icon">
-                        <i class="mdi mdi-check text-white"></i>
-                      </button>
-                      </span> <a href="" class="about-item-edit">View</a></li>
-                      
-								</ul>
-								<p class="card-description">Contact Information</p> -->
-                            <!-- <ul class="about">
-									<li class="about-items"><i class="mdi mdi-phone icon-sm "></i><span class="about-item-name">Phone:</span><span class="about-item-detail">+9779861106179</span><a href="" class="about-item-edit">Edit</a></li>
-									<li class="about-items"><i class="mdi mdi-map-marker icon-sm "></i><span class="about-item-name">Address:</span><span class="about-item-detail">254 National Highway , Hisar India</span> <a href="" class="about-item-edit">Edit</a></li>
-									<li class="about-items"><i class="mdi mdi-email-outline icon-sm "></i><span class="about-item-name">Email:</span><span class="about-item-detail"><a href="">reasonghimire706@gmail.com</a></span> <a href="" class="about-item-edit">Edit</a></li>
-									<li class="about-items"><i class="mdi mdi-web icon-sm "></i><span class="about-item-name">Site:</span><span class="about-item-detail"><a href="google.com">www.google.com</a></span> <a href="" class="about-item-edit">Edit</a></li>
-								</ul>
-								<p class="card-description">Basic Information</p>
-								<ul class="about">
-									<li class="about-items"><i class="mdi mdi-cake icon-sm "></i><span class="about-item-name">Birthday:</span><span class="about-item-detail">Aug 3 , 1998</span><a href="" class="about-item-edit">Edit</a></li>
-									<li class="about-items"><i class="mdi mdi-account icon-sm "></i><span class="about-item-name">Gender:</span><span class="about-item-detail">Male</span> <a href="" class="about-item-edit">Edit</a></li>
-									<li class="about-items"><i class="mdi mdi-clipboard-account icon-sm "></i><span class="about-item-name">Profession:</span><span class="about-item-detail">Student</span> <a href="" class="about-item-edit">Edit</a></li>
-									<li class="about-items"><i class="mdi mdi-water icon-sm "></i><span class="about-item-name">Blood Group:</span><span class="about-item-detail">AB+</span> <a href="" class="about-item-edit">Edit</a></li>
-									<li class="about-items"><i class="mdi mdi-human-male-female icon-sm "></i><span class="about-item-name">Relationship Status:</span><span class="about-item-detail">Single</span> <a href="" class="about-item-edit">Edit</a></li>
-								</ul> -->
+                            <form action="UpdateCon" method ="post"></form>
+                            <li>접속한 아이디 : ${loginMember.username}</li>
+                            <li>이메일<input type="email"	maxlength="30" name="useremail" class="input-field" value ="${loginMember.useremail }"	placeholder="이메일을 입력하세요" required></li>
+                       
 
 
                         </div>
