@@ -68,7 +68,7 @@ public class LoginCon extends HttpServlet {
 				HttpSession session = request.getSession();
 				//2. 세션에 저장
 				session.setAttribute("loginMember", checkMember);
-				response.sendRedirect("main.jsp");
+				response.sendRedirect("./template/test1_foodblog/indexaa.jsp");
 				return ;
 				//main.jsp로 이동
 				}else {
