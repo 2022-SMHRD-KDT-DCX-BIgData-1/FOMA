@@ -28,7 +28,7 @@
  -->
 
 </resultMap> 
-	
+   
    
    
    
@@ -57,13 +57,13 @@
   </select>
   
   
-   <update id="updateMember" parameterType="com.foma_java_mvc_folder.domain.Member"	>
+   <update id="updateMember" parameterType="com.foma_java_mvc_folder.domain.Member"   >
   update member set useremail=#{useremail}, userage=#{userage},userheight=#{userheight},userweight=#{userweight},userdiabetes=#{userdiabetes},userhbp=#{userhbp},userbmi=#{userbmi}
   where username=#{username}
   
   </update>
   
-   <delete id="deleteMember" parameterType="com.foma_java_mvc_folder.domain.Member"	>
+   <delete id="deleteMember" parameterType="com.foma_java_mvc_folder.domain.Member"   >
  DELETE FROM member WHERE username =#{username}
   
   </delete>
@@ -85,21 +85,25 @@
   </select>
   
   <select id="selectFMemberlowcal" parameterType="com.foma_java_mvc_folder.domain.FMember"  resultType = "com.foma_java_mvc_folder.domain.FMember">
-저칼로리 검색, 기준은 칼로리 300이하
-
+<!-- 저칼로리 검색, 기준은 칼로리 300이하
+ -->
    <![CDATA[select * from fmember where fd_name like '%'||#{fd_name}||'%' and fd_ing_cal>-1 and fd_ing_cal<300  and rownum<6]]>
  
   </select>
  
   <select id="selectFMemberlocarhifat" parameterType="com.foma_java_mvc_folder.domain.FMember"  resultType = "com.foma_java_mvc_folder.domain.FMember">
-<!--저탄고지  검색, 탄수화물 20이하	지방 40이상, 기준은 하루2000칼로리 기준 탄수화물 50,단백질100이하, 지방은 150이상 -->
+<!--저탄고지  검색, 탄수화물 20이하   지방 40이상, 기준은 하루2000칼로리 기준 탄수화물 50,단백질100이하, 지방은 150이상 -->
 <!--https://freefrdi.com/how-much-fat-for-keto/  -->
 <!--데이터 부족으로 숫자적음  -->
-   <![CDATA[select * from fmember where fd_name like '%'||#{fd_name}||'%' and fd_ing_carbohydrate>-1 and fd_ing_carbohydrate<20 AND fd_ing_saturated_fatty+fd_ing_trans_fatty >40  and rownum<6]]>
+   <![CDATA[select * from fmember where fd_name like '%'||#{fd_name}||'%' and fd_ing_carbohydrate>-1 and fd_ing_carbohydrate<20 AND fd_ing_saturated_fatty+fd_ing_trans_fatty+fd_ing_fatty >40  and rownum<6]]>
  
   </select>
   
-  
+  <!--카테고리 검색  -->
+    <select id="selectFMembercate" parameterType="com.foma_java_mvc_folder.domain.FMember"  resultType = "com.foma_java_mvc_folder.domain.FMember">
+  <![CDATA[select * from fmember where fd_category_big_name = #{fd_category_big_name}  and rownum<6]]>
+ 
+  </select>
   
   
 </mapper>
