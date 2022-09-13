@@ -1,10 +1,8 @@
-<%@page import="java.util.List"%>
-<%@page import="com.foma_java_mvc_folder.domain.FMember"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page import="java.util.*"%>
 
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 
     <head>
@@ -110,22 +108,38 @@
                     </div>
                 </div>
 
-                <div class="col-md-8 grid-margin stretch-card">
-                    <div class="card">
-                        <div class="card-body">
-                            <p class="card-title font-weight-bold">회원정보수정</p>
-                            <hr>
-                            <form action="UpdateCon" method ="post">
-                            <li>접속한 아이디 : ${loginMember.username}</li>
-                           	<li>이메일 : <input type="email"	maxlength="30" name="useremail" class="input-field" value ="${loginMember.useremail}" placeholder="이메일을 입력하세요" required></li>
-                           	<li>나이 : <input type="number" name="userage" class="input-field" max="200"value ="${loginMember.userage}" placeholder="나이를 입력하세요" required> </li>
-                           	<li>몸무게 : <input type="number"name="userweight" class="input-field" max="500" value ="${loginMember.userweight }"	placeholder="몸무게를 입력하세요" required> <label> </li>
-                           	<button class="submit">변경</button>
-                           	</form> 
-                        </div>
-                    </div>
-                </div>
+	<div class="col-md-8 grid-margin stretch-card" id="wrapper">
+				<!-- Menu -->
+					<nav class = "card" id="Update">	
+						<ul class="actions vertical card-body">
+							<li><h5>회원정보수정</h5></li>
+							<hr>
+							<!--변경할 회원정보를 담아서 updatecon으로 보내기  -->
+								<form action="../../UpdateCon" method ="post">
+								<li>접속한 아이디 : ${loginMember.username}</li>
+						
+					<li>이메일<input type="email"	maxlength="30" name="useremail" class="input-field" value ="${loginMember.useremail }"	placeholder="이메일을 입력하세요" required></li>
+				<!-- 숫자만 입력되게, 나이 제한 200  키 300 몸무게 500-->
+				<li>나이<input type="number" name="userage" class="input-field" max="200"value ="${loginMember.userage }"	placeholder="나이를 입력하세요" required> </li>
+				<li>키<input type="number"name="userheight" class="input-field" max="300" value ="${loginMember.userheight }"	placeholder="키(신장)을 입력하세요" required> </li>
+				<li>몸무게<input type="number"name="userweight" class="input-field" max="500" value ="${loginMember.userweight }"	placeholder="몸무게를 입력하세요" required> </li>
+				
+			
+				 <div style="margin: 10px;">
+                            <label> <input type="checkbox" name="userdiabetes"> 현재 당뇨병 상태 : ${loginMember.userdiabetes }</label>
+                            <label> <input type="checkbox" name="userhbp">현재 고혈합 상태 : ${loginMember.userhbp }</label>
+                        </div>	
 
+				<button class="submit" style="background-color: #F1F2F3; border: none; padding: 15px; width: 100px;">변경</button>
+								</form>
+								<hr>
+						</ul>
+					</nav>			
+			</div>
+
+				
+					
+			
 
 
                 <!-- scrollToTop start here --><a href="#" class="scrollToTop"><i class="icofont-swoosh-up"></i></a>

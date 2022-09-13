@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<meta http-equiv="refresh" content="0;url=../main.jsp">
+<meta http-equiv="refresh" content="0;url=../Login.jsp">
 </head>
 <body>
 <script type="text/javascript">

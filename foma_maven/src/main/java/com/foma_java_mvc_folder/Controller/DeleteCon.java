@@ -64,7 +64,7 @@ public class DeleteCon extends HttpServlet {
 				response.sendRedirect("./success_pages/success_delete_member.jsp");
 			}else {
 				System.out.println("삭제 실패");
-				response.sendRedirect("main.jsp");
+				response.sendRedirect("Login.jsp");
 				return;
 			}
 			}//service 메소드 끝

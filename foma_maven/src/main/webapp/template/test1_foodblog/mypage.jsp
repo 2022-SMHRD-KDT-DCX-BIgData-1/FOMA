@@ -104,7 +104,7 @@
                                 <ul class="profile-info-list">
                                 	<a href="../../Login.jsp" class="profile-info-list-item"><i class="mdi mdi-eye"></i>로그아웃</a>
                                     <a href="update.jsp" class="profile-info-list-item"><i class="mdi mdi-eye"></i>회원정보수정</a>
-                                    <a href="" class="profile-info-list-item"><i class="mdi mdi-eye"></i>회원탈퇴</a>
+                                    <a href="delete_member.jsp" class="profile-info-list-item"><i class="mdi mdi-eye"></i>회원탈퇴</a>
 
                                 </ul>
                             </div>
