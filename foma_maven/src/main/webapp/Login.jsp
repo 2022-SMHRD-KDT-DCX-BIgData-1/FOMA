@@ -25,56 +25,6 @@
 	Member loginMembr = (Member) session.getAttribute("loginMember");
 	%>
 
-
-	<!-- Banner -->
-	<section id="banner" class="major">
-		<div class="inner">
-			<header class="major">
-				<%-- 	----el식 사용 하지 않은 소스------
-			<%
-				//만약에 로그인 정보가 있다면 (세션에 로그인 정보가 있다면
-						//로그인 정보에서 이메일만 꺼내서 h1 태그 사이에 출력
-						if(loginMembr!=null){					
-						%>
-						<h1> <%= 	loginMembr.getEmail()		%></h1><%				
-						}else{
-							%>
-							<h1>로그인 한 세션아이디를 출력해주세요</h1>
-					<%
-						}				
-				%> --%>
-				<!-- 로그인 후 로그인 한 사용자의 세션아이디로 바꾸시오.ex)smart님 환영합니다 -->
-			</header>
-		</div>
-	</section>
-	<div class="wrap">
-		<div class="form-wrap">
-			<!-- c:chooose-when : 조건이 true 인 경우 조건부 태그 -->
-			<!-- 로그인시 로그아웃 회원탈퇴 수정 버튼 추가,  -->
-			<c:choose>
-				<c:when test="${empty loginMember}">
-				</c:when>
-				<c:otherwise>
-				<!--접속한 사람 이름 출력  -->
-					<h1 style="text-align:center; color: #eb5b37 "> ${loginMember.username }</h1>
-					<!--정보수정, 로그아웃, 탈퇴 버튼  -->
-					<button type="button" style="background-color: #dd716d"	class="togglebtn" onclick="location.href='LogoutCon'">로그아웃</button>
-					
-					<button type="button" style="background-color: #de3d35"class="togglebtn" onclick="location.href='update_member.jsp'">정보수정</button>
-					
-					<button type="button" style="background-color: #f6a212"class="togglebtn" onclick="location.href='delete_member.jsp'">회원탈퇴</button>
-
-<br>
-<br>
-      <button type="button" style="background-color:#DF7401;  position:relative; left:130px; height: 40px; width: 100px; "  onclick="location.href='template/test1_foodblog/index.html'"> FOMA 시작!</button>
-
-
-				</c:otherwise>
-			</c:choose>
-<%
-if(loginMembr==null){//만약 로그인해서 로그인멤버가 있을경우 기본 로그인창은 사라지도록 
-
-%>
 <div class="cotn_principal">
     <div class="cont_centrar">
 
@@ -157,7 +107,7 @@ if(loginMembr==null){//만약 로그인해서 로그인멤버가 있을경우 �
     </div>
 </div>
 </form>	
-<%} %>
+
 	<script>
 	function cambiar_login() {
 		  document.querySelector('.cont_forms').className = "cont_forms cont_forms_active_login";  

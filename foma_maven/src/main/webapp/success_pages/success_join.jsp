@@ -18,25 +18,13 @@
 </style>
 
 <body style="text-align: center;">
+	
+	<script type="text/javascript">
 
-	<!-- Wrapper -->
-	<div id="wrapper">
-		<!-- Menu -->
-		<font size="8">회원가입성공</font> <br>
-		다시 로그인 해 주세요<br>
-		
-		<br>
-		<%
-		Member vo = (Member) request.getAttribute("joinInfo");
-		%>
-		<table>
-			<tr>
-				<td>현재 접속자 아이디 : </td>
-				<td><%= vo.getUsername()%></td>
-			</tr>
-		</table>
-		<a href="./main.jsp"><input type="button" value="메인페이지로"></a>
-	</div>
+  alert("회원가입 성공!");
+  history.back()
+  
+	</script>
 	
 </body>
 </html>
