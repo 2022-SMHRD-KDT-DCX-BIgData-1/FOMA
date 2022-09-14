@@ -353,12 +353,12 @@ aside {
 }
 
 .padding-tb {
-    padding: 70px 0;
+    /* padding: 70px 0; */
 }
 
 @media (min-width: 1200px) {
     .padding-tb {
-        padding: 120px 0;
+        /* padding: 120px 0; */
     }
 }
 
@@ -3260,7 +3260,7 @@ aside {
 }
 
 .page-header {
-    padding: 75px 0;
+    /* padding: 75px 0; */
     background: #fafeff;
 }
 
