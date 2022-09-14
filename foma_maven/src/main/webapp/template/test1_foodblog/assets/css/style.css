@@ -3266,7 +3266,7 @@ aside {
 
 @media (min-width: 992px) {
     .page-header {
-        padding: 150px 0;
+        /* padding: 150px 0; */
     }
 }
 
