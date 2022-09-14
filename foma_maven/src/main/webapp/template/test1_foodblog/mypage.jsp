@@ -129,7 +129,9 @@
     			<button style="width: 50px; border: none;"> > </button>    
    				</div>
              	
-             	
+             	<div>
+             	<a>수정</a>
+             	</div>
               
 
 
