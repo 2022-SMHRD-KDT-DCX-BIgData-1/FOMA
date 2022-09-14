@@ -129,9 +129,7 @@
     			<button style="width: 50px; border: none;"> > </button>    
    				</div>
              	
-             	<div>
-             	추가
-             	</div>
+             	
               
 
 
