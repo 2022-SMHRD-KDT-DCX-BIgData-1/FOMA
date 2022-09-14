@@ -120,10 +120,16 @@
                             <img src="assets/images/blog/01.jpg" style="width: 150px; height: 150px;">
                             <span class="about-item-name">내일 수요일임</span><span class="about-item-detail"> ♥ <span>0</span></span> <a href="" class="about-item-edit">Edit</a>
                             </li>
-                             </div>
+                            </div>
                     </div>
                 </div>
-
+                
+                <div style="position: absolute; left: 1440px; top: 800px">
+    			<button style="width: 50px; border: none;"> < </button>
+    			<button style="width: 50px; border: none;"> > </button>    
+   				</div>
+             
+              
 
 
                 <!-- scrollToTop start here --><a href="#" class="scrollToTop"><i class="icofont-swoosh-up"></i></a>
