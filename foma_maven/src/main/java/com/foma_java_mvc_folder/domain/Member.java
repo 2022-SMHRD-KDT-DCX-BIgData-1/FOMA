@@ -25,10 +25,23 @@ public class Member {
 	private String userhbp ;
 	
 	private double userbmi;
+	//지병 9가지 추가(회원정보수정용-체크박스)
+	private String userhyperlip;
+	private String userobesity;
+	private String userheartdis;
+	private String userstroke;
+	private String userpuldis;
+	private String userliverdis;
+	private String useroste;
+	private String userarthritis;
+	private String userstocan;
 	
 
+	//생성자 추가(지병9가지)
 	public Member(String username, String userpw, String useremail, double userage, double userheight,
-			double userweight, String userdiabetes, String userhbp, double userbmi) {
+			double userweight, String userdiabetes, String userhbp, double userbmi, String userhyperlip,
+			String userobesity, String userheartdis, String userstroke, String userpuldis, String userliverdis,
+			String useroste, String userarthritis, String userstocan) {
 		super();
 		this.username = username;
 		this.userpw = userpw;
@@ -39,18 +52,39 @@ public class Member {
 		this.userdiabetes = userdiabetes;
 		this.userhbp = userhbp;
 		this.userbmi = userbmi;
+		this.userhyperlip = userhyperlip;
+		this.userobesity = userobesity;
+		this.userheartdis = userheartdis;
+		this.userstroke = userstroke;
+		this.userpuldis = userpuldis;
+		this.userliverdis = userliverdis;
+		this.useroste = useroste;
+		this.userarthritis = userarthritis;
+		this.userstocan = userstocan;
 	}
 
-	
-	
+
+
+//	public Member(String username, String userpw, String useremail, double userage, double userheight,
+//			double userweight, String userdiabetes, String userhbp, double userbmi) {
+//		super();
+//		this.username = username;
+//		this.userpw = userpw;
+//		this.useremail = useremail;
+//		this.userage = userage;
+//		this.userheight = userheight;
+//		this.userweight = userweight;
+//		this.userdiabetes = userdiabetes;
+//		this.userhbp = userhbp;
+//		this.userbmi = userbmi;
+//	}
+
 
 	public Member(String username, String userpw) {
 		super();
 		this.username = username;
 		this.userpw = userpw;
 	}
-
-
 
 	public String getUsername() {
 		return username;
@@ -114,6 +148,77 @@ public class Member {
 		this.userbmi = userbmi;
 	}
 
+	public String getUserhyperlip() {
+		return userhyperlip;
+	}
+
+	public void setUserhyperlip(String userhyperlip) {
+		this.userhyperlip = userhyperlip;
+	}
+
+	public String getUserobesity() {
+		return userobesity;
+	}
+
+	public void setUserobesity(String userobesity) {
+		this.userobesity = userobesity;
+	}
+
+	public String getUserheartdis() {
+		return userheartdis;
+	}
+
+	public void setUserheartdis(String userheartdis) {
+		this.userheartdis = userheartdis;
+	}
+
+	public String getUserstroke() {
+		return userstroke;
+	}
+
+	public void setUserstroke(String userstroke) {
+		this.userstroke = userstroke;
+	}
+
+	public String getUserpuldis() {
+		return userpuldis;
+	}
+
+	public void setUserpuldis(String userpuldis) {
+		this.userpuldis = userpuldis;
+	}
+
+	public String getUserliverdis() {
+		return userliverdis;
+	}
+
+	public void setUserliverdis(String userliverdis) {
+		this.userliverdis = userliverdis;
+	}
+
+	public String getUseroste() {
+		return useroste;
+	}
+
+	public void setUseroste(String useroste) {
+		this.useroste = useroste;
+	}
+
+	public String getUserarthritis() {
+		return userarthritis;
+	}
+
+	public void setUserarthritis(String userarthritis) {
+		this.userarthritis = userarthritis;
+	}
+
+	public String getUserstocan() {
+		return userstocan;
+	}
+
+	public void setUserstocan(String userstocan) {
+		this.userstocan = userstocan;
+	}
 	
 
 }
