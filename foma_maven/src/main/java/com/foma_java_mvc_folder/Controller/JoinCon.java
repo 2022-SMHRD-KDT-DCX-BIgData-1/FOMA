@@ -40,11 +40,22 @@ public class JoinCon extends HttpServlet {
 				}
 		
 		double userbmi= userweight/((userheight/100)*(userheight/100));
+		//지병 9가지 추가: 회원정보 수정에 담아질 것(회원가입x)
+		String userhyperlip = null; //고지혈증
+		String userobesity = null; //비만
+		String userheartdis = null; //심장병
+		String userstroke = null; //뇌졸중
+		String userpuldis = null; //폐질환
+		String userliverdis = null; //간질환
+		String useroste = null; //골다공증
+		String userarthritis = null; //관절염
+		String userstocan = null; //위암
 		
 		
 		
-		//2수집된 데이터를  객체에 담기
-		Member vo = new Member(username, userpw, useremail, userage, userheight, userweight, userdiabetes, userhbp,userbmi);
+		//2수집된 데이터를  객체에 담기(지병 9가지 추가!)
+		Member vo = new Member(username, userpw, useremail, userage, userheight, userweight, userdiabetes, userhbp,userbmi,
+					userhyperlip,userobesity,userheartdis,userstroke,userpuldis,userliverdis,useroste,userarthritis,userstocan);
 
 		
 		

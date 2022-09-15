@@ -39,7 +39,7 @@ String useremail = request.getParameter("useremail");
 		double userheight =  Double.parseDouble(request.getParameter("userheight"));
 		double userweight = Double.parseDouble(request.getParameter("userweight"));
 		
-		String userdiabetes= "정상"; //당뇨, 고혈합 기본적으로 not이며, 체크박스 체크하면 on으로 변경
+		String userdiabetes= "정상"; //당뇨, 고혈압 기본적으로 not이며, 체크박스 체크하면 on으로 변경
 		if(request.getParameter("userdiabetes")!=null){
 		userdiabetes = "당뇨";
 		}
@@ -49,10 +49,21 @@ String useremail = request.getParameter("useremail");
 				}
 		
 		double userbmi= userweight/((userheight/100)*(userheight/100));
+		//지병9가지 추가
+		String userhyperlip = null; //고지혈증
+		String userobesity = null; //비만
+		String userheartdis = null; //심장병
+		String userstroke = null; //뇌졸중
+		String userpuldis = null; //폐질환
+		String userliverdis = null; //간질환
+		String useroste = null; //골다공증
+		String userarthritis = null; //관절염
+		String userstocan = null; //위암
 		
 		
 		//2수집된 데이터를 Member 객체에 담기
-		Member vo = new Member(username, userpw, useremail, userage, userheight, userweight, userdiabetes, userhbp,userbmi);
+		Member vo = new Member(username, userpw, useremail, userage, userheight, userweight, userdiabetes, userhbp,userbmi,
+				userhyperlip,userobesity,userheartdis,userstroke,userpuldis,userliverdis,useroste,userarthritis,userstocan);
 		//3. MemㅠerMapper.sml에서 sql문 만들고 오기
 		
 		//4. MemberDAO에 메소드 만들고 오기
