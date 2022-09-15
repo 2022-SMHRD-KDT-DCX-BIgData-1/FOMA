@@ -114,8 +114,10 @@
   </select>
  
     <insert id="insertBoard" parameterType="com.saeyan.dto.BoardVO">
+ <!-- 
   insert into board(num, name, email, pass, title, content) values(board_seq.nextval, #{name}, #{email}, #{pass}, #{title}, #{content});   
-  
+   -->
+  insert into board(num, name, email, pass, title, content ,readcount ,writedate) values(board_seq.nextval, #{name}, #{email}, #{pass}, #{title}, #{content},#{readcount},#{writedate})
   </insert> 
   
 

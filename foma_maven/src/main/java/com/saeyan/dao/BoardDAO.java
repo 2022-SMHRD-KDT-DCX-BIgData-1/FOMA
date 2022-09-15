@@ -56,6 +56,7 @@ public class BoardDAO {
 //		String sql = "insert into board("
 //				+ "num, name, email, pass, title, content) "
 //				+ "values(board_seq.nextval, ?, ?, ?, ?, ?)";
+		System.out.println("게시판 받아온 이름	 :"+bVo.getName()+"받아온 날짜"+bVo.getWritedate());
 		
 		int cnt = 0;
 		try {
