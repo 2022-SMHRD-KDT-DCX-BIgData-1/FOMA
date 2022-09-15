@@ -150,53 +150,65 @@
                                         </td>
                                         </tr><!-- 4 줄 끝 -->
                                     </table>
+                                  
                                     <!-- 체크박스 -->
-	  <div class="form-check">
- 
-        <label class="form-check-label" for="flexCheckDefault">
-        현재 고혈합 상태 : ${loginMember.userhbp} <input type="checkbox" name="userhbp">
-        </label>
-        <label class="form-check-label" for="flexCheckDefault">
-        현재 당뇨병 상태 : ${loginMember.userdiabetes} <input type="checkbox" name="userhbp">
-        </label>
-        <label class="form-check-label" for="flexCheckDefault">
-        현재 고지혈증 상태 : 정상<input type="checkbox" name="">
-        </label>
-        <label class="form-check-label" for="flexCheckDefault">
-        현재 비만 상태 : 정상<input type="checkbox" name="">
-        </label>
+                       
+									<div class="form-check">
+      
+							        <label class="form-check-label" for="flexCheckDefault">
+							            현재 고혈압 상태 : ${loginMember.userhbp} <input type="checkbox" name="userhbp">
+							        </label>
+							        <label class="form-check-label" for="flexCheckDefault">
+							             현재 당뇨병 상태 : ${loginMember.userdiabetes} <input type="checkbox" name="userdiabetes">
+							        </label>
+							        <label class="form-check-label" for="flexCheckDefault">
+							            현재 고지혈증 상태 :  <input type="checkbox" name="">
+							        </label>
+							        <label class="form-check-label" for="flexCheckDefault">
+							            현재 비만 상태 :  <input type="checkbox" name="">
+							        </label>
+							        
+							      </div>
+							      <div class="form-check">
+      
+							        <label class="form-check-label" for="flexCheckDefault">
+							            현재 동맥경화 상태 : <input type="checkbox" name="">
+							        </label>
+							        <label class="form-check-label" for="flexCheckDefault">
+							             현재 심장병 상태 : <input type="checkbox" name="">
+							        </label>
+							        <label class="form-check-label" for="flexCheckDefault">
+							            현재 뇌졸중 상태 :  <input type="checkbox" name="">
+							        </label>
+							        <label class="form-check-label" for="flexCheckDefault">
+							            현재 만성폐질환 상태 :  <input type="checkbox" name="">
+							        </label>
+							        
+							      </div>
+							      <div class="form-check">
+      
+							        <label class="form-check-label" for="flexCheckDefault">
+							            현재 간질환 상태 : <input type="checkbox" name="">
+							        </label>
+							        <label class="form-check-label" for="flexCheckDefault">
+							             현재 골다공증 상태 : <input type="checkbox" name="">
+							        </label>
+							        <label class="form-check-label" for="flexCheckDefault">
+							            현재 류마티스성 관절염(성인병) 상태 :  <input type="checkbox" name="">
+							        </label>
+							  	<hr>
+							       <label>
+							            질병에 해당되지 않으면 체크하지 않고 변경을 눌러주세요!
+							        </label>
+							      
+							      </div>
+							      
+								
+									
+								
 
-      </div>
-      <div class="form-check">
- 
-        <label class="form-check-label" for="flexCheckDefault">
-        현재 동맥경화 상태 : ${loginMember.userhbp} <input type="checkbox" name="userhbp">
-        </label>
-        <label class="form-check-label" for="flexCheckDefault">
-        현재 심장병 상태 : ${loginMember.userdiabetes} <input type="checkbox" name="userhbp">
-        </label>
-        <label class="form-check-label" for="flexCheckDefault">
-        현재 뇌졸중 상태 : 정상<input type="checkbox" name="">
-        </label>
-        <label class="form-check-label" for="flexCheckDefault">
-        현재 만성폐질환 상태 : 정상<input type="checkbox" name="">
-        </label>
-
-      </div>
-      <div class="form-check">
- 
-        <label class="form-check-label" for="flexCheckDefault">
-        현재 간질환 상태 : ${loginMember.userhbp} <input type="checkbox" name="userhbp">
-        </label>
-        <label class="form-check-label" for="flexCheckDefault">
-        현재 골다공증 상태 : ${loginMember.userdiabetes} <input type="checkbox" name="userhbp">
-        </label>
-        <label class="form-check-label" for="flexCheckDefault">
-        현재 류마티스성 관절염(성인병) 상태 : 정상<input type="checkbox" name="">
-        </label>
-       
-
-      </div>
+        
+        
 								      
 								   
 								       
