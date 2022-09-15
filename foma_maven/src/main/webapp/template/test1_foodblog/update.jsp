@@ -109,34 +109,119 @@
                 </div>
 
 	<div class="col-md-8 grid-margin stretch-card" id="wrapper">
-				<!-- Menu -->
-					<nav class = "card" id="Update">	
-						<ul class="actions vertical card-body">
-							<li><h5>회원정보수정</h5></li>
-							<hr>
-							<!--변경할 회원정보를 담아서 updatecon으로 보내기  -->
-								<form action="../../UpdateCon" method ="post">
-								<li>접속한 아이디 : ${loginMember.username}</li>
-						
-					<li>이메일<input type="email"	maxlength="30" name="useremail" class="input-field" value ="${loginMember.useremail }"	placeholder="이메일을 입력하세요" required></li>
-				<!-- 숫자만 입력되게, 나이 제한 200  키 300 몸무게 500-->
-				<li>나이<input type="number" name="userage" class="input-field" max="200"value ="${loginMember.userage }"	placeholder="나이를 입력하세요" required> </li>
-				<li>키<input type="number"name="userheight" class="input-field" max="300" value ="${loginMember.userheight }"	placeholder="키(신장)을 입력하세요" required> </li>
-				<li>몸무게<input type="number"name="userweight" class="input-field" max="500" value ="${loginMember.userweight }"	placeholder="몸무게를 입력하세요" required> </li>
-				
-			
-				 <div style="margin: 10px;">
-                            <label> <input type="checkbox" name="userdiabetes"> 현재 당뇨병 상태 : ${loginMember.userdiabetes }</label>
-                            <label> <input type="checkbox" name="userhbp">현재 고혈합 상태 : ${loginMember.userhbp }</label>
-                        </div>	
+                        <!-- Menu -->
+                        <nav class="card" id="Update">
+                            <ul class="actions vertical card-body">
+                                <li>
+                                    <h5>회원정보수정</h5>
+                                </li>
+                                <hr>
+                                <!--변경할 회원정보를 담아서 updatecon으로 보내기  -->
+                                <form action="../../UpdateCon" method="post">
 
-				<button class="submit" style="background-color: #F1F2F3; border: none; padding: 15px; width: 100px;">변경</button>
-								</form>
-								<hr>
-						</ul>
-					</nav>			
-			</div>
+                                    <table style="border: none;">
+                                        <tr>
+                                            <!-- 첫번째 줄 시작 -->
+                                            <td style="width: 150px; height: 50px; text-align: center;">접속한 아이디</td>
+                                            <td>${loginMember.username}</td>
+                                        </tr><!-- 첫번째 줄 끝 -->
+                                        <tr>
+                                            <!-- 첫번째 줄 시작 -->
+                                            <td style="width: 150px; height: 50px; text-align: center;">이메일</td>
+                                            <td><input type="email" maxlength="30" name="useremail" class="input-field"
+                                                    value="${loginMember.useremail }" placeholder="이메일을 입력하세요" required>
+                                            </td>
+                                        </tr><!-- 첫번째 줄 끝 -->
+                                        <tr>
+                                            <!-- 두번째 줄 시작 -->
+                                            <td style="width: 150px; height: 50px; text-align: center;">나이</td>
+                                            <td><input type="number" name="userage" class="input-field" max="200"
+                                                    value="${loginMember.userage }" placeholder="나이를 입력하세요" required>
+                                            </td>
+                                        </tr><!-- 두번째 줄 끝 -->
+                                        <td style="width: 150px; height: 50px; text-align: center;">키</td>
+                                        <td><input type="number" name="userheight" class="input-field" max="300"
+                                                value="${loginMember.userheight }" placeholder="키(신장)을 입력하세요" required>
+                                        </td>
+                                        </tr><!-- 3 줄 끝 -->
+                                        <td style="width: 150px; height: 50px; text-align: center;">몸무게</td>
+                                        <td><input type="number" name="userweight" class="input-field" max="500"
+                                                value="${loginMember.userweight }" placeholder="몸무게를 입력하세요" required>
+                                        </td>
+                                        </tr><!-- 4 줄 끝 -->
+                                    </table>
+                                  
+                                    <!-- 체크박스 -->
+                       
+									<div class="form-check">
+      
+							        <label class="form-check-label" for="flexCheckDefault">
+							            현재 고혈압 상태 : ${loginMember.userhbp} <input type="checkbox" name="userhbp">
+							        </label>
+							        <label class="form-check-label" for="flexCheckDefault">
+							             현재 당뇨병 상태 : ${loginMember.userdiabetes} <input type="checkbox" name="userdiabetes">
+							        </label>
+							        <label class="form-check-label" for="flexCheckDefault">
+							            현재 고지혈증 상태 :  <input type="checkbox" name="">
+							        </label>
+							        <label class="form-check-label" for="flexCheckDefault">
+							            현재 비만 상태 :  <input type="checkbox" name="">
+							        </label>
+							        
+							      </div>
+							      <div class="form-check">
+      
+							        <label class="form-check-label" for="flexCheckDefault">
+							            현재 동맥경화 상태 : <input type="checkbox" name="">
+							        </label>
+							        <label class="form-check-label" for="flexCheckDefault">
+							             현재 심장병 상태 : <input type="checkbox" name="">
+							        </label>
+							        <label class="form-check-label" for="flexCheckDefault">
+							            현재 뇌졸중 상태 :  <input type="checkbox" name="">
+							        </label>
+							        <label class="form-check-label" for="flexCheckDefault">
+							            현재 만성폐질환 상태 :  <input type="checkbox" name="">
+							        </label>
+							        
+							      </div>
+							      <div class="form-check">
+      
+							        <label class="form-check-label" for="flexCheckDefault">
+							            현재 간질환 상태 : <input type="checkbox" name="">
+							        </label>
+							        <label class="form-check-label" for="flexCheckDefault">
+							             현재 골다공증 상태 : <input type="checkbox" name="">
+							        </label>
+							        <label class="form-check-label" for="flexCheckDefault">
+							            현재 류마티스성 관절염(성인병) 상태 :  <input type="checkbox" name="">
+							        </label>
+							  	<hr>
+							       <label>
+							            질병에 해당되지 않으면 체크하지 않고 변경을 눌러주세요!
+							        </label>
+							      
+							      </div>
+							      
+								
+									
+								
 
+        
+        
+								      
+								   
+								       
+     
+                                    <button class="submit"
+                                        style="background-color: #F1F2F3; border: none; padding: 15px; width: 100px;">변경</button>
+                                </form>
+                                <hr>
+                            </ul>
+                        </nav>
+                    </div>
+
+ 
 				
 					
 			

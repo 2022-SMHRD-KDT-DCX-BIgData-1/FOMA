@@ -105,5 +105,20 @@
  
   </select>
   
+  <!--게시판  -->
+
+ <select id="selectAllBoards" parameterType="com.saeyan.dto.BoardVO" resultType = "com.saeyan.dto.BoardVO">
+
+ select * from board order by num desc
+ 
+  </select>
+ 
+    <insert id="insertBoard" parameterType="com.saeyan.dto.BoardVO">
+ <!-- 
+  insert into board(num, name, email, pass, title, content) values(board_seq.nextval, #{name}, #{email}, #{pass}, #{title}, #{content});   
+   -->
+  insert into board(num, name, email, pass, title, content ,readcount ,writedate) values(board_seq.nextval, #{name}, #{email}, #{pass}, #{title}, #{content},#{readcount},#{writedate})
+  </insert> 
   
+
 </mapper>

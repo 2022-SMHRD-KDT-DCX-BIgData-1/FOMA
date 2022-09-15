@@ -72,6 +72,7 @@
                             required>
                         <input type="password" maxlength="10" name="userpw" class="input-field"
                             placeholder="패스워드를 입력하세요" required>
+                            
                         <button class="submit btn_login" onclick="cambiar_login()">LOGIN</button>
                     </div>
                 </form>
