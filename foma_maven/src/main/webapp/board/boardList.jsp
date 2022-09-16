@@ -27,6 +27,7 @@
 				<td colspan="5" style="border: white; text-align: right">
 				
 				<a href="board/boardWrite.jsp">게시글 등록</a></td>
+		<a href="template/test1_foodblog/index.jsp">FOMA 복귀</a></td>
 		
 			</tr>
 			<tr>

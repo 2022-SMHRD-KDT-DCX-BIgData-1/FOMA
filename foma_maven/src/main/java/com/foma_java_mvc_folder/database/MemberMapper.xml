@@ -121,17 +121,32 @@ select * from board where num = #{num}
   
   <!--게시판 접속회수 +1  -->
   
-   <update id="updateReadCount" parameterType="int"   >
+   <update id="updateReadCount" parameterType="com.saeyan.dto.BoardVO"   >
  update board set readcount = readcount+1 where num=#{num}
   
   </update>
  
+ 
+ <!--게시물 등록  -->
     <insert id="insertBoard" parameterType="com.saeyan.dto.BoardVO">
  <!-- 
   insert into board(num, name, email, pass, title, content) values(board_seq.nextval, #{name}, #{email}, #{pass}, #{title}, #{content});   
    -->
   insert into board(num, name, email, pass, title, content ,readcount ,writedate) values(board_seq.nextval, #{name}, #{email}, #{pass}, #{title}, #{content},#{readcount},#{writedate})
   </insert> 
+  
+   <!-- 게시판 삭제  -->
+     <delete id="deleteBoard" parameterType="com.saeyan.dto.BoardVO"   >
+ DELETE FROM board WHERE num =#{num}
+  
+  </delete>
+  
+  <!-- 게시판 업데이트 -->
+     <update id="updateBoard" parameterType="com.saeyan.dto.BoardVO"   >
+ update board set name=#{name}, email=#{email},pass=#{pass},title=#{title},content=#{content},writedate=#{writedate} where num=#{num}
+  
+  </update>
+ 
   
 
 </mapper>
