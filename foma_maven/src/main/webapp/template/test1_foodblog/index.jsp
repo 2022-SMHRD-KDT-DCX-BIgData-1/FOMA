@@ -73,10 +73,14 @@
                 <li><a href="recommendation2.html">지병에 따른 추천</a></li>
                 <li><a href="recommendation1.html">음식 분류별 추천</a></li>
               </ul>
-            </li>
+             </li>
             
             <li><a href="SNS.html">SNS</a>
              <ul>
+             <li><a href="../../board_index.jsp">게시판</a></li>
+             </ul>
+             </li>
+             
              <li><a href="../../board_index.jsp">게시판</a></li>
              </ul>
              </li>
