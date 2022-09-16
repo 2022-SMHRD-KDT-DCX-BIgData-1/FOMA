@@ -7,6 +7,7 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.saeyan.dao.BoardDAO;
 import com.saeyan.dto.BoardVO;
@@ -18,6 +19,11 @@ public class BoardListAction implements Action{
 		String url = "/board/boardList.jsp";
 		BoardDAO bDao = BoardDAO.getInstance();
 		List<BoardVO> boardList = bDao.selectAllBoards();
+		
+        HttpSession session = request.getSession();
+        session.setAttribute("boardList", boardList);
+		
+		
 		request.setAttribute("boardList", boardList);
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);

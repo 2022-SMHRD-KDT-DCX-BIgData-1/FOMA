@@ -12,6 +12,9 @@ public class BoardWriteFormAction implements Action {
 	public void execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String url = "/board/boardWrite.jsp";
+		System.out.println("wirte form 으로 이동 됨");
+		
+		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);
 	}

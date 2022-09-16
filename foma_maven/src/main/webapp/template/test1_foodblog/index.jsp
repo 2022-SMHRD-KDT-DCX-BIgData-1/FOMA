@@ -67,13 +67,20 @@
         <div class="main-menu">
           <ul>
             <li><a href="FindFriends.html">친구찾기</a></li>
+            
             <li><a href="">추천식단</a>
               <ul>
                 <li><a href="recommendation2.html">지병에 따른 추천</a></li>
                 <li><a href="recommendation1.html">음식 분류별 추천</a></li>
               </ul>
             </li>
-            <li><a href="SNS.html">SNS</a></li>
+            
+            <li><a href="SNS.html">SNS</a>
+             <ul>
+             <li><a href="../../board_index.jsp">게시판</a></li>
+             </ul>
+             </li>
+             
             <li><a href="mypage.jsp">마이페이지</a>
               <ul>
                 <li><a href="#">접속한 아이디 : ${loginMember.username}</a></li>

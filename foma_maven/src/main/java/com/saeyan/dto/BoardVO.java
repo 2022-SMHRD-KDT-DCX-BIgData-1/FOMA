@@ -19,23 +19,7 @@ public class BoardVO {
 	public BoardVO() {
 		super();
 	}
-	public BoardVO(String name, String email, String pass, String title, String content) {
-		super();
-		this.name = name;
-		this.email = email;
-		this.pass = pass;
-		this.title = title;
-		this.content = content;
-	}
-	public BoardVO(int num, String name, String email, String pass, String title, String content) {
-		super();
-		this.num = num;
-		this.name = name;
-		this.email = email;
-		this.pass = pass;
-		this.title = title;
-		this.content = content;
-	}
+
 	public BoardVO(int num, String name, String email, String pass, String title, String content, int readcount,
 			Timestamp writedate) {
 		super();

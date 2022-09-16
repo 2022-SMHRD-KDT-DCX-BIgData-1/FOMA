@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="	../css/shopping.css">
+<link rel="stylesheet" type="text/css" href="../css/shopping.css">
 <script type="text/javascript" src="../script/board.js"></script>
 </head>
 <body>
@@ -41,7 +41,10 @@
 			<br> <input type="submit" value="등록"
 				onclick="return boardCheck()"> <input type="reset"
 				value="다시 작성"> <input type="button" value="목록"
-				onclick="location.href='BoardServlet?command=board_list'">
+				onclick="location.href='../BoardServlet?command=board_list'">
+				<!-- 
+				response.sendRedirect("BoardServlet?command=board_list");
+				 -->
 		</form>
 	</div>
 </body>
