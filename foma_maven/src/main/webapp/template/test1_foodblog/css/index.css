@@ -1,0 +1,20 @@
+@charset "EUC-KR";
+.container {
+	margin-bottom: 50px;
+	
+}
+.footer .container{
+	margin-bottom: 0px;
+}
+.reselt {
+	margin: 0px;
+}
+.banner-content{
+	margin: auto;
+}
+.container .row {
+	margin: auto;
+}
+.row .col-xl-8 {
+	margin: auto;
+}

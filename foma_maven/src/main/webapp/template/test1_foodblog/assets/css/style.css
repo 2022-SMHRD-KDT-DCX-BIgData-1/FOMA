@@ -3646,7 +3646,7 @@ aside {
 @media (min-width: 992px) {
     .banner {
         padding: 1px 0;
-        margin-left: 300px;
+        /* margin-left: 300px; */
     }
 }
 
@@ -4202,7 +4202,7 @@ aside {
 /* @@@@@@@@@@@@@  Food Category Section Start Here  @@@@@@@@@@@@@@ */
 @media (min-width: 1200px) {
     .food-category.padding-tb {
-        padding: 130px 0;
+        padding: 50px 0;
     }
 }
 
