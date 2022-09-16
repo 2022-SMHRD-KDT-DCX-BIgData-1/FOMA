@@ -185,20 +185,20 @@
               <div class="swiper-slide">
                 <div class="food-item">
                 <!--검색어에 카테고리 분만 아니라 음식이름도 임시로 적어주어야 한다. 쿼리스트링으로 카테고리값 넘기기  -->
-                  <div class="food-thumb"><button type="button" onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=곡류 및 서류&fd_name=temp' "><img src="assets/images/food/01.png" alt="food"></button></div>
-                  <div class="food-content">떡</div>
+                  <div class="food-thumb" onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=밥류&fd_name=temp' "><img src="assets/images/food/01.png" alt="food"></div>
+                  <div class="food-content">밥류</div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="food-item">
-                  <div class="food-thumb"><button type="button" onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=과자류&fd_name=temp' "><img src="assets/images/food/02.png" alt="food"></a></div>
-                  <div class="food-content">과자류</div>
+                   <div class="food-thumb" onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=찌개류&fd_name=temp' "><img src="assets/images/food/02.png" alt="food"></div>
+                  <div class="food-content">찌개류</div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="food-item">
-                  <div class="food-thumb"><a href="#"><img src="assets/images/food/03.png" alt="food"></a></div>
-                  <div class="food-content"><a href="#">Dinner</a></div>
+                   <div class="food-thumb" onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=면류&fd_name=temp' "><img src="assets/images/food/03.png" alt="food"></div>
+                  <div class="food-content">면류</div>
                 </div>
               </div>
               <div class="swiper-slide">
