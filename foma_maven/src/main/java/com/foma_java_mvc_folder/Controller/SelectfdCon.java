@@ -35,7 +35,7 @@ public class SelectfdCon extends HttpServlet {
          HttpSession session = request.getSession();
          session.removeAttribute("selectFMember");//세션값 삭제
          //다시 검색페이지 이동
-         response.sendRedirect("/foma_maven2/template/test1_foodblog/index.jsp");
+         response.sendRedirect("/foma_maven/template/test1_foodblog/index.jsp");
          System.out.println("빈칸 검색 결과, selectFMember 세션 삭제");
          return;
       }else {
@@ -94,10 +94,10 @@ public class SelectfdCon extends HttpServlet {
          // 2. 세션에 저장
          session.setAttribute("selectFMember", selectFMember);
          if(selectcode.equals("one")) {//받아온 검색 결과에 셀렉트코드가 one이면 상세검색창
-            response.sendRedirect("/foma_maven2/template/test1_foodblog/shop-single.jsp");
+            response.sendRedirect("/foma_maven/template/test1_foodblog/shop-single.jsp");
 
          }else {
-         response.sendRedirect("/foma_maven2/template/test1_foodblog/index.jsp");
+         response.sendRedirect("/foma_maven/template/test1_foodblog/index.jsp");
          return;
          }
          

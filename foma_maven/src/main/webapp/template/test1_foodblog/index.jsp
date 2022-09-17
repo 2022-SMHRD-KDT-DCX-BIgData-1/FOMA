@@ -128,7 +128,7 @@
 					<div class="col-xl-8 col-12">
 						<div class="banner-content">
 
-							<form action="/foma_maven2/SelectfdCon" method="post">
+							<form action="/foma_maven/SelectfdCon" method="post">
 								<div class="codexcoder-selectoption">
 									<select name="selectcode">
 										<option value="none">음식 검색</option>
@@ -159,7 +159,7 @@
 							%>
 							<%-- <a href = "shop-single.jsp"> <%=	f.getFd_name()%></a>
 								 --%>
-							<form class="reselt" action="/foma_maven2/SelectfdCon" method="post">
+							<form class="reselt" action="/foma_maven/SelectfdCon" method="post">
 								<%
 								String str = f.getFd_name();
 								%>
@@ -229,7 +229,7 @@
 								<div class="food-item">
 									<!--검색어에 카테고리 분만 아니라 음식이름도 임시로 적어주어야 한다. 쿼리스트링으로 카테고리값 넘기기  -->
 									<div class="food-thumb"
-										onclick="location.href='/foma_maven2/SelectfdCon?selectcode=cate&fd_category_big_name=밥류&fd_name=temp' ">
+										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=밥류&fd_name=temp' ">
 										<img src="assets/images/food/01.png" alt="food">
 									</div>
 									<div class="food-content">
@@ -240,7 +240,7 @@
 							<div class="swiper-slide">
 								<div class="food-item">
 									<div class="food-thumb"
-										onclick="location.href='/foma_maven2/SelectfdCon?selectcode=cate&fd_category_big_name=찌개류&fd_name=temp' ">
+										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=찌개류&fd_name=temp' ">
 										<img src="assets/images/food/02.png" alt="food">
 									</div>
 									<div class="food-content">
@@ -251,7 +251,7 @@
 							<div class="swiper-slide">
 								<div class="food-item">
 									<div class="food-thumb"
-										onclick="location.href='/foma_maven2/SelectfdCon?selectcode=cate&fd_category_big_name=면류&fd_name=temp' ">
+										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=면류&fd_name=temp' ">
 										<img src="assets/images/food/03.png" alt="food">
 									</div>
 									<div class="food-content">
