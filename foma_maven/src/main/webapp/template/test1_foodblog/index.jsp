@@ -194,7 +194,7 @@
 		<div class="container">
 			<div class="food-box">
 				<div class="section-header">
-					<h3>🍏카테고리별 식단</h3>
+					<h3>🍏카테고리별 음식🍏</h3>
 					<h6>먹고싶은 음식 종류를 클릭해주세요</h6>
 					
 
