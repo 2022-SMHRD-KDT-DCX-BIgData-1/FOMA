@@ -128,7 +128,7 @@
 					<div class="col-xl-8 col-12">
 						<div class="banner-content">
 
-							<form action="/foma_maven/SelectfdCon" method="post">
+							<form action="/foma_maven2/SelectfdCon" method="post">
 								<div class="codexcoder-selectoption">
 									<select name="selectcode">
 										<option value="none">음식 검색</option>
@@ -159,7 +159,7 @@
 							%>
 							<%-- <a href = "shop-single.jsp"> <%=	f.getFd_name()%></a>
 								 --%>
-							<form class="reselt" action="/foma_maven/SelectfdCon" method="post">
+							<form class="reselt" action="/foma_maven2/SelectfdCon" method="post">
 								<%
 								String str = f.getFd_name();
 								%>
@@ -229,7 +229,7 @@
 								<div class="food-item">
 									<!--검색어에 카테고리 분만 아니라 음식이름도 임시로 적어주어야 한다. 쿼리스트링으로 카테고리값 넘기기  -->
 									<div class="food-thumb"
-										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=밥류&fd_name=temp' ">
+										onclick="location.href='/foma_maven2/SelectfdCon?selectcode=cate&fd_category_big_name=밥류&fd_name=temp' ">
 										<img src="assets/images/food/01.png" alt="food">
 									</div>
 									<div class="food-content">
@@ -240,28 +240,29 @@
 							<div class="swiper-slide">
 								<div class="food-item">
 									<div class="food-thumb"
-										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=찌개류&fd_name=temp' ">
+										onclick="location.href='/foma_maven2/SelectfdCon?selectcode=cate&fd_category_big_name=찌개&fd_category_big_name=국&fd_category_big_name=죽&fd_name=temp' ">
 										<img src="assets/images/food/02.png" alt="food">
 									</div>
 									<div class="food-content">
-										<a href="#">찌개류</a>
+										<a href="#">찌개&국</a>
 									</div>
 								</div>
 							</div>
 							<div class="swiper-slide">
 								<div class="food-item">
 									<div class="food-thumb"
-										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=면류&fd_name=temp' ">
+										onclick="location.href='/foma_maven2/SelectfdCon?selectcode=cate&fd_category_big_name=면&fd_name=temp' ">
 										<img src="assets/images/food/03.png" alt="food">
 									</div>
 									<div class="food-content">
-										<a href="#">면류</a>
+										<a href="#">면&만두</a>
 									</div>
 								</div>
 							</div>
 							<div class="swiper-slide">
 								<div class="food-item">
-									<div class="food-thumb">
+									<div class="food-thumb"
+										onclick="location.href='/foma_maven2/SelectfdCon?selectcode=cate&fd_category_big_name=볶음&fd_category_big_name=젓갈&fd_category_big_name=생채&fd_category_big_name=숙채&fd_name=temp' ">
 										<a href="#"><img src="assets/images/food/04.png" alt="food"></a>
 									</div>
 									<div class="food-content">
@@ -271,7 +272,8 @@
 							</div>
 							<div class="swiper-slide">
 								<div class="food-item">
-									<div class="food-thumb">
+									<div class="food-thumb"
+										onclick="location.href='/foma_maven2/SelectfdCon?selectcode=cate&fd_category_big_name=빵&fd_category_big_name=아이스크림&fd_name=temp' ">
 										<a href="#"><img src="assets/images/food/05.png" alt="food"></a>
 									</div>
 									<div class="food-content">
@@ -281,7 +283,8 @@
 							</div>
 							<div class="swiper-slide">
 								<div class="food-item">
-									<div class="food-thumb">
+									<div class="food-thumb"
+										onclick="location.href='/foma_maven2/SelectfdCon?selectcode=cate&fd_category_big_name=샐러드&fd_name=temp' ">
 										<a href="#"><img src="assets/images/food/06.png" alt="food"></a>
 									</div>
 									<div class="food-content">
@@ -291,7 +294,8 @@
 							</div>
 							<div class="swiper-slide">
 								<div class="food-item">
-									<div class="food-thumb">
+									<div class="food-thumb"
+										onclick="location.href='/foma_maven2/SelectfdCon?selectcode=cate&fd_category_big_name=구이&fd_name=temp' ">
 										<a href="#"><img src="assets/images/food/07.png" alt="food"></a>
 									</div>
 									<div class="food-content">
@@ -301,7 +305,8 @@
 							</div>
 							<div class="swiper-slide">
 								<div class="food-item">
-									<div class="food-thumb">
+									<div class="food-thumb"
+										onclick="location.href='/foma_maven2/SelectfdCon?selectcode=cate&fd_category_big_name=찜&fd_name=temp' ">
 										<a href="#"><img src="assets/images/food/08.png" alt="food"></a>
 									</div>
 									<div class="food-content">
@@ -309,16 +314,39 @@
 									</div>
 								</div>
 							</div>
-<!-- 							<div class="swiper-slide">
+							<div class="swiper-slide">
 								<div class="food-item">
-									<div class="food-thumb">
+									<div class="food-thumb"
+										onclick="location.href='/foma_maven2/SelectfdCon?selectcode=cate&fd_category_big_name=적&fd_name=temp' ">
 										<a href="#"><img src="assets/images/food/09.png" alt="food"></a>
+									</div>
+									<div class="food-content">
+										<a href="#">부침류</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="food-item">
+									<div class="food-thumb"
+										onclick="location.href='/foma_maven2/SelectfdCon?selectcode=cate&fd_category_big_name=조림&fd_name=temp' ">
+										<a href="#"><img src="assets/images/food/10.png" alt="food"></a>
+									</div>
+									<div class="food-content">
+										<a href="#">조림류</a>
+									</div>
+								</div>
+							</div>
+ 							<div class="swiper-slide">
+								<div class="food-item">
+									<div class="food-thumb"
+										onclick="location.href='/foma_maven2/SelectfdCon?selectcode=cate&fd_category_big_name=튀김&fd_name=temp' ">
+										<a href="#"><img src="assets/images/food/11.png" alt="food"></a>
 									</div>
 									<div class="food-content">
 										<a href="#">튀김류</a>
 									</div>
 								</div>
-							</div> -->
+							</div>
 						</div>
 					</div>
 					<div class="food-slider-next">

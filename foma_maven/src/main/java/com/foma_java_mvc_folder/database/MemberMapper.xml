@@ -135,7 +135,7 @@ https://freefrdi.com/how-much-fat-for-keto/
   
   <!--카테고리 검색  -->
   <select id="selectFMembercate" parameterType="com.foma_java_mvc_folder.domain.FMember"  resultType = "com.foma_java_mvc_folder.domain.FMember">
-  <![CDATA[select * from fmember where fd_category_big_name = #{fd_category_big_name} and rownum<6]]>
+  <![CDATA[select * from fmember where fd_category_big_name like '%'||#{fd_category_big_name}||'%' and rownum<6]]>
  
   </select>
   

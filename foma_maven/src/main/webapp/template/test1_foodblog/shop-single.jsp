@@ -309,7 +309,7 @@
         <div class="shape-2"><img src="assets/images/banner/shape/02.png" alt="banner"></div>
         <div class="container">
             <div class="page-title text-center">
-                <h3><%=f.get(0).getFd_name()%></h3>
+                <h3>🍵<%=f.get(0).getFd_name()%></h3>
                 <ul class="breadcrumb">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Search</a></li>
@@ -364,7 +364,7 @@
               <%
 				//세션에서 정보가 있다면 정보를 봅아서 출력하기					
 						if(f!=null){%>
-							<h4>🍵<%=f.get(0).getFd_name()%></h4>
+							<h4><%=f.get(0).getFd_name()%></h4>
 						<% }%>
 						<br>
 							
