@@ -34,7 +34,7 @@ public class UpdateCon extends HttpServlet {
 		
 		//form태그 파라미터 가져오기
 	
-String useremail = request.getParameter("useremail");		
+		String useremail = request.getParameter("useremail");		
 		double userage =  Double.parseDouble(request.getParameter("userage"));
 		double userheight =  Double.parseDouble(request.getParameter("userheight"));
 		double userweight = Double.parseDouble(request.getParameter("userweight"));
@@ -58,12 +58,12 @@ String useremail = request.getParameter("useremail");
 		String userliverdis = null; //간질환
 		String useroste = null; //골다공증
 		String userarthritis = null; //관절염
-		String userstocan = null; //위암
+		String usermyoinfar = null; //심근경색
 		
 		
 		//2수집된 데이터를 Member 객체에 담기
 		Member vo = new Member(username, userpw, useremail, userage, userheight, userweight, userdiabetes, userhbp,userbmi,
-				userhyperlip,userobesity,userheartdis,userstroke,userpuldis,userliverdis,useroste,userarthritis,userstocan);
+				userhyperlip,userobesity,userheartdis,userstroke,userpuldis,userliverdis,useroste,userarthritis,usermyoinfar);
 		//3. MemㅠerMapper.sml에서 sql문 만들고 오기
 		
 		//4. MemberDAO에 메소드 만들고 오기
