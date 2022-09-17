@@ -18,3 +18,7 @@
 .row .col-xl-8 {
 	margin: auto;
 }
+.row .reselt{
+	width: 90%;
+	justify-content: space-between;
+}
