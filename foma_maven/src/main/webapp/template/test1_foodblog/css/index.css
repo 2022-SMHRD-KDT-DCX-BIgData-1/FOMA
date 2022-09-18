@@ -22,3 +22,12 @@
 	width: 95%;
 	justify-content: space-between;
 }
+
+.row a button{
+	width: 800px;
+	height: 50px;
+	background: #fb524f;
+	border-radius: 10px;
+	color: white;
+	
+}
