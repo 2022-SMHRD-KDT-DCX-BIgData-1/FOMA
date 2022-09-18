@@ -136,8 +136,8 @@
 										<option value="lowcal">저칼로리 음식 검색</option>
 										<option value="locarhifat">저탄고지 음식 검색</option>
 										<option value="locarhifat">저당식 음식 검색</option> -->
-										<option value="hbp">고혈압 검색 </option>
-										<option value="diabe" >당뇨 검색</option>
+										<option value="hbp">고혈압 검색</option>
+										<option value="diabe">당뇨 검색</option>
 										<option value="hyperlip">고지혈증 검색</option>
 										<option value="obesity">비만 검색</option>
 										<option value="myoinfar">심근경색 검색</option>
@@ -147,8 +147,10 @@
 									placeholder="Enter your food name">
 								<button type="submit">
 									<i class="icofont-search-2"></i>
-								</button><br>
+								</button>
+								<br>
 							</form>
+							<br>
 							<%
 							ArrayList<FMember> selectFMember = (ArrayList<FMember>) session.getAttribute("selectFMember");
 							%>
@@ -159,7 +161,8 @@
 							%>
 							<%-- <a href = "shop-single.jsp"> <%=	f.getFd_name()%></a>
 								 --%>
-							<form class="reselt" action="/foma_maven/SelectfdCon" method="post">
+							<form class="reselt" action="/foma_maven/SelectfdCon"
+								method="post">
 								<%
 								String str = f.getFd_name();
 								%>
@@ -196,7 +199,7 @@
 				<div class="section-header">
 					<h3>🍏카테고리별 음식🍏</h3>
 					<h6>먹고싶은 음식 종류를 클릭해주세요</h6>
-					
+
 
 					<!--음식 카테고리 종류 : 곡류 및 서류
 과자류
@@ -263,7 +266,8 @@
 								<div class="food-item">
 									<div class="food-thumb"
 										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=볶음&fd_category_big_name=젓갈&fd_category_big_name=생채&fd_category_big_name=숙채&fd_name=temp' ">
-										<a href="#"><img src="assets/images/food/04.png" alt="food"></a>
+										<a href="#"><img src="assets/images/food/04.png"
+											alt="food"></a>
 									</div>
 									<div class="food-content">
 										<a href="#">반찬</a>
@@ -274,7 +278,8 @@
 								<div class="food-item">
 									<div class="food-thumb"
 										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=빵&fd_category_big_name=아이스크림&fd_name=temp' ">
-										<a href="#"><img src="assets/images/food/05.png" alt="food"></a>
+										<a href="#"><img src="assets/images/food/05.png"
+											alt="food"></a>
 									</div>
 									<div class="food-content">
 										<a href="#">디저트</a>
@@ -285,7 +290,8 @@
 								<div class="food-item">
 									<div class="food-thumb"
 										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=샐러드&fd_name=temp' ">
-										<a href="#"><img src="assets/images/food/06.png" alt="food"></a>
+										<a href="#"><img src="assets/images/food/06.png"
+											alt="food"></a>
 									</div>
 									<div class="food-content">
 										<a href="#">샐러드</a>
@@ -296,7 +302,8 @@
 								<div class="food-item">
 									<div class="food-thumb"
 										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=구이&fd_name=temp' ">
-										<a href="#"><img src="assets/images/food/07.png" alt="food"></a>
+										<a href="#"><img src="assets/images/food/07.png"
+											alt="food"></a>
 									</div>
 									<div class="food-content">
 										<a href="#">구이</a>
@@ -307,7 +314,8 @@
 								<div class="food-item">
 									<div class="food-thumb"
 										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=찜&fd_name=temp' ">
-										<a href="#"><img src="assets/images/food/08.png" alt="food"></a>
+										<a href="#"><img src="assets/images/food/08.png"
+											alt="food"></a>
 									</div>
 									<div class="food-content">
 										<a href="#">찜류</a>
@@ -318,7 +326,8 @@
 								<div class="food-item">
 									<div class="food-thumb"
 										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=적&fd_name=temp' ">
-										<a href="#"><img src="assets/images/food/09.png" alt="food"></a>
+										<a href="#"><img src="assets/images/food/09.png"
+											alt="food"></a>
 									</div>
 									<div class="food-content">
 										<a href="#">부침류</a>
@@ -329,18 +338,20 @@
 								<div class="food-item">
 									<div class="food-thumb"
 										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=조림&fd_name=temp' ">
-										<a href="#"><img src="assets/images/food/10.png" alt="food"></a>
+										<a href="#"><img src="assets/images/food/10.png"
+											alt="food"></a>
 									</div>
 									<div class="food-content">
 										<a href="#">조림류</a>
 									</div>
 								</div>
 							</div>
- 							<div class="swiper-slide">
+							<div class="swiper-slide">
 								<div class="food-item">
 									<div class="food-thumb"
 										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=튀김&fd_name=temp' ">
-										<a href="#"><img src="assets/images/food/11.png" alt="food"></a>
+										<a href="#"><img src="assets/images/food/11.png"
+											alt="food"></a>
 									</div>
 									<div class="food-content">
 										<a href="#">튀김류</a>
