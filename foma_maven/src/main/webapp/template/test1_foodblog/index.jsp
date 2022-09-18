@@ -132,15 +132,13 @@
 								<div class="codexcoder-selectoption">
 									<select name="selectcode">
 										<option value="none">음식 검색</option>
-										<!-- <option value="lowsalt">저염식 검색</option>
+										<option value="lowsalt">저염식 검색</option>
 										<option value="lowcal">저칼로리 음식 검색</option>
-										<option value="locarhifat">저탄고지 음식 검색</option>
-										<option value="locarhifat">저당식 음식 검색</option> -->
-										<option value="hbp">고혈압 검색</option>
+										<!-- <option value="hbp">고혈압 검색</option>
 										<option value="diabe">당뇨 검색</option>
 										<option value="hyperlip">고지혈증 검색</option>
 										<option value="obesity">비만 검색</option>
-										<option value="myoinfar">심근경색 검색</option>
+										<option value="myoinfar">심근경색 검색</option> -->
 									</select>
 								</div>
 								<input type="text" name="fd_name"

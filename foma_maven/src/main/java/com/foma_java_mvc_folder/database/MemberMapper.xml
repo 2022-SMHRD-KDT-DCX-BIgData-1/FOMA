@@ -78,21 +78,21 @@
  
   </select>
   
-  <!-- <select id="selectFMemberlowsalt" parameterType="com.foma_java_mvc_folder.domain.FMember"  resultType = "com.foma_java_mvc_folder.domain.FMember">
-저염식 검색, 기준은 소금함량 300이하
+	<!-- 저염식 검색, 기준은 소금함량 300이하 -->
+  <select id="selectFMemberlowsalt" parameterType="com.foma_java_mvc_folder.domain.FMember"  resultType = "com.foma_java_mvc_folder.domain.FMember">
 
    <![CDATA[select * from fmember where fd_name like '%'||#{fd_name}||'%' and fd_ing_salt>-1 and fd_ing_salt<300  and rownum<6]]>
  
   </select>
   
+	<!-- 저칼로리 검색, 기준은 칼로리 300이하 -->
   <select id="selectFMemberlowcal" parameterType="com.foma_java_mvc_folder.domain.FMember"  resultType = "com.foma_java_mvc_folder.domain.FMember">
-저칼로리 검색, 기준은 칼로리 300이하
 
    <![CDATA[select * from fmember where fd_name like '%'||#{fd_name}||'%' and fd_ing_cal>-1 and fd_ing_cal<300  and rownum<6]]>
  
   </select>
  
-  <select id="selectFMemberlocarhifat" parameterType="com.foma_java_mvc_folder.domain.FMember"  resultType = "com.foma_java_mvc_folder.domain.FMember">
+  <!-- <select id="selectFMemberlocarhifat" parameterType="com.foma_java_mvc_folder.domain.FMember"  resultType = "com.foma_java_mvc_folder.domain.FMember">
 저탄고지  검색, 탄수화물 20이하   지방 40이상, 기준은 하루2000칼로리 기준 탄수화물 50,단백질100이하, 지방은 150이상
 https://freefrdi.com/how-much-fat-for-keto/ 
 데이터 부족으로 숫자적음 

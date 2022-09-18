@@ -55,6 +55,12 @@ public class SelectfdCon extends HttpServlet {
    if(selectcode.equals("none")||selectcode.equals("one")){//셀렉트코드값 일반검색 , 한개검색
       selectFMember = (ArrayList<FMember>) dao.selectFMember(fd);// selectlist로 뽑아온 결과를 형변환 시켜준다.
       System.out.println("일반검색 쿼리보내기");
+   }else if(selectcode.equals("lowsalt")){//저염식 검색
+		selectFMember = (ArrayList<FMember>) dao.selectFMemberlowsalt(fd);	
+		System.out.println("저염식 쿼리보내기");
+   }else if(selectcode.equals("lowcal")) {//저칼로리
+		selectFMember = (ArrayList<FMember>) dao.selectFMemberlowcal(fd);// selectlist로 뽑아온 결과를 형변환 시켜준다.
+		System.out.println("저칼로리식 쿼리보내기");
    }else if(selectcode.equals("hbp")) { //고혈압
        selectFMember = (ArrayList<FMember>) dao.selectFMemberhbp(fd);// selectlist로 뽑아온 결과를 형변환 시켜준다.
        System.out.println("고혈압 쿼리보내기");   
