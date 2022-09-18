@@ -101,7 +101,6 @@
             </div>
         </nav>
     </div><!-- Mobile Menu Ending Here -->
-    <!-- header section start -->
     <header class="header-section d-xl-block d-none">
 		<div class="container-fluid">
 			<div class="header-area">
@@ -141,7 +140,7 @@
 		</div>
 		</div>
 	</header>
-    <!-- header section ending -->
+	<!-- header section ending -->
     <!-- Page Header Section Start Here -->
    <!-- Page Header Section Ending Here -->
     <!-- Popular Home Chef Section Start Here -->

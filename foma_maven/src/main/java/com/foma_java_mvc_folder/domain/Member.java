@@ -34,14 +34,14 @@ public class Member {
 	private String userliverdis;
 	private String useroste;
 	private String userarthritis;
-	private String userstocan;
+	private String usermyoinfar;//심근경색
 	
 
 	//생성자 추가(지병9가지)
 	public Member(String username, String userpw, String useremail, double userage, double userheight,
 			double userweight, String userdiabetes, String userhbp, double userbmi, String userhyperlip,
 			String userobesity, String userheartdis, String userstroke, String userpuldis, String userliverdis,
-			String useroste, String userarthritis, String userstocan) {
+			String useroste, String userarthritis, String usermyoinfar) {
 		super();
 		this.username = username;
 		this.userpw = userpw;
@@ -60,7 +60,7 @@ public class Member {
 		this.userliverdis = userliverdis;
 		this.useroste = useroste;
 		this.userarthritis = userarthritis;
-		this.userstocan = userstocan;
+		this.usermyoinfar = usermyoinfar;
 	}
 
 
@@ -85,6 +85,7 @@ public class Member {
 		this.username = username;
 		this.userpw = userpw;
 	}
+
 
 	public String getUsername() {
 		return username;
@@ -212,13 +213,12 @@ public class Member {
 		this.userarthritis = userarthritis;
 	}
 
-	public String getUserstocan() {
-		return userstocan;
+	public String getUsermyoinfar() {
+		return usermyoinfar;
 	}
 
-	public void setUserstocan(String userstocan) {
-		this.userstocan = userstocan;
+	public void setUsermyoinfar(String usermyoinfar) {
+		this.usermyoinfar = usermyoinfar;
 	}
 	
-
 }
