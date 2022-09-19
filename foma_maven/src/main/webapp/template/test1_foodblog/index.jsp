@@ -92,7 +92,7 @@
 						<li><a href="">추천식단</a>
 							<ul>
 								<li><a href="recommendation2.jsp">지병에 따른 추천</a></li>
-								<li><a href="recommendation1.html">음식 분류별 추천</a></li>
+								<li><a href="recommendation1.jsp">음식 분류별 추천</a></li>
 							</ul></li>
 
 						<li><a href="SNS.jsp">SNS</a>
@@ -134,16 +134,10 @@
 										<option value="none">음식 검색</option>
 										<option value="lowsalt">저염식 검색</option>
 										<option value="lowcal">저칼로리 음식 검색</option>
-										<!-- <option value="hbp">고혈압 검색</option>
-										<option value="diabe">당뇨 검색</option>
-										<option value="hyperlip">고지혈증 검색</option>
-										<option value="obesity">비만 검색</option>
-										<option value="myoinfar">심근경색 검색</option> -->
 									</select>
 								</div>
-								<input type="text" name="fd_name"
-									placeholder="Enter your food name">
-								<button type="submit">
+								<input type="text" name="fd_name" placeholder="Enter your food name">
+								<!-- <a href="recommendation1.jsp"></a> --><button type="submit">
 									<i class="icofont-search-2"></i>
 								</button>
 								<br>
@@ -177,7 +171,7 @@
 							<%
 							}
 							%>
-							<a href = "recommendation1.html"><button>더보기</button></a>
+							<a href = "recommendation1.jsp"><button>더보기</button></a>
 							<%
 							} else {
 							%>

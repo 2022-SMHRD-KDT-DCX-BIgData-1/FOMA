@@ -61,7 +61,7 @@
 						<li><a href="">추천식단</a>
 							<ul>
 								<li><a href="recommendation2.jsp">지병에 따른 추천</a></li>
-								<li><a href="recommendation1.html">음식 분류별 추천</a></li>
+								<li><a href="recommendation1.jsp">음식 분류별 추천</a></li>
 							</ul></li>
 
 						<li><a href="SNS.jsp">SNS</a>
@@ -98,7 +98,7 @@
 					<div class="col-xl-8 col-12">
 						<div class="banner-content">
 
-							<form action="/foma_maven2/SelectfdCon2" method="post">
+							<form action="/foma_maven/SelectfdCon2" method="post">
 								<div class="codexcoder-selectoption">
 									<select name="selectcode">
 										<option value="hbp">고혈압 검색 </option>
@@ -108,8 +108,7 @@
 										<option value="myoinfar">심근경색 검색</option>
 									</select>
 								</div>
-								<input type="text" name="fd_name"
-									placeholder="Enter your food name">
+								<input type="text" name="fd_name" placeholder="검색하고 싶은 지병을 선택하고 검색해주세요!">
 								<button type="submit">
 									<i class="icofont-search-2"></i>
 								</button><br>
@@ -124,7 +123,7 @@
 							%>
 							<%-- <a href = "shop-single.jsp"> <%=	f.getFd_name()%></a>
 								 --%>
-							<form class="reselt" action="/foma_maven2/SelectfdCon2" method="post">
+							<form class="reselt" action="/foma_maven/SelectfdCon2" method="post">
 								<%
 								String str = fd.getFd_name();
 								%>
@@ -144,7 +143,6 @@
 							<%
 							} else {
 							%>
-							<span>고혈압 당뇨 고지혈증 비만 심근경색 음식 추천</span>
 							<%
 							}
 							%>
