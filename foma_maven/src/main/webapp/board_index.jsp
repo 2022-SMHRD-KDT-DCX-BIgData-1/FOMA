@@ -7,8 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 <%
 response.sendRedirect("BoardServlet?command=board_list");
 %>
+
+
 </body>
 </html>

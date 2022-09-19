@@ -1,3 +1,4 @@
+<%@page import="com.foma_java_mvc_folder.domain.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
 
 <%-- <% 
@@ -14,6 +15,8 @@
 	String email = (String)session.getAttribute("email");
 
 %> --%>
+
+<% Member login = (Member)session.getAttribute("loginMember"); %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 
@@ -53,6 +56,7 @@
         <link rel="stylesheet" href="assets/css/lightcase.css"><!-- swiper css -->
         <link rel="stylesheet" href="assets/css/swiper.min.css"><!-- custom scss -->
         <link rel="stylesheet" href="assets/css/style.css">
+      
         <title>마이 페이지</title>
     </head>
 <body>
@@ -204,17 +208,62 @@
 							<div class="form-check">
 								<strong>✔️지병</strong><br>
 								현재 지병 상태(성인병)를 체크해주세요<br>
+								
 								<span>현재 고혈압 상태 : ${loginMember.userhbp}</span><br>
 								<span>현재 당뇨 상태 : ${loginMember.userdiabetes}</span><br>
-								<span>현재 고지혈증 상태 : ${loginMember.userhyperlip}</span><br>
-								<span>현재 비만 상태 : ${loginMember.userobesity}</span><br>
-								<span>현재 심장병 상태 : ${loginMember.userheartdis}</span><br>
-								<span>현재 뇌졸중 상태 : ${loginMember.userstroke}</span><br>
-								<span>현재 폐질환 상태 : ${loginMember.userpuldis}</span><br>
-								<span>현재 간질환 상태 : ${loginMember.userliverdis}</span><br>
-								<span>현재 골다공증 상태 : ${loginMember.useroste}</span><br>
-								<span>현재 관절염 상태 : ${loginMember.userarthritis}</span><br>
-								<span>현재 심근경색 상태 : ${loginMember.usermyoinfar}</span><br>
+								<%if(login.getUserhyperlip() != null) {%>
+									<span>현재 고지혈증 상태 : ${loginMember.userhyperlip}</span><br>
+								<% } else if(login.getUserhyperlip() == null){%>
+									<span></span>
+								<% }%> 
+								<%if(login.getUserobesity()!= null) {%>
+									<span>현재 비만 상태 : ${loginMember.userobesity}</span><br>
+								<% } else if(login.getUserobesity() == null){%>
+									<span></span>
+								<% }%>
+								<%if(login.getUserheartdis()!= null) {%>
+									<span>현재 심장병 상태 : ${loginMember.userheartdis}</span><br>
+								<% } else if(login.getUserheartdis() == null){%>
+									<span></span>
+								<% }%> 
+								<%if(login.getUserstroke()!= null) {%>
+									<span>현재 뇌졸중 상태 : ${loginMember.userstroke}</span><br>
+								<% } else if(login.getUserstroke() == null){%>
+									<span></span>
+								<% }%> 
+								<%if(login.getUserpuldis()!= null) {%>
+									<span>현재 폐질환 상태 : ${loginMember.userpuldis}</span><br>
+								<% } else if(login.getUserpuldis() == null){%>
+									<span></span>
+								<% }%> 
+								<%if(login.getUserliverdis()!= null) {%>
+									<span>현재 간질환 상태 : ${loginMember.userliverdis}</span><br>
+								<% } else if(login.getUserliverdis() == null){%>
+									<span></span>
+								<% }%> 
+								<%if(login.getUserosteo()!= null) {%>
+										<span>현재 골다공증 상태 : ${loginMember.userosteo}</span><br>
+								<% } else if(login.getUserosteo() == null){%>
+									<span></span>
+								<% }%> 
+								<%if(login.getUserarthritis()!= null) {%>
+									<span>현재 관절염 상태 : ${loginMember.userarthritis}</span><br>
+								<% } else if(login.getUserarthritis() == null){%>
+									<span></span>
+								<% }%> 
+								<%if(login.getUsermyoinfar()!= null) {%>
+									<span>현재 심근경색 상태 : ${loginMember.usermyoinfar}</span><br>
+								<% } else if(login.getUsermyoinfar() == null){%>
+									<span></span>
+								<% }%> 
+								
+		
+							
+								
+							
+								
+								
+								
 								<hr>
 								<label class="form-check-label" for="flexCheckDefault">
 							           고혈압 <input type="checkbox" name="userhbp" value="1">  
@@ -254,34 +303,8 @@
 
 							</div><br>
 							
-								<!-- <label class="form-check-label" for="flexCheckDefault">
-									현재 동맥경화 상태 : <input type="checkbox" name="">
-								</label> <label class="form-check-label" for="flexCheckDefault">
-									현재 심장병 상태 : <input type="checkbox" name="">
-								</label> <label class="form-check-label" for="flexCheckDefault">
-									현재 뇌졸중 상태 : <input type="checkbox" name="">
-								</label> <label class="form-check-label" for="flexCheckDefault">
-									현재 만성폐질환 상태 : <input type="checkbox" name="">
-								</label> -->
-
 							
-							<!-- <div class="form-check">
-
-								<label class="form-check-label" for="flexCheckDefault">
-									현재 간질환 상태 : <input type="checkbox" name="">
-								</label> <label class="form-check-label" for="flexCheckDefault">
-									현재 골다공증 상태 : <input type="checkbox" name="">
-								</label> <label class="form-check-label" for="flexCheckDefault">
-									현재 류마티스성 관절염(성인병) 상태 : <input type="checkbox" name="">
-								</label>
-								<hr>
-								<label> 질병에 해당되지 않으면 체크하지 않고 변경을 눌러주세요! </label>
-
-							</div> -->
-	
-							<!-- <button class="submit"
-								style="background-color: #F1F2F3; border: none; padding: 15px; width: 100px;" onclick="location.href='index.jsp'">변경</button> -->
-							<input type="submit" style="background-color: #F1F2F3; border: none; padding: 15px; width: 100px;" value="변경">
+							<input type="submit" style="background-color: #F1F2F3; border: none; padding: 15px; width: 100px;" value="변경" id = "clicka">
 							<input type="button" style="background-color: #F1F2F3; border: none; padding: 15px; width: 100px;" value="취소" onclick="location.href='index.jsp'">
 							
 						</form>
@@ -305,7 +328,14 @@
 		</div>
 	</footer>
 
+<script>
 
+document.getElementById('clicka').addEventListener('click',function(){
+    document.querySelector('.form-check').classList.remove('hide')
+  })
+
+
+</script>
 
 
 
