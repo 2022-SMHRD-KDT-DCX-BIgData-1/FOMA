@@ -47,7 +47,7 @@ public class JoinCon extends HttpServlet {
 		String userstroke = null; //뇌졸중
 		String userpuldis = null; //폐질환
 		String userliverdis = null; //간질환
-		String useroste = null; //골다공증
+		String userosteo = null; //골다공증
 		String userarthritis = null; //관절염
 		String usermyoinfar = null; //심근경색
 		
@@ -55,7 +55,7 @@ public class JoinCon extends HttpServlet {
 		
 		//2수집된 데이터를  객체에 담기(지병 9가지 추가!)
 		Member vo = new Member(username, userpw, useremail, userage, userheight, userweight, userdiabetes, userhbp,userbmi,
-					userhyperlip,userobesity,userheartdis,userstroke,userpuldis,userliverdis,useroste,userarthritis,usermyoinfar);
+					userhyperlip,userobesity,userheartdis,userstroke,userpuldis,userliverdis,userosteo,userarthritis,usermyoinfar);
 
 		
 		

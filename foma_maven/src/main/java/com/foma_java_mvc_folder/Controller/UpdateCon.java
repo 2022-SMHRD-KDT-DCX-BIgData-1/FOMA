@@ -74,9 +74,9 @@ public class UpdateCon extends HttpServlet {
 		if( request.getParameter("userliverdis")!=null) {
 			userliverdis = "간질환";	
 			}
-		String useroste ="정상"; //골다공증
-		if( request.getParameter("useroste")!=null) {
-			useroste = "골다공증";	
+		String userosteo ="정상"; //골다공증
+		if( request.getParameter("userosteo")!=null) {
+			userosteo = "골다공증";	
 			}
 		String userarthritis ="정상"; //관절염
 		if( request.getParameter("userarthritis")!=null) {
@@ -94,7 +94,7 @@ public class UpdateCon extends HttpServlet {
 		
 		//2수집된 데이터를 Member 객체에 담기
 		Member vo = new Member(username, userpw, useremail, userage, userheight, userweight, userdiabetes, userhbp,userbmi,
-				userhyperlip,userobesity,userheartdis,userstroke,userpuldis,userliverdis,useroste,userarthritis,usermyoinfar);
+				userhyperlip,userobesity,userheartdis,userstroke,userpuldis,userliverdis,userosteo,userarthritis,usermyoinfar);
 		//3. MemㅠerMapper.sml에서 sql문 만들고 오기
 		
 		//4. MemberDAO에 메소드 만들고 오기

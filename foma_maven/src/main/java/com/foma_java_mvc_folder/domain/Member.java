@@ -32,16 +32,16 @@ public class Member {
 	private String userstroke;
 	private String userpuldis;
 	private String userliverdis;
-	private String useroste;
+	private String userosteo;
 	private String userarthritis;
-	private String usermyoinfar;//심근경색
+	private String usermyoinfar; //심근경색
 	
 
 	//생성자 추가(지병9가지)
 	public Member(String username, String userpw, String useremail, double userage, double userheight,
 			double userweight, String userdiabetes, String userhbp, double userbmi, String userhyperlip,
 			String userobesity, String userheartdis, String userstroke, String userpuldis, String userliverdis,
-			String useroste, String userarthritis, String usermyoinfar) {
+			String userosteo, String userarthritis, String usermyoinfar) {
 		super();
 		this.username = username;
 		this.userpw = userpw;
@@ -58,7 +58,7 @@ public class Member {
 		this.userstroke = userstroke;
 		this.userpuldis = userpuldis;
 		this.userliverdis = userliverdis;
-		this.useroste = useroste;
+		this.userosteo = userosteo;
 		this.userarthritis = userarthritis;
 		this.usermyoinfar = usermyoinfar;
 	}
@@ -197,12 +197,12 @@ public class Member {
 		this.userliverdis = userliverdis;
 	}
 
-	public String getUseroste() {
-		return useroste;
+	public String getUserosteo() {
+		return userosteo;
 	}
 
-	public void setUseroste(String useroste) {
-		this.useroste = useroste;
+	public void setUserosteo(String userosteo) {
+		this.userosteo = userosteo;
 	}
 
 	public String getUserarthritis() {
@@ -220,5 +220,6 @@ public class Member {
 	public void setUsermyoinfar(String usermyoinfar) {
 		this.usermyoinfar = usermyoinfar;
 	}
-	
+
+
 }
