@@ -41,6 +41,15 @@
 				<td colspan="3"><pre><%=bd.get(0).getContent() %></pre></td>
 			</tr>
 		</table>
+		<br>
+		<table>
+			<tr action="">
+				<td>아이디</td>
+				<td>내용<input name="comment"></td>
+				<td>작성 시간</td>
+				<td><button>작성</button></td>
+			</tr>
+		</table>
 		<br> <br> <input type="button" value="게시글 수정"
 			onclick="open_win('BoardServlet?command=board_check_pass_form&num=<%bd.get(0).getNum();%>', 'update')">
 		<input type="button" value="게시글 삭제"
