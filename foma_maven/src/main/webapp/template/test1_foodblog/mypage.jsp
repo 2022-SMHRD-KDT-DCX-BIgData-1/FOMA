@@ -58,6 +58,7 @@
 <link rel="stylesheet" href="assets/css/swiper.min.css">
 <!-- custom scss -->
 <link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style2.css">
 <title>마이 페이지</title>
 </head>
 

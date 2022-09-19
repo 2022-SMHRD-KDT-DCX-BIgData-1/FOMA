@@ -1,5 +1,6 @@
 <%@page import="java.util.List"%>
 <%@page import="com.foma_java_mvc_folder.domain.FMember"%>
+<%@page import="com.foma_java_mvc_folder.Controller.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -34,7 +35,9 @@
 	<!--음식정보 출력 멤버 선언 -->
 	<%
 	ArrayList<FMember> f = (ArrayList<FMember>) session.getAttribute("selectFMember");
+	fd_select_web fdweb = new fd_select_web();
 	%>
+	
 	<!-- preloader -->
 	<div class="preloader">
 		<div class="load loade">
@@ -183,7 +186,11 @@
 												<div class="swiper-slide">
 													<div class="shop-item">
 														<div class="shop-thumb">
+															<!-- 
 															<img src="assets/images/popular-food/01.jpg"
+															 -->
+															 <img src="<%= fdweb.fdselectweb(f.get(0).getFd_name()) %>"
+																
 																alt="shop-single">
 														</div>
 													</div>

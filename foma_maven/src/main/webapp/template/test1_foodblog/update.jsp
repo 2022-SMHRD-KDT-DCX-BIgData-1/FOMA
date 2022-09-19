@@ -56,7 +56,7 @@
         <link rel="stylesheet" href="assets/css/lightcase.css"><!-- swiper css -->
         <link rel="stylesheet" href="assets/css/swiper.min.css"><!-- custom scss -->
         <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/style2.css">
+      
         <title>마이 페이지</title>
     </head>
 <body>
@@ -212,9 +212,9 @@
 								<span>현재 고혈압 상태 : ${loginMember.userhbp}</span><br>
 								<span>현재 당뇨 상태 : ${loginMember.userdiabetes}</span><br>
 								<span>현재 고지혈증 상태 : ${loginMember.userhyperlip}</span><br>
-								<!-- <%if(login.getUserbmi() != null) {%>
+								
 								<span>현재 비만 상태 : ${loginMember.userobesity}</span><br>
-								<%}%> -->
+							
 								
 								<span>현재 심장병 상태 : ${loginMember.userheartdis}</span><br>
 								<span>현재 뇌졸중 상태 : ${loginMember.userstroke}</span><br>

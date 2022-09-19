@@ -41,6 +41,7 @@
 				<td colspan="3"><pre><%=bd.get(0).getContent() %></pre></td>
 			</tr>
 		</table>
+
 		
 		
 		
@@ -54,7 +55,7 @@
 		</table>
 	
 		
-	
+
 		<br> <br> <input type="button" value="게시글 수정"
 			onclick="open_win('BoardServlet?command=board_check_pass_form&num=<%bd.get(0).getNum();%>', 'update')">
 		<input type="button" value="게시글 삭제"
