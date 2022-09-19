@@ -437,11 +437,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
-
-
-	<footer class="footer">
+		<footer class="footer">
 		<div class="bg-shape-style"></div>
 		<div class="container">
 			<div class="footer-bottom text-center">
@@ -452,6 +448,11 @@
 			</div>
 		</div>
 	</footer>
+	</div>
+
+
+
+	
 
 
 
