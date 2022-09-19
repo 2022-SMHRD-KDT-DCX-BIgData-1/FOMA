@@ -177,7 +177,7 @@
 							<%
 							}
 							%>
-							<a><button>더보기</button></a>
+							<a href = "recommendation1.html"><button>더보기</button></a>
 							<%
 							} else {
 							%>
@@ -452,6 +452,7 @@
 			</div>
 		</div>
 	</footer>
+
 
 
 	<!-- Food Catagory Section Start here -->

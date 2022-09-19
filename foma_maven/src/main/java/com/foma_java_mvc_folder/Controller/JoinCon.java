@@ -41,15 +41,15 @@ public class JoinCon extends HttpServlet {
 		
 		double userbmi= userweight/((userheight/100)*(userheight/100));
 		//지병 9가지 추가: 회원정보 수정에 담아질 것(회원가입x)
-		String userhyperlip = null; //고지혈증
-		String userobesity = null; //비만
-		String userheartdis = null; //심장병
-		String userstroke = null; //뇌졸중
-		String userpuldis = null; //폐질환
-		String userliverdis = null; //간질환
-		String userosteo = null; //골다공증
-		String userarthritis = null; //관절염
-		String usermyoinfar = null; //심근경색
+		String userhyperlip = ""; //고지혈증
+		String userobesity = ""; //비만
+		String userheartdis = ""; //심장병
+		String userstroke = ""; //뇌졸중
+		String userpuldis = ""; //폐질환
+		String userliverdis = ""; //간질환
+		String userosteo = ""; //골다공증
+		String userarthritis = ""; //관절염
+		String usermyoinfar = ""; //심근경색
 		
 		
 		

@@ -50,7 +50,7 @@ public class UpdateCon extends HttpServlet {
 				}
 		double userbmi= userweight/((userheight/100)*(userheight/100));
 		
-		String userhyperlip ="정상"; //고지혈증
+		String userhyperlip = null; //고지혈증
 		if( request.getParameter("userhyperlip")!=null) {
 			userhyperlip = "고지혈증";	
 			}

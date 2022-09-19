@@ -208,12 +208,33 @@
 							<div class="form-check">
 								<strong>✔️지병</strong><br>
 								현재 지병 상태(성인병)를 체크해주세요<br>
-								<!-- 반복문 1.  -->
+								
 								<span>현재 고혈압 상태 : ${loginMember.userhbp}</span><br>
 								<span>현재 당뇨 상태 : ${loginMember.userdiabetes}</span><br>
-								<span>현재 고지혈증 상태 : ${loginMember.userhyperlip}</span><br>
+								<%if(login.getUserhyperlip() != null) {%>
+									<span>현재 고지혈증 상태 : ${loginMember.userhyperlip}</span><br>
+								<% } %>
+								<%if(login.getUserhyperlip() != null) {%>
+									<span>현재 고지혈증 상태 : ${loginMember.userhyperlip}</span><br>
+								<% } %>
+								<%if(login.getUserhyperlip() != null) {%>
+									<span>현재 고지혈증 상태 : ${loginMember.userhyperlip}</span><br>
+								<% } %>
+								<%if(login.getUserhyperlip() != null) {%>
+									<span>현재 고지혈증 상태 : ${loginMember.userhyperlip}</span><br>
+								<% } %>
+								<%if(login.getUserhyperlip() != null) {%>
+									<span>현재 고지혈증 상태 : ${loginMember.userhyperlip}</span><br>
+								<% } %>
+								<%if(login.getUserhyperlip() != null) {%>
+									<span>현재 고지혈증 상태 : ${loginMember.userhyperlip}</span><br>
+								<% } %>
 								
-								<span>현재 비만 상태 : ${loginMember.userobesity}</span><br>
+								
+								
+								
+								
+								<!-- <span>현재 비만 상태 : ${loginMember.userobesity}</span><br>
 							
 								
 								<span>현재 심장병 상태 : ${loginMember.userheartdis}</span><br>
@@ -221,7 +242,10 @@
 								<span>현재 폐질환 상태 : ${loginMember.userpuldis}</span><br>
 								<span>현재 간질환 상태 : ${loginMember.userliverdis}</span><br>
 								<span>현재 골다공증 상태 : ${loginMember.userosteo}</span><br>
-								<span>현재 관절염 상태 : ${loginMember.userarthritis}</span><br>
+								<span>현재 관절염 상태 : ${loginMember.userarthritis}</span><br> 
+								
+								-->
+								
 								
 								
 								<hr>
