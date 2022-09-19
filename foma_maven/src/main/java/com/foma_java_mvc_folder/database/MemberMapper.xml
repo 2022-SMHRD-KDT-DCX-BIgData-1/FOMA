@@ -35,7 +35,7 @@
      <!--   유저 데이터 관련 쿼리 명령문들  -->
     
     <insert id="insertMember" parameterType="com.foma_java_mvc_folder.domain.Member">
-  insert into Member values (#{username},#{userpw},#{useremail},#{userage},#{userheight},#{userweight},#{userdiabetes},#{userhbp},#{userbmi})
+  insert into Member values (#{username},#{userpw},#{useremail},#{userage},#{userheight},#{userweight},#{userdiabetes},#{userhbp},#{userbmi},#{userhyperlip},#{userobesity},#{userheartdis},#{userstroke},#{userpuldis},#{userliverdis},#{userosteo},#{userarthritis},#{usermyoinfar})
   
   </insert>
   <select id="selectMember" parameterType="com.foma_java_mvc_folder.domain.Member"  resultType = "com.foma_java_mvc_folder.domain.Member">
@@ -59,8 +59,8 @@
   
    <update id="updateMember" parameterType="com.foma_java_mvc_folder.domain.Member"   >
   update member set userpw=#{userpw},useremail=#{useremail}, userage=#{userage},userheight=#{userheight},userweight=#{userweight},userdiabetes=#{userdiabetes},userhbp=#{userhbp},userbmi=#{userbmi},
-  userhyperlip=#{userhyperlip},userobesity=#{userobesity},userheartdis=#{userheartdis},userstroke=#{userstroke},userpuldis=#{userpuldis},userliverdis=#{userliverdis}
-  
+  userhyperlip=#{userhyperlip},userobesity=#{userobesity},userheartdis=#{userheartdis},userstroke=#{userstroke},userpuldis=#{userpuldis},userliverdis=#{userliverdis},userosteo=#{userosteo},
+  userarthritis=#{userarthritis},usermyoinfar=#{usermyoinfar}
   
   where username=#{username}
 
