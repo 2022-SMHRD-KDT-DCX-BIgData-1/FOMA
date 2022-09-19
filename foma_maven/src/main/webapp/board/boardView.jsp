@@ -4,6 +4,8 @@
 	pageEncoding="UTF-8"%>
 <%@page import="java.util.List"%>			
 <%@page import="com.saeyan.dto.BoardVO"%>	
+<%@page import="com.foma_java_mvc_folder.domain.Member"%>	
+<%@page import="com.saeyan.dto.SubBoardVO"%>	
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -15,7 +17,12 @@
 <script type="text/javascript" src="script/board.js"></script>
 </head>
 <body>
-<%  List<BoardVO> bd = (List<BoardVO>)session.getAttribute("selectOneBoardByNum");%>
+<%  List<BoardVO> bd = (List<BoardVO>)session.getAttribute("selectOneBoardByNum");
+List<SubBoardVO> sbd = (List<SubBoardVO>)session.getAttribute("selectAllSubBoards");
+//Member loginmember = (Member)session.getAttribute("loginmember");
+
+%>
+
 
 	<div id="wrap" align="center">
 		<h1>게시글 상세보기</h1>
@@ -42,14 +49,39 @@
 			</tr>
 		</table>
 		<br>
+		
+		<form name="frm" method="post" action="SubBoardServlet">
+			<input type="hidden" name="num" value="<%=bd.get(0).getNum() %>">
 		<table>
+	
+		<%if(sbd!=null) { for(SubBoardVO s: sbd){%>
+			
+		<tr action="">
+				<td><%=s.getName() %></td>
+				<td><%=s.getContent() %>
+				<td><%=s.getWritedate() %></td>
+				<td><button>삭제</button></td>
+			</tr>
+		
+		<% }
+		}%>
+	
+<br>
+
 			<tr action="">
-				<td>아이디</td>
-				<td>내용<input name="comment"></td>
-				<td>작성 시간</td>
+				<td>아이디를 입력하세요<input name="name"></td>
+				<td>댓글을 입력하세요 :<input name="content"></td>
+				<td></td>
 				<td><button>작성</button></td>
 			</tr>
 		</table>
+		
+	<input type="submit" value="등록">
+	
+	</form>
+		
+		
+		
 		<br> <br> <input type="button" value="게시글 수정"
 			onclick="open_win('BoardServlet?command=board_check_pass_form&num=<%bd.get(0).getNum();%>', 'update')">
 		<input type="button" value="게시글 삭제"

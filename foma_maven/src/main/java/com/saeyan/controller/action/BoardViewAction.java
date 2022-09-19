@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 
 import com.saeyan.dao.BoardDAO;
 import com.saeyan.dto.BoardVO;
+import com.saeyan.dto.SubBoardVO;
 
 public class BoardViewAction implements Action {
 
@@ -26,10 +27,15 @@ public class BoardViewAction implements Action {
 	//	BoardVO bVo = bDao.selectOneBoardByNum(num);
 		
 List<BoardVO> selectOneBoardByNum = bDao.selectOneBoardByNum(num);
+
+
+List<SubBoardVO> selectAllSubBoards = bDao.selectAllSubBoards(num);//리플
 		
         HttpSession session = request.getSession();
+        
         session.setAttribute("selectOneBoardByNum", selectOneBoardByNum);
-		
+        session.setAttribute("selectAllSubBoards", selectAllSubBoards);
+        
 		//request.setAttribute("board", bVo);
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);

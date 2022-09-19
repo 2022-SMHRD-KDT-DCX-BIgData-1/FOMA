@@ -184,6 +184,19 @@ select * from board where num = #{num}
   
   </update>
  
+ <!--리플 검색 -->
+  <select id="selectAllSubBoards" parameterType="com.saeyan.dto.SubBoardVO" resultType = "com.saeyan.dto.SubBoardVO">
+
+select * from subboard where num = #{num}
+ 
+  </select>
+  <!-- 리플 등록 -->
+  
+  <insert id="insertSubBoard" parameterType="com.saeyan.dto.SubBoardVO">
+
+  insert into subboard(num, name, content ,writedate) values(#{num}, #{name}, #{content}, #{writedate})
+ 
+  </insert> 
   
 
 </mapper>

@@ -52,7 +52,7 @@
 					<td><%=bv.getWritedate() %>></td>
 				
 					<td><%=bv.getReadcount() %></td>
-					<td><%= %></td>
+					<td></td>
 				</tr>
 				<% }%><%} %>
 		

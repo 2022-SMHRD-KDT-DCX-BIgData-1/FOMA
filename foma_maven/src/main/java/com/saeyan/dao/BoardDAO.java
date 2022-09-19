@@ -10,6 +10,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import org.apache.catalina.Session;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -19,6 +20,7 @@ import com.foma_java_mvc_folder.database.SqlSessionManager;
 import com.foma_java_mvc_folder.domain.Member;
 import com.foma_java_mvc_folder.domain.MemberDAO;
 import com.saeyan.dto.BoardVO;
+import com.saeyan.dto.SubBoardVO;
 
 public class BoardDAO {
 	
@@ -58,6 +60,35 @@ public class BoardDAO {
 	
 		      return list;
 		   }
+	
+	public List<SubBoardVO> selectAllSubBoards(String num2) {  //리플 글 검색
+		//String sql = "select * from board order by num desc";
+		List<SubBoardVO> list = new ArrayList<SubBoardVO>();
+
+
+		   SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
+		   SqlSession sqlSession = sqlSessionFactory.openSession();
+		   
+		  int num=Integer.parseInt(num2);
+		  try {//검색결과를 리스트로 받아온다
+			  list = sqlSession.selectList("selectAllSubBoards",num);
+			System.out.println(list);
+			  if (list != null && !list.isEmpty()) { //빈배열 체크
+				  System.out.println("가져온 리플번호 :"+num+" 작성자 : "+list.get(0).getName() +"컨텐츠 : "+list.get(0).getContent());
+					sqlSession.commit();
+
+				 } else {
+					sqlSession.rollback();
+				 }
+			  } finally {
+				 sqlSession.close();
+			  }
+
+		 
+			  return list;
+		   }
+	
+	
 
 	public void insertBoard(BoardVO bVo) { // 게시판 작성
 //		String sql = "insert into board("
@@ -184,7 +215,8 @@ public class BoardDAO {
 				sqlSession.close();
 			}
 		}
-		
+
+
 		
 		
 /*  원본소스들
