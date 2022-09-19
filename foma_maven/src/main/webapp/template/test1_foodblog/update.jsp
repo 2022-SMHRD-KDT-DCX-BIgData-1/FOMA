@@ -150,6 +150,7 @@
 						<form action="../../UpdateCon" method="post">
 
 							<table style="border: none;">
+							
 								<tr>
 									<!-- 첫번째 줄 시작 -->
 									<td style="width: 150px; height: 50px; text-align: center;">접속한
@@ -159,17 +160,18 @@
 								<!-- 첫번째 줄 끝 -->
 								<!-- 비밀번호 변경이 추가가 안되어있음 그래서 추가함 -->
 								<tr>
-									<!-- 첫번째 줄 시작 -->
+									<!-- 두번째 줄 시작 -->
 									<td style="width: 150px; height: 50px; text-align: center;">비밀번호</td>
-									<td><input type="password" name="userpw" class="input-field" 
-										value="${loginMember.userpw }" placeholder="비밀번호를 입력하세요" required></td>
+									<td><input type="password" maxlength="30" name="userpw"
+										class="input-field" value="${loginMember.userpw }"
+										placeholder="비밀번호를 입력하세요" required></td>
 								</tr>
 								<tr>
 									<!-- 두번째 줄 시작 -->
 									<td style="width: 150px; height: 50px; text-align: center;">이메일</td>
 									<td><input type="email" maxlength="30" name="useremail"
 										class="input-field" value="${loginMember.useremail }"
-										placeholder="이메일을 입력하세요" required></td>
+										placeholder="이메일를 입력하세요" required></td>
 								</tr>
 								<!-- 두번째 줄 끝 -->
 								<tr>
@@ -204,38 +206,48 @@
 								현재 지병 상태(성인병)를 체크해주세요<br>
 								<span>현재 고혈압 상태 : ${loginMember.userhbp}</span><br>
 								<span>현재 당뇨 상태 : ${loginMember.userdiabetes}</span><br>
+								<span>현재 고지혈증 상태 : ${loginMember.userhyperlip}</span><br>
+								<span>현재 비만 상태 : ${loginMember.userobesity}</span><br>
+								<span>현재 심장병 상태 : ${loginMember.userheartdis}</span><br>
+								<span>현재 뇌졸중 상태 : ${loginMember.userstroke}</span><br>
+								<span>현재 폐질환 상태 : ${loginMember.userpuldis}</span><br>
+								<span>현재 간질환 상태 : ${loginMember.userliverdis}</span><br>
+								<span>현재 골다공증 상태 : ${loginMember.useroste}</span><br>
+								<span>현재 관절염 상태 : ${loginMember.userarthritis}</span><br>
+								<span>현재 심근경색 상태 : ${loginMember.usermyoinfar}</span><br>
+								<hr>
 								<label class="form-check-label" for="flexCheckDefault">
-							           고혈압 <input type="checkbox" name="ill" value="1">  
+							           고혈압 <input type="checkbox" name="userhbp" value="1">  
 							    </label>
 								<label class="form-check-label" for="flexCheckDefault">
-							            당뇨 <input type="checkbox" name="ill" value="2">  
+							            당뇨 <input type="checkbox" name="userdiabetes" value="2">  
 							    </label><br>
 								<label class="form-check-label" for="flexCheckDefault">
-										고지혈증 ${loginMember.userhyperlip} <input type="checkbox" name="ill" value="3">  
+										고지혈증 <input type="checkbox" name="userhyperlip" value="3">  
 								</label> 
 								<label class="form-check-label" for="flexCheckDefault">
-										비만 ${loginMember.userobesity} <input type="checkbox" name="ill" value="4"> 
+										비만 <input type="checkbox" name="userobesity" value="4"> 
 								</label>
 								<label class="form-check-label" for="flexCheckDefault">
-										심장병 ${loginMember.userheartdis} <input type="checkbox" name="ill" value="5">  
+										심장병 <input type="checkbox" name="userheartdis" value="5">  
 								</label>
 								<label class="form-check-label" for="flexCheckDefault">
-										뇌졸중 ${loginMember.userstroke} <input type="checkbox" name="ill" value="6">  
+										뇌졸중 <input type="checkbox" name="userstroke" value="6">  
 								</label><br>
 								<label class="form-check-label" for="flexCheckDefault">
-										폐질환 ${loginMember.userpuldis} <input type="checkbox" name="ill" value="7">  
+										폐질환 <input type="checkbox" name="userpuldis" value="7">  
 								</label>
 								<label class="form-check-label" for="flexCheckDefault">
-										간질환 ${loginMember.userliverdis} <input type="checkbox" name="ill" value="8">  
+										간질환 <input type="checkbox" name="userliverdis" value="8">  
 								</label>
 								<label class="form-check-label" for="flexCheckDefault">
-										골다공증 ${loginMember.useroste} <input type="checkbox" name="ill" value="9">  
+										골다공증 <input type="checkbox" name="userosteo" value="9">  
 								</label>
 								<label class="form-check-label" for="flexCheckDefault">
-										관절염 ${loginMember.userarthritis} <input type="checkbox" name="ill" value="10">  
+										관절염 <input type="checkbox" name="userarthritis" value="10">  
 								</label>
 								<label class="form-check-label" for="flexCheckDefault">
-										심근경색 ${loginMember.usermyoinfar} <input type="checkbox" name="ill" value="11">  
+										심근경색 <input type="checkbox" name="usermyoinfar" value="11">  
 								</label>
 								<hr>
 								<label> 질병에 해당되지 않으면 체크하지 않고 변경 또는 취소를 눌러주세요! </label>
@@ -277,7 +289,21 @@
 					</ul>
 					</nav>
 				</div>
-
+				</div>
+				</div>
+				</div>
+				
+<footer class="footer">
+		<div class="bg-shape-style"></div>
+		<div class="container">
+			<div class="footer-bottom text-center">
+				<p>
+					&copy; 2019 <a href="http://www.bootstrapmb.com/"><span>Mezban</span></a>Design
+					by <a href="#"><span>FoxCoders</span></a>.
+				</p>
+			</div>
+		</div>
+	</footer>
 
 
 

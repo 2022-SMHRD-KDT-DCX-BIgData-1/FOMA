@@ -157,8 +157,21 @@
 					<button style="width: 50px; border: none;"><</button>
 					<button style="width: 50px; border: none;">></button>
 				</div>
+</div>
+</div>
+</div>
 
-
+<footer class="footer">
+		<div class="bg-shape-style"></div>
+		<div class="container">
+			<div class="footer-bottom text-center">
+				<p>
+					&copy; 2019 <a href="http://www.bootstrapmb.com/"><span>Mezban</span></a>Design
+					by <a href="#"><span>FoxCoders</span></a>.
+				</p>
+			</div>
+		</div>
+	</footer>
 
 
 

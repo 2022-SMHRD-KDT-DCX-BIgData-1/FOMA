@@ -30,10 +30,10 @@ public class UpdateCon extends HttpServlet {
 		HttpSession session = request.getSession();
 		Member loginMember = (Member)session.getAttribute("loginMember");		
 		String username = loginMember.getUsername();
-		String userpw = loginMember.getUserpw();
+		
 		
 		//form태그 파라미터 가져오기
-	
+		String userpw = request.getParameter("userpw");
 		String useremail = request.getParameter("useremail");		
 		double userage =  Double.parseDouble(request.getParameter("userage"));
 		double userheight =  Double.parseDouble(request.getParameter("userheight"));
@@ -43,22 +43,53 @@ public class UpdateCon extends HttpServlet {
 		if(request.getParameter("userdiabetes")!=null){
 		userdiabetes = "당뇨";
 		}
-		String userhbp ="정상";
+		
+		String userhbp ="정상"; //고혈압
 				if( request.getParameter("userhbp")!=null) {
 					userhbp = "고혈압";
 				}
-		
 		double userbmi= userweight/((userheight/100)*(userheight/100));
-		//지병9가지 추가
-		String userhyperlip = null; //고지혈증
-		String userobesity = null; //비만
-		String userheartdis = null; //심장병
-		String userstroke = null; //뇌졸중
-		String userpuldis = null; //폐질환
-		String userliverdis = null; //간질환
-		String useroste = null; //골다공증
-		String userarthritis = null; //관절염
-		String usermyoinfar = null; //심근경색
+		
+		String userhyperlip ="정상"; //고지혈증
+		if( request.getParameter("userhyperlip")!=null) {
+			userhyperlip = "고지혈증";	
+			}
+		String userobesity ="정상"; //비만
+		if( request.getParameter("userobesity")!=null) {
+			userobesity = "비만";	
+			}
+		String userheartdis ="정상"; //심장병
+		if( request.getParameter("userheartdis")!=null) {
+			userheartdis = "심장병";	
+			}
+		String userstroke ="정상"; //뇌졸중
+		if( request.getParameter("userstroke")!=null) {
+			userstroke = "뇌졸중";	
+			}
+		String userpuldis ="정상"; //폐질환
+		if( request.getParameter("userpuldis")!=null) {
+			userpuldis = "폐질환";	
+			}
+		String userliverdis ="정상"; //간질환
+		if( request.getParameter("userliverdis")!=null) {
+			userliverdis = "간질환";	
+			}
+		String useroste ="정상"; //골다공증
+		if( request.getParameter("useroste")!=null) {
+			useroste = "골다공증";	
+			}
+		String userarthritis ="정상"; //관절염
+		if( request.getParameter("userarthritis")!=null) {
+			userarthritis = "관절염";	
+			}
+		String usermyoinfar ="정상"; //심근경색
+		if( request.getParameter("usermyoinfar")!=null) {
+			usermyoinfar = "심근경색";	
+			}
+		
+	
+	
+	
 		
 		
 		//2수집된 데이터를 Member 객체에 담기
