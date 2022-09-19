@@ -213,38 +213,54 @@
 								<span>현재 당뇨 상태 : ${loginMember.userdiabetes}</span><br>
 								<%if(login.getUserhyperlip() != null) {%>
 									<span>현재 고지혈증 상태 : ${loginMember.userhyperlip}</span><br>
-								<% } %>
-								<%if(login.getUserhyperlip() != null) {%>
-									<span>현재 고지혈증 상태 : ${loginMember.userhyperlip}</span><br>
-								<% } %>
-								<%if(login.getUserhyperlip() != null) {%>
-									<span>현재 고지혈증 상태 : ${loginMember.userhyperlip}</span><br>
-								<% } %>
-								<%if(login.getUserhyperlip() != null) {%>
-									<span>현재 고지혈증 상태 : ${loginMember.userhyperlip}</span><br>
-								<% } %>
-								<%if(login.getUserhyperlip() != null) {%>
-									<span>현재 고지혈증 상태 : ${loginMember.userhyperlip}</span><br>
-								<% } %>
-								<%if(login.getUserhyperlip() != null) {%>
-									<span>현재 고지혈증 상태 : ${loginMember.userhyperlip}</span><br>
-								<% } %>
+								<% } else if(login.getUserhyperlip() == null){%>
+									<span></span>
+								<% }%> 
+								<%if(login.getUserobesity()!= null) {%>
+									<span>현재 비만 상태 : ${loginMember.userobesity}</span><br>
+								<% } else if(login.getUserobesity() == null){%>
+									<span></span>
+								<% }%>
+								<%if(login.getUserheartdis()!= null) {%>
+									<span>현재 심장병 상태 : ${loginMember.userheartdis}</span><br>
+								<% } else if(login.getUserheartdis() == null){%>
+									<span></span>
+								<% }%> 
+								<%if(login.getUserstroke()!= null) {%>
+									<span>현재 뇌졸중 상태 : ${loginMember.userstroke}</span><br>
+								<% } else if(login.getUserstroke() == null){%>
+									<span></span>
+								<% }%> 
+								<%if(login.getUserpuldis()!= null) {%>
+									<span>현재 폐질환 상태 : ${loginMember.userpuldis}</span><br>
+								<% } else if(login.getUserpuldis() == null){%>
+									<span></span>
+								<% }%> 
+								<%if(login.getUserliverdis()!= null) {%>
+									<span>현재 간질환 상태 : ${loginMember.userliverdis}</span><br>
+								<% } else if(login.getUserliverdis() == null){%>
+									<span></span>
+								<% }%> 
+								<%if(login.getUserosteo()!= null) {%>
+										<span>현재 골다공증 상태 : ${loginMember.userosteo}</span><br>
+								<% } else if(login.getUserosteo() == null){%>
+									<span></span>
+								<% }%> 
+								<%if(login.getUserarthritis()!= null) {%>
+									<span>현재 관절염 상태 : ${loginMember.userarthritis}</span><br>
+								<% } else if(login.getUserarthritis() == null){%>
+									<span></span>
+								<% }%> 
+								<%if(login.getUsermyoinfar()!= null) {%>
+									<span>현재 심근경색 상태 : ${loginMember.usermyoinfar}</span><br>
+								<% } else if(login.getUsermyoinfar() == null){%>
+									<span></span>
+								<% }%> 
 								
-								
-								
-								
-								
-								<!-- <span>현재 비만 상태 : ${loginMember.userobesity}</span><br>
+		
 							
 								
-								<span>현재 심장병 상태 : ${loginMember.userheartdis}</span><br>
-								<span>현재 뇌졸중 상태 : ${loginMember.userstroke}</span><br>
-								<span>현재 폐질환 상태 : ${loginMember.userpuldis}</span><br>
-								<span>현재 간질환 상태 : ${loginMember.userliverdis}</span><br>
-								<span>현재 골다공증 상태 : ${loginMember.userosteo}</span><br>
-								<span>현재 관절염 상태 : ${loginMember.userarthritis}</span><br> 
-								
-								-->
+							
 								
 								
 								

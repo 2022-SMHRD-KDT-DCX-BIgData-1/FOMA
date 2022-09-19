@@ -50,39 +50,39 @@ public class UpdateCon extends HttpServlet {
 				}
 		double userbmi= userweight/((userheight/100)*(userheight/100));
 		
-		String userhyperlip = null; //고지혈증
+		String userhyperlip = ""; //고지혈증
 		if( request.getParameter("userhyperlip")!=null) {
 			userhyperlip = "고지혈증";	
 			}
-		String userobesity ="정상"; //비만
+		String userobesity = ""; //비만
 		if( request.getParameter("userobesity")!=null) {
 			userobesity = "비만";	
 			}
-		String userheartdis ="정상"; //심장병
+		String userheartdis =""; //심장병
 		if( request.getParameter("userheartdis")!=null) {
 			userheartdis = "심장병";	
 			}
-		String userstroke ="정상"; //뇌졸중
+		String userstroke =""; //뇌졸중
 		if( request.getParameter("userstroke")!=null) {
 			userstroke = "뇌졸중";	
 			}
-		String userpuldis ="정상"; //폐질환
+		String userpuldis =""; //폐질환
 		if( request.getParameter("userpuldis")!=null) {
 			userpuldis = "폐질환";	
 			}
-		String userliverdis ="정상"; //간질환
+		String userliverdis =""; //간질환
 		if( request.getParameter("userliverdis")!=null) {
 			userliverdis = "간질환";	
 			}
-		String userosteo ="정상"; //골다공증
+		String userosteo =""; //골다공증
 		if( request.getParameter("userosteo")!=null) {
 			userosteo = "골다공증";	
 			}
-		String userarthritis ="정상"; //관절염
+		String userarthritis =""; //관절염
 		if( request.getParameter("userarthritis")!=null) {
 			userarthritis = "관절염";	
 			}
-		String usermyoinfar ="정상"; //심근경색
+		String usermyoinfar =""; //심근경색
 		if( request.getParameter("usermyoinfar")!=null) {
 			usermyoinfar = "심근경색";	
 			}
