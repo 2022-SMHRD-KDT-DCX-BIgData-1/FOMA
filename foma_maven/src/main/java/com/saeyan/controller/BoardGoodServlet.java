@@ -42,8 +42,8 @@ public class BoardGoodServlet extends HttpServlet {
 			response.sendRedirect("BoardServlet?command=board_view&num=" + num);
 			return;
 		}else {
-			
-			response.sendRedirect("BoardServlet?command=board_view&num=" + num);
+			response.sendRedirect("./error_pages/error_good_once.jsp");
+			//response.sendRedirect("BoardServlet?command=board_view&num=" + num);
 			return;
 		}
 		
