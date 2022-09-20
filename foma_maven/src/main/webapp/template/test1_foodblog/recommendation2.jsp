@@ -123,7 +123,7 @@
 							%>
 							<%-- <a href = "shop-single.jsp"> <%=	f.getFd_name()%></a>
 								 --%>
-							<form class="reselt" action="/foma_maven/SelectfdCon2" method="post">
+							<form class="reselt" action="/foma_maven/SelectfdCon" method="post">
 								<%
 								String str = fd.getFd_name();
 								%>
