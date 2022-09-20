@@ -16,6 +16,7 @@ public class SubBoardVO {
 		this.content = content;
 		this.writedate = writedate;
 	}
+	
 	public int getNum() {
 		return num;
 	}
