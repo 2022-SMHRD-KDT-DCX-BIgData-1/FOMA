@@ -163,7 +163,7 @@
 	<!-- Page Header Section Start Here -->
 	<!-- Page Header Section Ending Here -->
 	<!-- Popular Home Chef Section Start Here -->
-	<div class="shop-page single padding-tb pb-0">
+	<div class="shop-page single padding-tb pb-0" style = "text-align: center;">
 		<div class="container">
 			<div class="section-wrapper">
 				<article>
@@ -214,7 +214,7 @@
 								</div>
 								<div class="desc">
 									<!--음식 영양소 , 조건문을 통해 자료없음을 표시해줘야한다. -->
-									<table>
+									<table style="position: relative;     left: 520px;">
 										<tr>
 											<td>칼로리(kcal) :</td>
 											<td><%=Math.round(f.get(0).getFd_ing_cal())%></td>
