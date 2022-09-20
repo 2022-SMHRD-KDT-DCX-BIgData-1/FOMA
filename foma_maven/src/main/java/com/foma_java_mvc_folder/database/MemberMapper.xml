@@ -114,33 +114,33 @@ https://freefrdi.com/how-much-fat-for-keto/
   <!--고혈압 : 기준 → 나트륨 2000mg미만 지방 51g미만(트랜스지방산, 포화지방산 포함) 당류35g미만 칼로리열량 <550미만-->
   <select id="selectFMemberhbp" parameterType="com.foma_java_mvc_folder.domain.FMember"  resultType = "com.foma_java_mvc_folder.domain.FMember">
 
-   <![CDATA[select * from fmember where fd_name like '%'||#{fd_name}||'%' and fd_ing_salt>-1 and fd_ing_salt<2000 and fd_ing_saturated_fatty+fd_ing_trans_fatty+fd_ing_fatty <50 and fd_ing_sugar>-1 and fd_ing_sugar <35 and fd_ing_cal>-1 and fd_ing_cal<300 and rownum<11]]>
+   <![CDATA[select * from fmember where fd_name like '%'||#{fd_name}||'%' and fd_ing_salt>-1 and fd_ing_salt<2000 and fd_ing_saturated_fatty+fd_ing_trans_fatty+fd_ing_fatty <50 and fd_ing_sugar>-1 and fd_ing_sugar <35 and fd_ing_cal>-1 and fd_ing_cal<300 ]]>
  
   </select>
   
   <!--당뇨 : 기준 → 당류25g미만 나트륨 2000mg미만 지방(지방+포화+트랜스<35)<35 단백질 35g미만 탄수화물 140g미만  -->
   <select id="selectFMemberdiabe" parameterType="com.foma_java_mvc_folder.domain.FMember"  resultType = "com.foma_java_mvc_folder.domain.FMember">
 
-   <![CDATA[select * from fmember where fd_name like '%'||#{fd_name}||'%' and fd_ing_salt<2000 and fd_ing_saturated_fatty+fd_ing_trans_fatty+fd_ing_fatty <35 and fd_ing_sugar <25 and fd_ing_protein<35 and fd_ing_carbohydrate<140 and rownum<11]]>
+   <![CDATA[select * from fmember where fd_name like '%'||#{fd_name}||'%' and fd_ing_salt<2000 and fd_ing_saturated_fatty+fd_ing_trans_fatty+fd_ing_fatty <35 and fd_ing_sugar <25 and fd_ing_protein<35 and fd_ing_carbohydrate<140]]>
  
   </select>
   
   <!--고지혈증 : 기준 → 나트륨 2000mg미만 콜레스테롤300mg미만 식이섬유25g미만 칼로리 500미만  -->
   <select id="selectFMemberhyperlip" parameterType="com.foma_java_mvc_folder.domain.FMember"  resultType = "com.foma_java_mvc_folder.domain.FMember">
 
-   <![CDATA[select * from fmember where fd_name like '%'||#{fd_name}||'%' and fd_ing_salt<2000 and fd_ing_cholesterol<300 and fd_ing_dietaryfiber<25 and fd_ing_cal < 500 and rownum<11]]>
+   <![CDATA[select * from fmember where fd_name like '%'||#{fd_name}||'%' and fd_ing_salt<2000 and fd_ing_cholesterol<300 and fd_ing_dietaryfiber<25 and fd_ing_cal < 500]]>
  
   </select>
   
   <!--비만 : 기준 → 칼로리 500미만 나트륨 2000mg미만   -->
   <select id="selectFMemberobesity" parameterType="com.foma_java_mvc_folder.domain.FMember"  resultType = "com.foma_java_mvc_folder.domain.FMember">
-   <![CDATA[select * from fmember where fd_name like '%'||#{fd_name}||'%' and fd_ing_salt<2000 and fd_ing_cal < 500 and rownum<11]]>
+   <![CDATA[select * from fmember where fd_name like '%'||#{fd_name}||'%' and fd_ing_salt<2000 and fd_ing_cal < 500]]>
  
   </select>
   
   <!-- 심근경색 기준: 나트륨 2000mg미만 당류25g미만 칼로리 500미만 지방(지방+포화+트랜스)<35 -->
   <select id="selectFMembermyoinfar" parameterType="com.foma_java_mvc_folder.domain.FMember"  resultType = "com.foma_java_mvc_folder.domain.FMember">
-   <![CDATA[select * from fmember where fd_name like '%'||#{fd_name}||'%' and fd_ing_salt<2000 and fd_ing_cal < 500 and fd_ing_saturated_fatty+fd_ing_trans_fatty+fd_ing_fatty <35 and fd_ing_sugar <25 and rownum<11]]>
+   <![CDATA[select * from fmember where fd_name like '%'||#{fd_name}||'%' and fd_ing_salt<2000 and fd_ing_cal < 500 and fd_ing_saturated_fatty+fd_ing_trans_fatty+fd_ing_fatty <35 and fd_ing_sugar <25]]>
  
   </select>
   

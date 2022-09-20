@@ -1,3 +1,4 @@
+<%@page import="BoardListServlet.Myutil"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" isELIgnored="false"%>
 <%@page import="java.util.List"%>
@@ -117,21 +118,69 @@
 							<%
 							ArrayList<FMember> selectFMember = (ArrayList<FMember>) session.getAttribute("selectFMember");
 							%>
+<!--페이징 테스트 : 지병페이지 -->
+<%
+
+int pgstart =0;
+int pgend = 0;
+String paging="";
+if(selectFMember!=null){
+	request.setCharacterEncoding("utf-8");
+
+	// 파라미터로 넘어온 페이지 번호(JSP에서 page는 예약어로 변수명으로 사용 불가)
+	String pageNum = request.getParameter("page");
+	int current_page = 1;
+	if(pageNum != null) {
+		current_page = Integer.parseInt(pageNum);
+	}
+	
+	Myutil util = new Myutil();
+	//datacount: 총데이터수 / rows: 한화면에 출력할 목록수 / total_page: 전체페이지수 
+	//pagecount: int로 rows랑 datacount를 받는 변수? datacount/rows+(datacount%rows>0?1:0)
+	int dataCount = selectFMember.size();
+	int rows = 10;
+	int total_page = util.pageCount(rows, dataCount);
+	if(current_page > total_page) {
+		current_page = total_page;
+	}
+	//listUrl: 링크를 설정할 주소
+	String listUrl = "recommendation2.jsp";
+	paging = util.paging(current_page, total_page, listUrl);
+	
+	pgstart = (current_page*10)-10;
+	pgend = 10;
+	
+int endindex = selectFMember.size()%10;
+	
+	if(selectFMember.size()>10){//목록이 10개 이상
+
+		if(selectFMember.size()-(current_page*10)>0){//남아있는 목록이 10개 이상일경우
+			pgend =(current_page*10);
+		}else{
+			pgend = (current_page*10)-10 + endindex;
+		}
+	}else{
+		pgend = selectFMember.size();
+	}
+}
+%>
 							<%
 							//세션에서 정보가 있다면 정보를 가져와서 출력하기					
 							if (selectFMember != null) {
-								for (FMember fd : selectFMember) {
+								/* for (FMember fd : selectFMember) { */
+								for (int i=pgstart;i<pgend;i++) {
 							%>
-							<%-- <a href = "shop-single.jsp"> <%=	f.getFd_name()%></a>
-								 --%>
+							<%-- <a href = "shop-single.jsp"> <%=	f.getFd_name()%></a>--%>
+								 
 							<form class="reselt" action="/foma_maven/SelectfdCon2" method="post">
 								<%
-								String str = fd.getFd_name();
+								/* String str = fd.getFd_name(); */
+								String str = selectFMember.get(i).getFd_name();
 								%>
 								<input type="text" name="fd_name" value="<%=str%>">
 								<!--같이 값을 보내줄 셀렉트코드를 히든값으로 지정한다. 한개검색  -->
 								<input type="hidden" name="selectcode" value="one"> <label>
-									자세한 정보 →
+									영양소 정보 보기👉
 									<button type="submit">
 										<i class="icofont-search-2"></i>
 									</button>
@@ -141,7 +190,6 @@
 							<%
 							}
 							%>
-							<button>더보기</button>
 							<%
 							} else {
 							%>
@@ -154,6 +202,13 @@
 				</div>
 			</div>
 		</div>
+			<div class="container">
+	<!-- 페이징 처리 테스트 -->
+	<div style="padding-top: 	20px;">
+	
+		<%= paging %>
+	
+	</div>
 	</section>
 	<!-- <section class="page-header">
 		<div class="container">
