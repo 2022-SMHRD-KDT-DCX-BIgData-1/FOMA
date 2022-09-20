@@ -27,19 +27,18 @@
 <link rel="stylesheet" href="Login.css">
 <link rel="stylesheet" href="Login.css">
 </head>
+
 <body>
+
 	<header class="header-section d-xl-block d-none">
 		<div class="container-fluid">
 			<div class="header-area">
 				<div class="logo">
-					<a href="index.jsp"><img src="template/test1_foodblog/assets/images/logo/01.png"
-						alt="logo"></a>
+					<a href="Login.jsp"><img src="template/test1_foodblog/assets/images/logo/01.png" alt="logo"></a>
 				</div>
 			</div>
 		</div>
-		</div>
-		</div>
-		</div>
+		
 	</header>
 	<!--로그인 했을시 멤버를 가져오기위해 멤버 선언  -->
 	<%
@@ -88,7 +87,7 @@
 							alt="" />
 					</div>
 
-<<<<<<< HEAD
+
                 <form id="login" action="LoginCon" class="input-group" method="post">
                     <div class="cont_form_login">
                         <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">X</i></a>
@@ -101,7 +100,7 @@
                         <button class="submit btn_login" onclick="cambiar_login()">LOGIN</button>
                     </div>
                 </form>
-=======
+
 					<form id="login" action="LoginCon" class="input-group"
 						method="post">
 						<div class="cont_form_login">
@@ -112,7 +111,7 @@
 								class="input-field" placeholder="이름을 입력하세요" required> <input
 								type="password" maxlength="10" name="userpw" class="input-field"
 								placeholder="패스워드를 입력하세요" required>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-DCX-BIgData-1/FOMA.git
+
 
 							<button class="submit btn_login" onclick="cambiar_login()">LOGIN</button>
 						</div>
@@ -153,16 +152,7 @@
 		</div>
 	</div>
 	</form>
-	<footer class="footer">
-		<div class="bg-shape-style"></div>
-		<div class="container">
-			<div class="footer-bottom text-center">
-				<p>
-					F.O.M.A 조 나명훈 신은지 황윤정 김용선 박선우
-				</p>
-			</div>
-		</div>
-	</footer>
+	
 
 	<script>
 		function cambiar_login() {

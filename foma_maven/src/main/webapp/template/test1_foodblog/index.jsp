@@ -137,7 +137,7 @@
 									</select>
 								</div>
 								<input type="text" name="fd_name" placeholder="Enter your food name">
-								<!-- <a href="recommendation1.jsp"></a> --><button type="submit">
+								 <a href="recommendation1.jsp"><button type="submit"></a>
 									<i class="icofont-search-2"></i>
 								</button>
 								<br>
