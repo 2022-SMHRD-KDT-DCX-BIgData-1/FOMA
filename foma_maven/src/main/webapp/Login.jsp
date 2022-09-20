@@ -69,7 +69,7 @@
                         <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">X</i></a>
                         <h2>로그인</h2>
                         <input type="text" maxlength="10" name="username" class="input-field" placeholder="이름을 입력하세요"
-                            required>
+                            required>	
                         <input type="password" maxlength="10" name="userpw" class="input-field"
                             placeholder="패스워드를 입력하세요" required>
                             
