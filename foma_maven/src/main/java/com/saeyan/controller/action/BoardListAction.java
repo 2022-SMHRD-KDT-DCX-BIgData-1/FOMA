@@ -12,8 +12,6 @@ import javax.servlet.http.HttpSession;
 import com.saeyan.dao.BoardDAO;
 import com.saeyan.dto.BoardVO;
 
-import BoardListServlet.BoardListController;
-
 public class BoardListAction implements Action{
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response)
