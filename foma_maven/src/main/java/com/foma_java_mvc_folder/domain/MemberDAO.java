@@ -123,4 +123,22 @@ public class MemberDAO {
 		}
 		return cnt;
 	}
+	//아이디조회(친구찾기)
+	public String findIdMember(String username) {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		String findIdMember = null;
+		try {
+			findIdMember = sqlSession.selectOne("findIdMember", username);
+			System.out.println(findIdMember);
+			if (findIdMember != null) {
+				sqlSession.commit();
+
+			} else {
+				sqlSession.rollback();
+			}
+		} finally {
+			sqlSession.close();
+		}
+		return findIdMember;
+	}
 }

@@ -85,7 +85,11 @@ public class Member {
 		this.username = username;
 		this.userpw = userpw;
 	}
-
+	
+	public Member(String username) {
+	super();
+	this.username = username;
+	}
 
 	public String getUsername() {
 		return username;

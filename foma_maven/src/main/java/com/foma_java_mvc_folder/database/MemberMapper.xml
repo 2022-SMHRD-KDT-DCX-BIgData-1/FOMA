@@ -56,6 +56,13 @@
  
   </select>
   
+  <!-- 아이디 조회 -->
+  <select id="findIdMember" parameterType="String"  resultType = "String">
+
+ 	select username from Member where username = #{username} 
+ 
+  </select>
+  
   
    <update id="updateMember" parameterType="com.foma_java_mvc_folder.domain.Member"   >
   update member set userpw=#{userpw},useremail=#{useremail}, userage=#{userage},userheight=#{userheight},userweight=#{userweight},userdiabetes=#{userdiabetes},userhbp=#{userhbp},userbmi=#{userbmi},

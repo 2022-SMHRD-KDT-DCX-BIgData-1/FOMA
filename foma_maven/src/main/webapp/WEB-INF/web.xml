@@ -76,6 +76,12 @@
   	<description></description>
   	<servlet-class>BoardListServlet.ListController</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>findIdCon</servlet-name>
+  	<display-name>findIdCon</display-name>
+  	<description></description>
+  	<servlet-class>com.foma_java_mvc_folder.Controller.findIdCon</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
   	<url-pattern>/JoinCon</url-pattern>
@@ -123,6 +129,10 @@
   <servlet-mapping>
   	<servlet-name>ListController</servlet-name>
   	<url-pattern>/ListController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>findIdCon</servlet-name>
+  	<url-pattern>/findIdCon</url-pattern>
   </servlet-mapping>
 
  
