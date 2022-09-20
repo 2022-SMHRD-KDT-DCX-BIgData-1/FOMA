@@ -88,6 +88,20 @@
 							alt="" />
 					</div>
 
+<<<<<<< HEAD
+                <form id="login" action="LoginCon" class="input-group" method="post">
+                    <div class="cont_form_login">
+                        <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">X</i></a>
+                        <h2>로그인</h2>
+                        <input type="text" maxlength="10" name="username" class="input-field" placeholder="이름을 입력하세요"
+                            required>	
+                        <input type="password" maxlength="10" name="userpw" class="input-field"
+                            placeholder="패스워드를 입력하세요" required>
+                            
+                        <button class="submit btn_login" onclick="cambiar_login()">LOGIN</button>
+                    </div>
+                </form>
+=======
 					<form id="login" action="LoginCon" class="input-group"
 						method="post">
 						<div class="cont_form_login">
@@ -98,6 +112,7 @@
 								class="input-field" placeholder="이름을 입력하세요" required> <input
 								type="password" maxlength="10" name="userpw" class="input-field"
 								placeholder="패스워드를 입력하세요" required>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-DCX-BIgData-1/FOMA.git
 
 							<button class="submit btn_login" onclick="cambiar_login()">LOGIN</button>
 						</div>

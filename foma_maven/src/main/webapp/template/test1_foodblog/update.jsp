@@ -328,14 +328,7 @@
 		</div>
 	</footer>
 
-<script>
 
-document.getElementById('clicka').addEventListener('click',function(){
-    document.querySelector('.form-check').classList.remove('hide')
-  })
-
-
-</script>
 
 
 

@@ -19,7 +19,7 @@
 <body>
 <%  List<BoardVO> bd = (List<BoardVO>)session.getAttribute("selectOneBoardByNum");
 List<SubBoardVO> sbd = (List<SubBoardVO>)session.getAttribute("selectAllSubBoards");
-//Member loginmember = (Member)session.getAttribute("loginmember");
+Member lg = (Member)session.getAttribute("loginMember");
 
 %>
 
@@ -50,35 +50,67 @@ List<SubBoardVO> sbd = (List<SubBoardVO>)session.getAttribute("selectAllSubBoard
 		</table>
 		<br>
 		
+		
+		<form name ="" method = "post" action ="BoardGoodServlet">
+			<%if(lg!=null){ %>	
+		<input type="hidden" name="username" value="<%=lg.getUsername()%>">
+		<%} %>
+		<input type="hidden" name="num" value="<%=bd.get(0).getNum() %>">
+			<table>		
+			<tr>
+				<th> 좋아요 갯수 : <%=bd.get(0).getGood() %> </th>
+				<%if(lg!=null){ %>	
+				<td> <input type="submit" value="좋아요"> </td>
+				<%} %>
+			</tr>		
+			</table>
+		</form>
+		
+		<br>
+		
+	<%if(sbd!=null) { for(SubBoardVO s: sbd){%>	
 		<form name="frm" method="post" action="SubBoardServlet">
 			<input type="hidden" name="num" value="<%=bd.get(0).getNum() %>">
+			<input type="hidden" name="subcode" value="delete">
+		<input type="hidden" name="name" value="<%=s.getName() %>">
+		<input type="hidden" name="content" value="<%=s.getContent() %>">
+		<input type="hidden" name="writedate" value="<%=s.getWritedate() %>">
+		
 		<table>
 	
-		<%if(sbd!=null) { for(SubBoardVO s: sbd){%>
+		
 			
 		<tr action="">
 				<td><%=s.getName() %></td>
 				<td><%=s.getContent() %>
 				<td><%=s.getWritedate() %></td>
-				<td><button>삭제</button></td>
+				<td><input type="submit" value="댓글 삭제"></td>
+				
+	
+
 			</tr>
-		
+	</table>	
+		</form>
 		<% }
 		}%>
 	
 <br>
-
+<form name="frm" method="post" action="SubBoardServlet">
+			<input type="hidden" name="num" value="<%=bd.get(0).getNum() %>">
+				<input type="hidden" name="subcode" value="insert">
+		<table>
 			<tr action="">
 				<td>아이디를 입력하세요<input name="name"></td>
 				<td>댓글을 입력하세요 :<input name="content"></td>
 				<td></td>
-				<td><button>작성</button></td>
+				<td><input type="submit" value="댓글 등록"></td>
 			</tr>
-		</table>
 		
-	<input type="submit" value="등록">
+		
+		</form>
+		
 	
-	</form>
+	
 		
 		
 		

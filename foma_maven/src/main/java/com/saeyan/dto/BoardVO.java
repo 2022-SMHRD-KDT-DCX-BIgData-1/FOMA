@@ -11,11 +11,34 @@ public class BoardVO {
 	private String content;
 	private int readcount;
 	private Timestamp writedate;
+	private int good;
 	
 	
 	
 		
 	
+	public int getGood() {
+		return good;
+	}
+
+	public void setGood(int good) {
+		this.good = good;
+	}
+
+	public BoardVO(int num, String name, String email, String pass, String title, String content, int readcount,
+			Timestamp writedate, int good) {
+		super();
+		this.num = num;
+		this.name = name;
+		this.email = email;
+		this.pass = pass;
+		this.title = title;
+		this.content = content;
+		this.readcount = readcount;
+		this.writedate = writedate;
+		this.good = good;
+	}
+
 	public BoardVO() {
 		super();
 	}

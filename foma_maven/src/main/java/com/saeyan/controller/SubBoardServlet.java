@@ -30,18 +30,31 @@ public class SubBoardServlet extends HttpServlet {
 		int num = Integer.valueOf(request.getParameter("num"));
 		String name = request.getParameter("name");
 		String content = request.getParameter("content");
-
-		Timestamp timestamp = new Timestamp(System.currentTimeMillis());// 현재 날짜
-		  // 2. 수집된 데이터를 Member 객체에 담기
-		SubBoardVO sbv = new SubBoardVO(num, name, content, timestamp);
+		String subcode = request.getParameter("subcode"); // 게시판 기능 판정코드
 		
-		 // 4. FMemberDAO 가서 메소드 만들고 오기
-	      // 5. FMemberDAO객체 생성 메소드 호출
-	SubBoardDAO sbd = new SubBoardDAO();
-		sbd.insertSubBoard(sbv);;
-		 response.sendRedirect("BoardServlet?command=board_view&num="+num);
-		 return;
-		 
+		System.out.println("받아온 게시판 코드"+subcode);
+		Timestamp timestamp = new Timestamp(System.currentTimeMillis());// 현재 날짜
+		// 2. 수집된 데이터를 Member 객체에 담기
+		SubBoardVO sbv = new SubBoardVO(num, name, content, timestamp);
+
+		// 4. FMemberDAO 가서 메소드 만들고 오기
+		// 5. FMemberDAO객체 생성 메소드 호출
+		SubBoardDAO sbd = new SubBoardDAO();
+		System.out.println("댓글 작성자 :  "+name+"content : "+content);
+		
+		if (name == null || content == null||name.equals("")||content.equals("")||name.isEmpty()||content.isEmpty()||name.isBlank()||content.isBlank()) {// 댓글,작성자 빈칸일경우
+				System.out.println("댓글 빈칸, 게시판 리턴");
+			response.sendRedirect("BoardServlet?command=board_view&num=" + num);
+			return;
+		}else if (subcode.equals("delete")) {// 댓글 삭제
+			sbd.deleteSubBoard(sbv);
+		} else {// 댓글 추가
+			sbd.insertSubBoard(sbv);
+		}
+
+		response.sendRedirect("BoardServlet?command=board_view&num=" + num);
+		return;
+
 	}
 
 }

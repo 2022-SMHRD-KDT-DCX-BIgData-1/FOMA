@@ -22,7 +22,8 @@ public class BoardWriteAction implements Action {
 		bVo.setContent(request.getParameter("content"));
 		
 		Timestamp timestamp = new Timestamp(System.currentTimeMillis());//현재 날	짜
-		
+		int good=0;
+		bVo.setGood(0);
 		bVo.setWritedate(timestamp);
 		bVo.setReadcount(0);
 		
