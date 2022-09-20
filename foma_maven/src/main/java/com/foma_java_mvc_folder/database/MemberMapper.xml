@@ -165,12 +165,13 @@ select * from board where num = #{num}
   </update>
  
  
+ 
  <!--게시물 등록  -->
     <insert id="insertBoard" parameterType="com.saeyan.dto.BoardVO">
  <!-- 
   insert into board(num, name, email, pass, title, content) values(board_seq.nextval, #{name}, #{email}, #{pass}, #{title}, #{content});   
    -->
-  insert into board(num, name, email, pass, title, content ,readcount ,writedate) values(board_seq.nextval, #{name}, #{email}, #{pass}, #{title}, #{content},#{readcount},#{writedate})
+  insert into board(num, name, email, pass, title, content ,readcount ,writedate,good) values(board_seq.nextval, #{name}, #{email}, #{pass}, #{title}, #{content},#{readcount},#{writedate},#{good})
   </insert> 
   
    <!-- 게시판 삭제  -->
@@ -204,7 +205,18 @@ select * from subboard where num = #{num}
   
   </delete>
   
+  <!--좋아요 검색  -->
+    <select id="selectgood" parameterType="com.saeyan.dto.SubBoardVO" resultType = "com.saeyan.dto.SubBoardVO">
+
+select * from subboard where num = #{num}
+ 
+  </select>
   
+  <!--좋아요 업데이트 -->
+ 
+  <update id="updategood" parameterType="int"   >
+ update board set good = good+1 where num=#{num}
   
+  </update>
 
 </mapper>

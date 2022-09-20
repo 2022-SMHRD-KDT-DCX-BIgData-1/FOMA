@@ -136,7 +136,7 @@ public class BoardDAO {
 	
 		    
 		   }
-
+	
 	
 	// 게시판 글 상세 내용 보기 :글번호로 찾아온다. : 실패 null,
 		public List<BoardVO> selectOneBoardByNum(String num2) {  //게시판 하나 검색

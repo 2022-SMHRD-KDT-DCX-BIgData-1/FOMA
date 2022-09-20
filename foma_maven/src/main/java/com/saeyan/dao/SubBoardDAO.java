@@ -51,5 +51,28 @@ public class SubBoardDAO {
 			sqlSession.close();
 		}
 	}
+	public void updategood(int num) {//게시판 좋아요 +1
+		  SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
+		   SqlSession sqlSession = sqlSessionFactory.openSession();
+		   int cnt =0;
+		  try {//검색결과를 리스트로 받아온다
+			 
+			  System.out.println("좋아요 dao 진입 : ");
+			cnt = sqlSession.update("updategood",num);
+			
+			  if (cnt >0) {
+				  
+		            sqlSession.commit();
+
+		         } else {
+		            sqlSession.rollback();
+		         }
+		      } finally {
+		         sqlSession.close();
+		      }
+	
+		    
+		   }
+
 	
 }
