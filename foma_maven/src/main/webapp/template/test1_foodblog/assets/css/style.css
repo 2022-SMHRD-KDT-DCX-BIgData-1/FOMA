@@ -8886,6 +8886,7 @@ p.comment-form-cookies-consent input {
 }
 
 .footer .footer-bottom p {
+	text-align: center;
     margin-bottom: 0;
     color: #fff;
 }
