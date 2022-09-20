@@ -199,5 +199,12 @@ select * from subboard where num = #{num}
  
   </insert> 
   
+  <delete id="deleteSubBoard" parameterType="com.saeyan.dto.SubBoardVO"   >
+ DELETE FROM subboard WHERE name=#{name} and content =#{content}
+  
+  </delete>
+  
+  
+  
 
 </mapper>
