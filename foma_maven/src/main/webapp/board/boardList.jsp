@@ -20,6 +20,45 @@
 </style>
 </head>
 <body>
+<header class="header-section d-xl-block d-none">
+		<div class="container-fluid">
+			<div class="header-area">
+				<div class="logo">
+					<a href="index.jsp"><img src="assets/images/logo/01.png"
+						alt="logo"></a>
+				</div>
+				<div class="main-menu">
+					<ul>
+						<li><a href="template/test1_foodblog/FindFriends.jsp">친구찾기</a></li>
+
+						<li><a href="">추천식단</a>
+							<ul>
+								<li><a href="template/test1_foodblog/recommendation2.jsp">지병에 따른 추천</a></li>
+								<li><a href="template/test1_foodblog/recommendation1.jsp">음식 분류별 추천</a></li>
+							</ul></li>
+
+						<li><a href="template/test1_foodblog/SNS.jsp">SNS</a>
+							<ul>
+								<li><a href="board_index.jsp">게시판</a></li>
+							</ul></li>
+
+						<li><a href="template/test1_foodblog/mypage.jsp">마이페이지</a>
+							<ul>
+								<li><a href="#">접속한 아이디 : ${loginMember.username}</a></li>
+								<li><a href="../../Login.jsp">로그아웃</a></li>
+							</ul></li>
+					</ul>
+
+				</div>
+
+
+
+			</div>
+		</div>
+		</div>
+		</div>
+		</div>
+	</header>
 
 
 <%  List<BoardVO> bd = (List<BoardVO>)session.getAttribute("boardList");%>
