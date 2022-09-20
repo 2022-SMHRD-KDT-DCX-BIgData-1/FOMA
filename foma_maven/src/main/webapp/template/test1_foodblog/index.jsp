@@ -248,7 +248,7 @@
 								<div class="food-item">
 									<div class="food-thumb"
 										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=탕류&fd_name=temp' ">
-										<img src="assets/images/food/02.png" alt="food">
+										<img src="assets/images/food/03.png" alt="food">
 									</div>
 									<div class="food-content">
 										<a href="#">국</a>
@@ -259,7 +259,7 @@
 								<div class="food-item">
 									<div class="food-thumb"
 										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=면&fd_name=temp' ">
-										<img src="assets/images/food/03.png" alt="food">
+										<img src="assets/images/food/04.png" alt="food">
 									</div>
 									<div class="food-content">
 										<a href="#">면&만두</a>
@@ -270,7 +270,7 @@
 								<div class="food-item">
 									<div class="food-thumb"
 										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=볶음&fd_general_name=무침&fd_name=temp' ">
-										<a href="#"><img src="assets/images/food/04.png"
+										<a href="#"><img src="assets/images/food/05.png"
 											alt="food"></a>
 									</div>
 									<div class="food-content">
@@ -282,7 +282,7 @@
 								<div class="food-item">
 									<div class="food-thumb"
 										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=무침&fd_name=temp' ">
-										<a href="#"><img src="assets/images/food/04.png"
+										<a href="#"><img src="assets/images/food/06.png"
 											alt="food"></a>
 									</div>
 									<div class="food-content">
@@ -294,7 +294,7 @@
 								<div class="food-item">
 									<div class="food-thumb"
 										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=숙채&fd_name=temp' ">
-										<a href="#"><img src="assets/images/food/04.png"
+										<a href="#"><img src="assets/images/food/07.png"
 											alt="food"></a>
 									</div>
 									<div class="food-content">
@@ -306,7 +306,7 @@
 								<div class="food-item">
 									<div class="food-thumb"
 										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=젓갈&fd_name=temp' ">
-										<a href="#"><img src="assets/images/food/04.png"
+										<a href="#"><img src="assets/images/food/08.png"
 											alt="food"></a>
 									</div>
 									<div class="food-content">
@@ -318,7 +318,7 @@
 								<div class="food-item">
 									<div class="food-thumb"
 										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=빵&fd_name=temp' ">
-										<a href="#"><img src="assets/images/food/05.png"
+										<a href="#"><img src="assets/images/food/09.png"
 											alt="food"></a>
 									</div>
 									<div class="food-content">
@@ -330,7 +330,7 @@
 								<div class="food-item">
 									<div class="food-thumb"
 										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=샐러드&fd_name=temp' ">
-										<a href="#"><img src="assets/images/food/06.png"
+										<a href="#"><img src="assets/images/food/10.png"
 											alt="food"></a>
 									</div>
 									<div class="food-content">
@@ -342,7 +342,7 @@
 								<div class="food-item">
 									<div class="food-thumb"
 										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=구이&fd_name=temp' ">
-										<a href="#"><img src="assets/images/food/07.png"
+										<a href="#"><img src="assets/images/food/11.png"
 											alt="food"></a>
 									</div>
 									<div class="food-content">
@@ -354,7 +354,7 @@
 								<div class="food-item">
 									<div class="food-thumb"
 										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=찜&fd_name=temp' ">
-										<a href="#"><img src="assets/images/food/08.png"
+										<a href="#"><img src="assets/images/food/12.png"
 											alt="food"></a>
 									</div>
 									<div class="food-content">
@@ -366,7 +366,7 @@
 								<div class="food-item">
 									<div class="food-thumb"
 										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=적&fd_name=temp' ">
-										<a href="#"><img src="assets/images/food/09.png"
+										<a href="#"><img src="assets/images/food/13.png"
 											alt="food"></a>
 									</div>
 									<div class="food-content">
@@ -378,7 +378,7 @@
 								<div class="food-item">
 									<div class="food-thumb"
 										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=조림&fd_name=temp' ">
-										<a href="#"><img src="assets/images/food/10.png"
+										<a href="#"><img src="assets/images/food/14.png"
 											alt="food"></a>
 									</div>
 									<div class="food-content">
@@ -390,7 +390,7 @@
 								<div class="food-item">
 									<div class="food-thumb"
 										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=튀김&fd_name=temp' ">
-										<a href="#"><img src="assets/images/food/11.png"
+										<a href="#"><img src="assets/images/food/15.png"
 											alt="food"></a>
 									</div>
 									<div class="food-content">
