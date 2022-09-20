@@ -25,6 +25,7 @@
 <link rel="stylesheet" href="assets/css/swiper.min.css" />
 <!-- cusyom scss -->
 <link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/style2.css" />
 <link rel="stylesheet" href="assets/css/sickness.css" />
 <link href="assets/css/animate.css">
 <link rel="stylesheet" href="css/LikeFind.css" />
