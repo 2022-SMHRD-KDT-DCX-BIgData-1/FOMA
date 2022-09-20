@@ -53,13 +53,11 @@ List<SubBoardVO> sbd = (List<SubBoardVO>)session.getAttribute("selectAllSubBoard
 		<form name ="" method = "post" action ="BoardGoodServlet">
 		
 		<input type="hidden" name="num" value="<%=bd.get(0).getNum() %>">
-			<table>
-		
+			<table>		
 			<tr>
 				<th> 좋아요 갯수 : <%=bd.get(0).getGood() %> </th>
 				<td> <input type="submit" value="좋아요"> </td>
-			</tr>
-		
+			</tr>		
 			</table>
 		</form>
 		
