@@ -5,11 +5,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <title>FOMA 게시글 등록</title>
-<link rel="shortcut icon" href="template/test1_foodblog/assets/images/favicon.png"
-	type="image/png">
+
+
 <link rel="stylesheet" type="text/css" href="../css/shopping.css">
 <script type="text/javascript" src="../script/board.js"></script>
+<link rel="shortcut icon" href="template/test1_foodblog/assets/images/favicon.png"
+	type="image/png">
 </head>
 <body>
 	<div id="wrap" align="center">
