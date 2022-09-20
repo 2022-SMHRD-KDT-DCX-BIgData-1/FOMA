@@ -19,7 +19,7 @@
 <body>
 <%  List<BoardVO> bd = (List<BoardVO>)session.getAttribute("selectOneBoardByNum");
 List<SubBoardVO> sbd = (List<SubBoardVO>)session.getAttribute("selectAllSubBoards");
-//Member loginmember = (Member)session.getAttribute("loginmember");
+Member lg = (Member)session.getAttribute("loginMember");
 
 %>
 
@@ -50,13 +50,18 @@ List<SubBoardVO> sbd = (List<SubBoardVO>)session.getAttribute("selectAllSubBoard
 		</table>
 		<br>
 		
-		<form name ="" method = "post" action ="BoardGoodServlet">
 		
+		<form name ="" method = "post" action ="BoardGoodServlet">
+			<%if(lg!=null){ %>	
+		<input type="hidden" name="username" value="<%=lg.getUsername()%>">
+		<%} %>
 		<input type="hidden" name="num" value="<%=bd.get(0).getNum() %>">
 			<table>		
 			<tr>
 				<th> 좋아요 갯수 : <%=bd.get(0).getGood() %> </th>
+				<%if(lg!=null){ %>	
 				<td> <input type="submit" value="좋아요"> </td>
+				<%} %>
 			</tr>		
 			</table>
 		</form>

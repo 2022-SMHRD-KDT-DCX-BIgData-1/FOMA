@@ -218,5 +218,16 @@ select * from subboard where num = #{num}
  update board set good = good+1 where num=#{num}
   
   </update>
+  
+  <!--좋아요 아이디 검색  -->
+ <select id="selectusergood" parameterType="com.saeyan.dto.SubBoardVO" resultType = "int">
+<![CDATA[select num from subgood where username =#{username} and  num = #{num} and rownum<2]]>
+</select>
+  <!-- 좋아요 아이디 등록  -->
+    <insert id="insertsubgood" parameterType="com.saeyan.dto.SubBoardVO">
+
+  insert into subgood(username,num) values(#{username}, #{num})
+ 
+  </insert> 
 
 </mapper>

@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.saeyan.dao.BoardDAO;
 import com.saeyan.dao.SubBoardDAO;
+import com.saeyan.dto.GoodVO;
 import com.saeyan.dto.SubBoardVO;
 
 
@@ -22,20 +23,34 @@ public class BoardGoodServlet extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		// 1. 파라미터 수집
 
-		System.out.println("좋아요 서블릿 입장");
-
+		
 		
 		int num = Integer.valueOf(request.getParameter("num"));
-		
-		
+		String username = request.getParameter("username");
+		System.out.println("좋아요 서블릿 입장"+username+num);
+
 		// 2. 수집된 데이터를 Member 객체에 담기
 		
+		
 		SubBoardDAO bd = new SubBoardDAO();
+		GoodVO vo = new GoodVO(username, num);
+		int cnt = bd.selectusergood(vo);
+		System.out.println("좋아요 유저 검샘결과 " +cnt );
+		if(cnt==0){
+			bd.insertusergood(vo);
+			bd.updategood(num);
+			response.sendRedirect("BoardServlet?command=board_view&num=" + num);
+			return;
+		}else {
+			
+			response.sendRedirect("BoardServlet?command=board_view&num=" + num);
+			return;
+		}
 		
-		bd.updategood(num);
 		
-		response.sendRedirect("BoardServlet?command=board_view&num=" + num);
-		return;
+		
+		
+	
 		
 		
 	}
