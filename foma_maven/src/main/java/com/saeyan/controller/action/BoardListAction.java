@@ -12,6 +12,8 @@ import javax.servlet.http.HttpSession;
 import com.saeyan.dao.BoardDAO;
 import com.saeyan.dto.BoardVO;
 
+import BoardListServlet.BoardListController;
+
 public class BoardListAction implements Action{
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response)
@@ -19,6 +21,10 @@ public class BoardListAction implements Action{
 		String url = "/board/boardList.jsp";
 		BoardDAO bDao = BoardDAO.getInstance();
 		List<BoardVO> boardList = bDao.selectAllBoards();
+		
+		 //BoardListController bd = new  BoardListController();
+		
+	//	List pagelist=  bd.paging(1, boardList.size()) ;
 		
         HttpSession session = request.getSession();
         session.setAttribute("boardList", boardList);

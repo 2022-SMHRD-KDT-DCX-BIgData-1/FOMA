@@ -4,6 +4,7 @@
 	pageEncoding="UTF-8"%>
 <%@page import="java.util.List"%>			
 <%@page import="com.saeyan.dto.BoardVO"%>	
+<%@page import="BoardListServlet.Myutil"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
@@ -67,6 +68,10 @@
 <title>마이 페이지</title>
 </head>
 <link rel="stylesheet" type="text/css" href="css/shopping.css">
+<link rel="stylesheet" type="text/css" href="css/pagekim.css">
+<style type="text/css">
+	
+</style>
 </head>
 <body>
 <header class="header-section d-xl-block d-none">
@@ -111,8 +116,49 @@
 
 
 <%  List<BoardVO> bd = (List<BoardVO>)session.getAttribute("boardList");%>
+<!--페이징 테스트  -->
+<%
+	request.setCharacterEncoding("utf-8");
 
-   
+	// 파라미터로 넘어온 페이지 번호(JSP에서 page는 예약어로 변수명으로 사용 불가)
+	String pageNum = request.getParameter("page");
+	int current_page = 1;
+	if(pageNum != null) {
+		current_page = Integer.parseInt(pageNum);
+	}
+	
+	Myutil util = new Myutil();
+	
+	int dataCount = bd.size();
+	int rows = 10;
+	int total_page = util.pageCount(rows, dataCount);
+	if(current_page > total_page) {
+		current_page = total_page;
+	}
+	
+	String listUrl = "BoardServlet?command=board_list";
+	String paging = util.paging(current_page, total_page, listUrl);
+	
+	int pgstart = (current_page*10)-10;
+	int pgend = 10;
+	
+int endindex = bd.size()%10;
+	
+	if(bd.size()>10){//목록이 10개 이상
+
+		if(bd.size()-(current_page*10)>0){//남아있는 목록이 10개 이상일경우
+			pgend =(current_page*10);
+		}else{
+			pgend = (current_page*10)-10 + endindex;
+		}
+
+		
+	}else{
+		pgend = bd.size();
+	}
+%>
+
+ <!--페이징 테스트  -->  
 	<div id="wrap" align="center">
 		<h1>게시글 리스트</h1>
 		<table class="list">
@@ -134,18 +180,18 @@
 			 <%
 		//세션에서 정보가 있다면 정보를 가져와서 출력하기					
 						if(bd!=null){
-							for (BoardVO bv : bd) {
+							for (int i=pgstart;i<pgend;i++) {
 								%>
 							<tr class="record">
-					<td><%=bv.getNum()%>	</td>
-					<td><a href="BoardServlet?command=board_view&num=<%=bv.getNum() %>">
-							<%=bv.getTitle() %> </a></td>
-					<td><%=bv.getName() %></td>
+					<td><%=bd.get(i).getNum()%>	</td>
+					<td><a href="BoardServlet?command=board_view&num=<%=bd.get(i).getNum() %>">
+							<%=bd.get(i).getTitle() %> </a></td>
+					<td><%=bd.get(i).getName() %></td>
 					
-					<td><%=bv.getWritedate() %>></td>
+					<td><%=bd.get(i).getWritedate() %>></td>
 				
-					<td><%=bv.getReadcount() %></td>
-					<td><%=bv.getGood() %></td>
+					<td><%=bd.get(i).getReadcount() %></td>
+					<td><%=bd.get(i).getGood() %></td>
 				</tr>
 				<% }%><%} %>
 		
@@ -167,6 +213,17 @@
 			
 			
 		</table>
+		<div class="container">
+	<!-- 
+	<h3 style="text-align: center;">페이징 처리 테스트</h3>
+	 -->
+	<div style="padding-top: 	20px;">
+		<%= paging %>
+	</div>
+	
+	
+	
+</div>
 	</div>
 	<footer class="footer">
 		<div class="bg-shape-style"></div>

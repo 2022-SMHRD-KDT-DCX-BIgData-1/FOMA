@@ -70,6 +70,12 @@
   	<description></description>
   	<servlet-class>com.saeyan.controller.BoardGoodServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ListController</servlet-name>
+  	<display-name>ListController</display-name>
+  	<description></description>
+  	<servlet-class>BoardListServlet.ListController</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
   	<url-pattern>/JoinCon</url-pattern>
@@ -113,6 +119,10 @@
   <servlet-mapping>
   	<servlet-name>BoardGoodServlet</servlet-name>
   	<url-pattern>/BoardGoodServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ListController</servlet-name>
+  	<url-pattern>/ListController</url-pattern>
   </servlet-mapping>
 
  
