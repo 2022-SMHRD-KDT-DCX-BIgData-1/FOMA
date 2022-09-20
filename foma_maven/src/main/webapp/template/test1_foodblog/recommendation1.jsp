@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" isELIgnored="false"%>
 <%@page import="java.util.List"%>
+<%@page import="BoardListServlet.Myutil"%>
 <%@page import="com.foma_java_mvc_folder.domain.FMember"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page import="java.util.*"%>
@@ -30,6 +31,7 @@
 <link href="assets/css/animate.css">
 <link rel="stylesheet" href="css/LikeFind.css" />
 <link rel="stylesheet" href="js/LikeFind.js" />
+<link rel="stylesheet" type="text/css" href="css/pagekim.css">
 <title>검색한 결과 더보기</title>
 </head>
 <body>
@@ -37,6 +39,7 @@
               <%
               ArrayList<FMember> f = (ArrayList<FMember>)session.getAttribute("selectFMember");
 			  %>  
+			  
 	<!-- preloader -->
 	<div class="preloader">
         <div class="load loade">
@@ -117,16 +120,63 @@
 							<%
 							ArrayList<FMember> selectFMember = (ArrayList<FMember>) session.getAttribute("selectFMember");
 							%>
+							<!--페이징 테스트  -->
+<%
+
+int pgstart =0;
+int pgend = 0;
+String paging="";
+if(selectFMember!=null){
+	request.setCharacterEncoding("utf-8");
+
+	// 파라미터로 넘어온 페이지 번호(JSP에서 page는 예약어로 변수명으로 사용 불가)
+	String pageNum = request.getParameter("page");
+	int current_page = 1;
+	if(pageNum != null) {
+		current_page = Integer.parseInt(pageNum);
+	}
+	
+	Myutil util = new Myutil();
+	
+	int dataCount = selectFMember.size();
+	int rows = 10;
+	int total_page = util.pageCount(rows, dataCount);
+	if(current_page > total_page) {
+		current_page = total_page;
+	}
+	
+	String listUrl = "recommendation1.jsp";
+	paging = util.paging(current_page, total_page, listUrl);
+	
+	pgstart = (current_page*10)-10;
+	pgend = 10;
+	
+int endindex = selectFMember.size()%10;
+	
+	if(selectFMember.size()>10){//목록이 10개 이상
+
+		if(selectFMember.size()-(current_page*10)>0){//남아있는 목록이 10개 이상일경우
+			pgend =(current_page*10);
+		}else{
+			pgend = (current_page*10)-10 + endindex;
+		}
+
+		
+	}else{
+		pgend = selectFMember.size();
+	}
+}
+%>
 							<%
 							//세션에서 정보가 있다면 정보를 가져와서 출력하기					
 							if (selectFMember != null) {
-								for (FMember fd : selectFMember) {
+								for (int i=pgstart;i<pgend;i++) {
 							%>
 							<%-- <a href = "shop-single.jsp"> <%=	f.getFd_name()%></a>
 								 --%>
 							<form class="result" action="/foma_maven/SelectfdCon" method="post">
 								<%
-								String str = fd.getFd_name();
+								String str = selectFMember.get(i).getFd_name();
 								%>
 								<input type="text" name="fd_name" value="<%=str%>">
 								<!--같이 값을 보내줄 셀렉트코드를 히든값으로 지정한다. 한개검색  -->
@@ -153,6 +203,15 @@
 				</div>
 			</div>
 		</div>
+			<div class="container">
+	<!-- 
+	<h3 style="text-align: center;">페이징 처리 테스트</h3>
+	 -->
+	<div style="padding-top: 	20px;">
+	
+		<%= paging %>
+	
+	</div>
 	</section>
 	
 	<!-- Popular Food Section Start Here -->
