@@ -293,7 +293,7 @@
 							<div class="swiper-slide">
 								<div class="food-item">
 									<div class="food-thumb"
-										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=나물&fd_name=temp' ">
+										onclick="location.href='/foma_maven/SelectfdCon?selectcode=cate&fd_category_big_name=숙채&fd_name=temp' ">
 										<a href="#"><img src="assets/images/food/04.png"
 											alt="food"></a>
 									</div>
