@@ -5,3 +5,11 @@ footer.footer {
   background-color: #fb524f;
   position: absolute;
 }
+@media (min-width: 992px) {
+    .banner {
+        padding: 1px 0;
+        margin-left: 350px;
+        margin-top: 20px;
+        text-align: center;
+    }
+}

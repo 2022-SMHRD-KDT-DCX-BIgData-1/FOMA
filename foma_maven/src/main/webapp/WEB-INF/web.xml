@@ -41,6 +41,12 @@
   	<servlet-class>com.foma_java_mvc_folder.Controller.SelectfdCon</servlet-class>
   </servlet>
   <servlet>
+  	<servlet-name>SelectfdCon2</servlet-name>
+  	<display-name>SelectfdCon2</display-name>
+  	<description></description>
+  	<servlet-class>com.foma_java_mvc_folder.Controller.SelectfdCon2</servlet-class>
+  </servlet>
+  <servlet>
   	<servlet-name>BoardServlet</servlet-name>
   	<display-name>BoardServlet</display-name>
   	<description></description>
@@ -87,6 +93,10 @@
   <servlet-mapping>
   	<servlet-name>SelectfdCon</servlet-name>
   	<url-pattern>/SelectfdCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SelectfdCon2</servlet-name>
+  	<url-pattern>/SelectfdCon2</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>BoardServlet</servlet-name>
