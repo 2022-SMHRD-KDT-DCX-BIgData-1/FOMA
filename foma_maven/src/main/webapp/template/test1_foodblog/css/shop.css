@@ -1,0 +1,43 @@
+/* .shop-page single padding-tb pb-0 {
+	background: url(assets/images/about/01.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: left-bottom;
+	background-size: 300px 200px;
+} */
+img {
+	width: 250px;
+}
+
+div {
+	font-size: 20px;
+	text-align: center;
+}
+
+.shop-page {
+	text-align: center;
+}
+
+.desc table {
+	width: 50%;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+.column {
+	float: left;
+	width: 50%;
+	padding: 10px;
+}
+
+.row1:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+footer {
+	position: bottom;
+	bottom: 0;
+	width: 100%;
+}
