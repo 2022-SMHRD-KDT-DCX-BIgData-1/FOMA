@@ -163,7 +163,7 @@
 	<!-- Page Header Section Start Here -->
 	<!-- Page Header Section Ending Here -->
 	<!-- Popular Home Chef Section Start Here -->
-	<div class="shop-page single padding-tb pb-0" style = "text-align: center;">
+	<div class="shop-page single padding-tb pb-0">
 		<div class="container">
 			<div class="section-wrapper">
 				<article>
