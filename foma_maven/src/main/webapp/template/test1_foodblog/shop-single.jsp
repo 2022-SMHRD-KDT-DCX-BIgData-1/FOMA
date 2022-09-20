@@ -166,10 +166,11 @@
 	<div class="shop-page single padding-tb pb-0">
 		<div class="container">
 			<div class="section-wrapper">
-				<div class="row justify-content-center">
-					<div class="col-xl-8 col-12">
-						<article>
-							<div class="shop-single">
+				<article>
+					<div class="row1">
+						<div class="column">
+							
+
 
 								<%
 								//세션에서 정보가 있다면 정보를 봅아서 출력하기					
@@ -189,65 +190,69 @@
 											alt="shop-single">
 									</div>
 								</div>
+							
+						</div>
+						<div class="column">
+							
 
-									<div class="shop-single-content">
-										<div class="title">
-											<!-- 음식 정보 출력단 -->
-											<!--음식 분류  -->
-											<h5>
-												<a href="#"><%=f.get(0).getFd_category_big_name()%></a>
-											</h5>
-											<div class="type-of-food">
-												<span>✔️Type of food :</span> <a href="#"><%=f.get(0).getFd_general_name()%></a>
-												<%-- <a href="#"><%=f.get(0).getFd_category_small_name() %></a>
+								<div class="title">
+									<!-- 음식 정보 출력단 -->
+									<!--음식 분류  -->
+									<h5>
+										<a href="#"><%=f.get(0).getFd_category_big_name()%></a>
+									</h5>
+
+									<div class="type-of-food">
+										<span>✔️Type of food :</span> <a href="#"><%=f.get(0).getFd_general_name()%></a>
+										<%-- <a href="#"><%=f.get(0).getFd_category_small_name() %></a>
                                                 <a href="#"><%=f.get(0).getFd_category_micro_name() %></a></div>
                                                 <div class="rating"><i class="icofont-star"></i><i
                                                         class="icofont-star"></i><i class="icofont-star"></i><i
                                                         class="icofont-star"></i><i class="icofont-star"></i><span>(2
                                                         Customer Reviews)</span></div> --%>
-											</div>
-											</div>
-											<div class="desc">
-												<!--음식 영양소 , 조건문을 통해 자료없음을 표시해줘야한다. -->
-												<table>
-													<tr>
-														<td>칼로리(kcal) :</td>
-														<td><%=Math.round(f.get(0).getFd_ing_cal())%></td>
-													</tr>
-													<tr>
-														<td>단백질(g) :</td>
-														<td><%=Math.round(f.get(0).getFd_ing_protein())%></td>
-													</tr>
-													<tr>
-														<td>탄수화물(g) :</td>
-														<td><%=Math.round(f.get(0).getFd_ing_carbohydrate())%></td>
-													</tr>
-													<tr>
-														<td>포화지방(g) :</td>
-														<td><%=String.format("%10.2f", (f.get(0).getFd_ing_saturated_fatty() * 100) / 100.0)%></td>
-													</tr>
-													<tr>
-														<td>트랜스지방(g) :</td>
-														<td><%=String.format("%10.2f", (f.get(0).getFd_ing_trans_fatty() * 100) / 100.0)%></td>
-													</tr>
-													<tr>
-														<td>총 지방(g) :</td>
-														<td><%=Math.round(f.get(0).getFd_ing_fatty())%></td>
-													</tr>
-													<tr>
-														<td>나트륨(mg) :</td>
-														<td><%=Math.round(f.get(0).getFd_ing_salt())%></td>
-													</tr>
-													<tr>
-														<td>당류(g) :</td>
-														<td><%=String.format("%10.2f", (f.get(0).getFd_ing_sugar() * 100) / 100.0)%></td>
-													</tr>
-													<tr>
-														<td>1회섭취량 :</td>
-														<td><%=f.get(0).getFd_intake_once()%></td>
-													</tr>
-												</table>
-												<%-- <c:choose>
+									</div>
+								</div>
+								<div class="desc">
+									<!--음식 영양소 , 조건문을 통해 자료없음을 표시해줘야한다. -->
+									<table>
+										<tr>
+											<td>칼로리(kcal) :</td>
+											<td><%=Math.round(f.get(0).getFd_ing_cal())%></td>
+										</tr>
+										<tr>
+											<td>단백질(g) :</td>
+											<td><%=Math.round(f.get(0).getFd_ing_protein())%></td>
+										</tr>
+										<tr>
+											<td>탄수화물(g) :</td>
+											<td><%=Math.round(f.get(0).getFd_ing_carbohydrate())%></td>
+										</tr>
+										<tr>
+											<td>포화지방(g) :</td>
+											<td><%=String.format("%10.2f", (f.get(0).getFd_ing_saturated_fatty() * 100) / 100.0)%></td>
+										</tr>
+										<tr>
+											<td>트랜스지방(g) :</td>
+											<td><%=String.format("%10.2f", (f.get(0).getFd_ing_trans_fatty() * 100) / 100.0)%></td>
+										</tr>
+										<tr>
+											<td>총 지방(g) :</td>
+											<td><%=Math.round(f.get(0).getFd_ing_fatty())%></td>
+										</tr>
+										<tr>
+											<td>나트륨(mg) :</td>
+											<td><%=Math.round(f.get(0).getFd_ing_salt())%></td>
+										</tr>
+										<tr>
+											<td>당류(g) :</td>
+											<td><%=String.format("%10.2f", (f.get(0).getFd_ing_sugar() * 100) / 100.0)%></td>
+										</tr>
+										<tr>
+											<td>1회섭취량 :</td>
+											<td><%=f.get(0).getFd_intake_once()%></td>
+										</tr>
+									</table>
+									<%-- <c:choose>
                                             <c:when test="${f.get(0).getFd_ing_dietaryfiber() ne -1}">
                                            <p>식이섬유 : 자료없음<p>
                                             </c:when>
@@ -267,7 +272,7 @@
 
 
 
-												<!-- <ul>
+									<!-- <ul>
                                                     <li>20 MP front & 28 megapixel CMOS rear camera</li>
                                                     <li>4.5 inch HD Touch Screen (1280 x 720)</li>
                                                     <li>1.4 GHz Quad Core™ Processor</li>
@@ -276,14 +281,11 @@
                                                 <div class="quyality">
                                                     <p><span>SKU</span>: FW511948218</p>
                                                 </div> -->
-											</div>
-										</div>
-									
-								
-							</div>
-						</article>
+								</div>
+							
+						</div>
 					</div>
-				</div>
+				</article>
 			</div>
 		</div>
 	</div>
