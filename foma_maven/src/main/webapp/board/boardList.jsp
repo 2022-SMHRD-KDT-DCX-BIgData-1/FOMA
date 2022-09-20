@@ -99,8 +99,6 @@ int endindex = bd.size()%10;
 		}
 
 		
-		
-		
 	}else{
 		pgend = bd.size();
 	}
