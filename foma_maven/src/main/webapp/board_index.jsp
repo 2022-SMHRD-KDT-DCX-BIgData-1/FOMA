@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>게시글</title>
 </head>
 <body>
+
 
 <%
 response.sendRedirect("BoardServlet?command=board_list");
