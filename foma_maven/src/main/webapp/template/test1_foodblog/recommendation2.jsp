@@ -91,7 +91,6 @@
 	<!-- Page Header Section Start Here -->
 	<!-- Banner Section Start Here -->
 	<section class="banner">
-
 		<div class="banner-area">
 			<div class="container">
 				<div class="row">
@@ -113,6 +112,7 @@
 									<i class="icofont-search-2"></i>
 								</button><br>
 							</form>
+							<br>
 							<%
 							ArrayList<FMember> selectFMember = (ArrayList<FMember>) session.getAttribute("selectFMember");
 							%>
@@ -123,14 +123,14 @@
 							%>
 							<%-- <a href = "shop-single.jsp"> <%=	f.getFd_name()%></a>
 								 --%>
-							<form class="reselt" action="/foma_maven/SelectfdCon" method="post">
+							<form class="reselt" action="/foma_maven/SelectfdCon2" method="post">
 								<%
 								String str = fd.getFd_name();
 								%>
 								<input type="text" name="fd_name" value="<%=str%>">
 								<!--같이 값을 보내줄 셀렉트코드를 히든값으로 지정한다. 한개검색  -->
 								<input type="hidden" name="selectcode" value="one"> <label>
-									자세한 정보 클릭!
+									자세한 정보 →
 									<button type="submit">
 										<i class="icofont-search-2"></i>
 									</button>
@@ -140,9 +140,11 @@
 							<%
 							}
 							%>
+							<button>더보기</button>
 							<%
 							} else {
 							%>
+							검색어를 입력해주세요!
 							<%
 							}
 							%>
