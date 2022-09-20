@@ -29,5 +29,27 @@ public class SubBoardDAO {
 			sqlSession.close();
 		}
 	}
+	public void deleteSubBoard(SubBoardVO bVo) { // 게시판 작성
+//		String sql = "insert into board("
+//				+ "num, name, email, pass, title, content) "
+//				+ "values(board_seq.nextval, ?, ?, ?, ?, ?)";
+		System.out.println("댓글삭제 받아온 이름	 :"+bVo.getName()+"받아온 날짜"+bVo.getWritedate());
+		SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
+		   SqlSession sqlSession = sqlSessionFactory.openSession();
+		int cnt = 0;
+		try {
+			// Mapper-insert 태그의 id, 매개변수
+			cnt = sqlSession.delete("deleteSubBoard", bVo);
+
+			if (cnt > 0) {
+				sqlSession.commit();
+			} else {
+				sqlSession.rollback();
+			}
+
+		} finally {
+			sqlSession.close();
+		}
+	}
 	
 }
