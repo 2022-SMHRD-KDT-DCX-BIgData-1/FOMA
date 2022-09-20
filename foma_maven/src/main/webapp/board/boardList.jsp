@@ -12,7 +12,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>FOMA 게시판</title>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +30,7 @@
 <meta property="og:url" content="http://github.com/nauvalazhar/Magz" />
 <meta property="og:image"
 	content="https://raw.githubusercontent.com/nauvalazhar/Magz/master/images/preview.png" />
-<title>FOMA 내정보</title>
+
 <!-- Bootstrap -->
 <link rel="stylesheet" href="scripts/bootstrap/bootstrap.min.css">
 <!-- IonIcons -->
@@ -65,7 +65,8 @@
 <!-- custom scss -->
 <link rel="stylesheet" href="template/test1_foodblog/assets/css/style.css">
 <link rel="stylesheet" href="template/test1_foodblog/assets/css/style2.css">
-<title>마이 페이지</title>
+<link rel="shortcut icon" href="template/test1_foodblog/assets/images/favicon.png"
+	type="image/png">
 </head>
 <link rel="stylesheet" type="text/css" href="css/shopping.css">
 <link rel="stylesheet" type="text/css" href="css/pagekim.css">

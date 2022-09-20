@@ -22,6 +22,8 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
 <meta charset="UTF-8">
+<link rel="shortcut icon" href="template/test1_foodblog/assets/images/favicon.png"
+	type="image/png">
 <title>로그인 / 회원가입</title>
 <link rel="stylesheet" href="Login.css">
 <link rel="stylesheet" href="Login.css">

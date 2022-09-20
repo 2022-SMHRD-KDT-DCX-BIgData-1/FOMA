@@ -12,7 +12,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>FOMA 게시판 안</title>
+<link rel="shortcut icon" href="template/test1_foodblog/assets/images/favicon.png"
+	type="image/png">
+</head>
 <link rel="stylesheet" type="text/css" href="css/shopping.css">
 <script type="text/javascript" src="script/board.js"></script>
 </head>
