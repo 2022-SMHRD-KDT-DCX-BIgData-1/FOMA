@@ -57,9 +57,9 @@
   </select>
   
   <!-- 아이디 조회 -->
-  <select id="findIdMember" parameterType="String"  resultType = "String">
+  <select id="findIdMember" parameterType="String"  resultType = "com.foma_java_mvc_folder.domain.Member">
 
- 	select username from Member where username = #{username} 
+ 	select username from Member where username like '%'||#{username}||'%'
  
   </select>
   

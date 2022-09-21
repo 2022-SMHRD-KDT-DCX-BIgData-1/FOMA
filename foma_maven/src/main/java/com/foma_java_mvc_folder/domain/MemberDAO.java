@@ -1,5 +1,7 @@
 package com.foma_java_mvc_folder.domain;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -124,21 +126,21 @@ public class MemberDAO {
 		return cnt;
 	}
 	//아이디조회(친구찾기)
-	public String findIdMember(String username) {
-		SqlSession sqlSession = sqlSessionFactory.openSession();
-		String findIdMember = null;
-		try {
-			findIdMember = sqlSession.selectOne("findIdMember", username);
-			System.out.println(findIdMember);
-			if (findIdMember != null) {
-				sqlSession.commit();
+		public List<Member> findIdMember(String username) {
+			SqlSession sqlSession = sqlSessionFactory.openSession();
+			List<Member> findIdMember = null;
+			try {
+				findIdMember = sqlSession.selectList("findIdMember", username);
+				System.out.println(findIdMember);
+				if (findIdMember != null) {
+					sqlSession.commit();
 
-			} else {
-				sqlSession.rollback();
+				} else {
+					sqlSession.rollback();
+				}
+			} finally {
+				sqlSession.close();
 			}
-		} finally {
-			sqlSession.close();
-		}
-		return findIdMember;
+			return findIdMember;
 	}
 }
