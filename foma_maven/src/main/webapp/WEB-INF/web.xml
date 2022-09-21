@@ -82,6 +82,12 @@
   	<description></description>
   	<servlet-class>com.foma_java_mvc_folder.Controller.findIdCon</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>GoodBoardDesc</servlet-name>
+  	<display-name>GoodBoardDesc</display-name>
+  	<description></description>
+  	<servlet-class>BoardListServlet.GoodBoardDesc</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
   	<url-pattern>/JoinCon</url-pattern>
@@ -133,6 +139,10 @@
   <servlet-mapping>
   	<servlet-name>findIdCon</servlet-name>
   	<url-pattern>/findIdCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>GoodBoardDesc</servlet-name>
+  	<url-pattern>/GoodBoardDesc</url-pattern>
   </servlet-mapping>
 
  

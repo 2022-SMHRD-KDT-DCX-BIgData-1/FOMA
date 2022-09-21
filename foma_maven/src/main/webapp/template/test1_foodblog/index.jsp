@@ -1,8 +1,12 @@
+<%@page import="org.apache.catalina.users.AbstractGroup"%>
+<%@page import="BoardListServlet.GoodBoardDesc"%>
 <%@page import="java.util.List"%>
 <%@page import="com.foma_java_mvc_folder.domain.FMember"%>
+<%@page import="com.saeyan.dto.BoardVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <%@ page import="java.util.*"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -412,22 +416,38 @@
 	</section>
 	<!-- Banner Section Ending Here -->
 
-	<div class="container">
-		<h2 class="text-center">나 게시글임 ㅇㅇ</h2>
+<%GoodBoardDesc agb = new GoodBoardDesc();
+agb.service(request, response);
+%>
+<% 
 
+List<BoardVO> gbdo = (List<BoardVO>) session.getAttribute("selectgoodBoardsdesc");
+
+int bgsize =0;
+if(gbdo.size()>3){
+	bgsize=3;
+}else{
+	bgsize=gbdo.size();
+}
+							%>
+
+
+
+	<div class="container">
+		<h2 class="text-center">게시판 추천 TOP3</h2>
+		<%for(int i=0; i<bgsize; i++){ %>
 		<div class="card">
 			<div class="card-body">
 				<div class="row">
 					<div class="col-md-2">
 						<img src="https://image.ibb.co/jw55Ex/def_face.jpg"
 							class="img img-rounded img-fluid" />
-						<p class="text-secondary text-center">몇분전에 올라옴</p>
+						<p class="text-secondary text-center"><%=gbdo.get(i).getName() %></p>
 					</div>
 					<div class="col-md-10">
 						<p>
 							<a class="float-left"
-								href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>오늘
-									화요일임</strong></a> <span class="float-right"><i
+								href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>좋아요 : <%=gbdo.get(i).getGood()%></strong></a> <span class="float-right"><i
 								class="text-warning fa fa-star"></i></span> <span class="float-right"><i
 								class="text-warning fa fa-star"></i></span> <span class="float-right"><i
 								class="text-warning fa fa-star"></i></span> <span class="float-right"><i
@@ -435,7 +455,10 @@
 
 						</p>
 						<div class="clearfix"></div>
-						<p>내일 수요일임 ㅇㄴ</p>
+						
+						<p><a href="../../BoardServlet?command=board_view&num=<%=gbdo.get(i).getNum() %>">
+						<%=gbdo.get(i).getTitle() %> </a></p>
+						
 						<p>
 							<a class="float-right btn btn-outline-primary ml-2"> <i
 								class="fa fa-reply"></i> Reply
@@ -445,6 +468,8 @@
 						</p>
 					</div>
 				</div>
+			
+				<!-- 
 				<div class="card card-inner">
 					<div class="card-body">
 						<div class="row">
@@ -475,8 +500,11 @@
 							</div>
 						</div>
 					</div>
-				</div>
+					</div>
+					 -->
+				
 			</div>
+				<%} %>
 		</div>
 		<footer class="footer">
 		<div class="bg-shape-style"></div>

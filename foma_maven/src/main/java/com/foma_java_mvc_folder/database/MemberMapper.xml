@@ -236,5 +236,15 @@ select * from subboard where num = #{num}
   insert into subgood(username,num) values(#{username}, #{num})
  
   </insert> 
+  
+  <!--게시판 좋아요순  -->
+  <select id="selectgoodBoardsdesc" parameterType="com.saeyan.dto.BoardVO" resultType = "com.saeyan.dto.BoardVO">
+
+ select * from board order by good desc 
+ 
+  </select>
+  
+  
+  
 
 </mapper>
