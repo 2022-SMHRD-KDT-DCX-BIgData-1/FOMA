@@ -11,6 +11,7 @@ import java.util.List;
 import javax.servlet.http.HttpSession;
 
 import org.apache.catalina.Session;
+import org.apache.catalina.connector.Response;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -137,6 +138,7 @@ public class BoardDAO {
 		} finally {
 			sqlSession.close();
 		}
+		
 	}
 	
 
