@@ -137,7 +137,7 @@
 									<select name="selectcode">
 										<option value="none">음식 검색</option>
 										<option value="lowsalt">저염식 검색</option>
-										<option value="lowcal">저칼로리 음식 검색</option>
+										<option value="lowcal">저칼로리 검색</option>
 									</select>
 								</div>
 								<input type="text" name="fd_name" placeholder="Enter your food name">
@@ -421,6 +421,18 @@
 		</div>
 	</section>
 	<!-- Banner Section Ending Here -->
+	<footer class="footer">
+		<div class="bg-shape-style"></div>
+		<div class="container">
+			<div class="footer-bottom text-center">
+				<p>
+					&copy; 2019 <a href="http://www.bootstrapmb.com/"><span>Mezban</span></a>Design
+					by <a href="#"><span>FoxCoders</span></a>.
+				</p>
+			</div>
+		</div>
+	</footer>
+	
 
 <%GoodBoardDesc agb = new GoodBoardDesc();
 agb.service(request, response);
@@ -448,12 +460,12 @@ if(gbdo.size()>3){
 					<div class="col-md-2">
 						<img src="https://image.ibb.co/jw55Ex/def_face.jpg"
 							class="img img-rounded img-fluid" />
-						<p class="text-secondary text-center"><%=gbdo.get(i).getName() %></p>
+						<p class="text-secondary text-center">닉네임 : <%=gbdo.get(i).getName() %></p>
 					</div>
 					<div class="col-md-10">
 						<p>
-							<a class="float-left"
-								href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>좋아요 : <%=gbdo.get(i).getGood()%></strong></a> <span class="float-right"><i
+							<a class="float-left" ><strong style="font-size: 15px;">현재 받은 좋아요 개수 : <%=gbdo.get(i).getGood()%></strong></a> 
+							<span class="float-right"><i
 								class="text-warning fa fa-star"></i></span> <span class="float-right"><i
 								class="text-warning fa fa-star"></i></span> <span class="float-right"><i
 								class="text-warning fa fa-star"></i></span> <span class="float-right"><i
@@ -462,16 +474,10 @@ if(gbdo.size()>3){
 						</p>
 						<div class="clearfix"></div>
 						
-						<p><a href="../../BoardServlet?command=board_view&num=<%=gbdo.get(i).getNum() %>">
+						<p style="font-size:30px; padding-top:20px;"><a href="../../BoardServlet?command=board_view&num=<%=gbdo.get(i).getNum() %>">게시글 제목 :
 						<%=gbdo.get(i).getTitle() %> </a></p>
 						
-						<p>
-							<a class="float-right btn btn-outline-primary ml-2"> <i
-								class="fa fa-reply"></i> Reply
-							</a> <a class="float-right btn text-white btn-danger"> <i
-								class="fa fa-heart"></i> Like
-							</a>
-						</p>
+					
 					</div>
 				</div>
 			
@@ -512,18 +518,10 @@ if(gbdo.size()>3){
 			</div>
 				<%} %>
 		</div>
-		<footer class="footer">
-		<div class="bg-shape-style"></div>
-		<div class="container">
-			<div class="footer-bottom text-center">
-				<p>
-					&copy; 2019 <a href="http://www.bootstrapmb.com/"><span>Mezban</span></a>Design
-					by <a href="#"><span>FoxCoders</span></a>.
-				</p>
-			</div>
-		</div>
-	</footer>
+		
 	</div>
+	
+	
 
 
 
