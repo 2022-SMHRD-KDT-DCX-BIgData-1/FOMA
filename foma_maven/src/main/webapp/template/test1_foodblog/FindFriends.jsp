@@ -93,7 +93,7 @@
 		<div class="pageTitle">
 			<div class="search-title">
 				<h5>Add Friends</h5>
-				<hr>
+				<br>
 				<form class="result" action="/foma_maven/findIdCon" method="post">
 					<div class="codexcoder-selectoption">
 						<input type="text" name="find" placeholder="id 입력" />
@@ -107,7 +107,7 @@
 			</div>
 		</div>
 	</div>
-	<div>
+	<div class="result1">
 		<p>✔️검색한 아이디 목록<p>					
 				<%
 				//세션에서 정보가 있다면 정보를 가져와서 출력하기
@@ -120,15 +120,18 @@
 					for (Member m : findIdMember){
 				%>
 				
-				<form class="result" action="/foma_maven/findIdCon" method="post">
-				<%-- <%=m.getUsername()%> --%>
+				<%-- <form class="result" action="/foma_maven/findIdCon" method="post">
+				<%=m.getUsername()%>
 					<input type="text" name="find" value="<%=m.getUsername() %>">
 					<input type="hidden" name="find" > 
 					<button type="submit">
 					<!-- 이미지 수정 필요함! -->
 						<!-- <img src="images/spinner.png" /> -->
 					</button>
-				</form>
+				</form> --%>
+				<div class="result">
+					<span><%=m.getUsername() %></span>
+				</div>
 				<br>
 				<%
 				}
@@ -223,7 +226,7 @@ int endindex = findIdMember.size()%10;
 				}
 				%> --%>
 				</div>
-				<div class="container">
+				<div class="container1">
 	<!-- 페이징 처리 테스트 -->
 	<%-- <div style="padding-top: 	20px;">
 	

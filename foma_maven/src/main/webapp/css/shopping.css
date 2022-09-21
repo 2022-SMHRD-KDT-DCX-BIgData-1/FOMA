@@ -38,3 +38,16 @@ a:HOVER {
 	text-decoration: underline; /* 밑줄 */
 	color: green; /* 글 색상 */
 }
+#wrap {
+	height: 80px;
+	width: 1000px;
+	background: #fb524f;
+	border-radius: 10px;
+}
+#wrap .title h1{
+	color: white;
+}
+.list {
+	width: 1000px;
+	margin: auto;
+}
