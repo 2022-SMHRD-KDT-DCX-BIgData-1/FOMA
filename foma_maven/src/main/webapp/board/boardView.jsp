@@ -76,7 +76,7 @@ List<imageVO> imgvo = (List<imageVO>)session.getAttribute("selectimage");
 		</form>
 		
 		<br>
-		<%if(!imgvo.isEmpty()){%>			
+		<%if(!imgvo.isEmpty()) {%>			
 		<img src = "fomaimages/<%=imgvo.get(0).getFileName()%>">	
 		<!--  
 			<img src = "<%=imgvo.get(0).getUploadFilePath()%>\<%=imgvo.get(0).getFileName()%>">	
