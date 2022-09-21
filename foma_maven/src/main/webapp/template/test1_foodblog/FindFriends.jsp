@@ -1,3 +1,7 @@
+<%@page import="java.util.List"%>
+<%@page import="com.foma_java_mvc_folder.domain.Member"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.foma_java_mvc_folder.domain.MemberDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -82,22 +86,105 @@
 	<!-- header section ending -->
 	
 	<!-- Page Header Section Start Here -->
-     <table>
-     	<tr>
-     		<th>아이디</th>
-     		<td><input type="text" name="find" id="name" value="<% String username = request.getParameter("find");
-     				if (username != null) out.println(username);%>">
-     		</td>
-     		<td><input type="submit" value="친구찾기"></td>
-     	<tr>
-     		<td colspan="6">
-     			<p>이곳에 db에 입력된 친구들 리스트</p>
-     			<p>순번 아이디</p>
-     			
-     </table>
-     
-     
-     
+	<section class="page-header">
+        <div class="container">
+          <div class="pageTitle">
+			<div class = "search-title">
+            <h5>Add Friends</h5>
+            <hr>
+				<form class="result" action="/foma_maven/findIdCon" method="post">
+				<div class="codexcoder-selectoption">
+					<input type="text" name="find" placeholder="id 입력" />
+					        <button type="submit" id="search">
+					                <img src="images/search.png" />
+					        </button><br>
+				</div>
+				</form>
+				<br>
+				<p>✔️검색한 아이디 목록<p>					
+				<% //세션에서 정보가 있다면 정보를 가져와서 출력하기
+				List<Member> findIdMember = (List<Member>)session.getAttribute("findIdMember");%>
+				<%
+				//session객체에 id가 session 있으면
+				if (findIdMember != null) {
+					for(Member m: findIdMember){
+				%>
+				<form class="result" action="/foma_maven/findIdCon" method="post">
+				<%= m.getUsername() %>
+					<input type="text" name="find" <%-- value="<%=f %>" --%>>
+					<%-- <%=findIdMember %> --%>
+					<input type="hidden" name="find" > 
+					<button type="submit" value="친구 찾기">
+						<img src="images/spinner.png" />
+					</button>
+				</form>
+				<br>
+				<%
+				}
+				%>
+				<%
+				}else {
+				%>
+				아이디를 검색해주세요!
+				<%
+				}
+				%>
+				
+				<div class="FindingFriends">
+      <div id="fb">
+        <!-- <div id="fb-top">
+          <p><b>Friend Requests</b><span>Find Friends &bull; Settings</span></p>
+        </div> -->
+        <a href="#">
+          <img
+            src="assets/images/gallery/01.jpg"
+            height="100"
+            width="100"
+            alt="Image of woman"
+          />
+          <p id="info">
+            <b>User Name</b> <br>
+            <!-- <span>14 mutual friends -->
+          </p>
+        </a>
+        <div id="button-block">
+          <div id="confirm">Confirm</div>
+          <!-- <div id="delete">Delete Request</div> -->
+        </div>
+      </div>
+				     <%-- <table>
+				     	<tr>
+				     		<th>아이디<br></th>
+				     		<td><input type="text" name="find" id="name" value="<% String username = request.getParameter("find");
+				     				if (username != null) out.println(username);%>">
+				     		</td>
+				     		<td><input type="submit" value="친구찾기"></td>
+				     			<% MemberDAO dao = new MemberDAO();%>
+				     			<% String findIdMember = (String)session.getAttribute("findIdMember");%>
+				     			<%
+				     			if(findIdMember != null){ 
+				     			%>
+				     	</tr>
+				     	<tr>
+				     		<td colspan="6">
+				     			<p>검색한 친구들 리스트</p>
+				     			<p>아이디</p>
+				     			<input type="text" name="find" value="<%=findIdMember %>">
+				     			<%=findIdMember  %>
+				     		</td>
+				     	</tr>
+				     	<br>
+				     		<%
+				     			}else{
+				     		%>
+				     			아이디를 검색해주세요! --%>
+				     			<%-- <%}%> --%>
+				     <!-- </table> -->
+				</div>
+          	</div>
+        </div>
+	</section>
+				     
     <!-- Page Header Section Ending Here -->
     <!-- Popular Home Chef Section Start Here -->
     <div class="FindingFriends">
