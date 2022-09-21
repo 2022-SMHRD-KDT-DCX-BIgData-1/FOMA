@@ -129,6 +129,7 @@ public class MemberDAO {
 		public List<Member> findIdMember(String username) {
 			SqlSession sqlSession = sqlSessionFactory.openSession();
 			List<Member> findIdMember = null;
+			System.out.println("파인드멤버 받아온 이름"+username);
 			try {
 				findIdMember = sqlSession.selectList("findIdMember", username);
 				System.out.println(findIdMember);

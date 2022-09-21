@@ -106,27 +106,28 @@
 		</div>
 	</div>
 	<div>
-		<p>
-			✔️검색한 아이디 목록<p>					
+		<p>✔️검색한 아이디 목록<p>					
 				<%
-									//세션에서 정보가 있다면 정보를 가져와서 출력하기
-									List<Member> findIdMember = (List<Member>) session.getAttribute("findIdMember");
-									%>
+				//세션에서 정보가 있다면 정보를 가져와서 출력하기
+				List<Member> findIdMember = (List<Member>) session.getAttribute("findIdMember");
+				%>
+				👉검색하신 내용이 <%=findIdMember.size() %>개 검색되었습니다.
 				<%
 				//session객체에 id가 session 있으면
 				if (findIdMember != null) {
 					for (Member m : findIdMember) {
 				%>
-				
+			 	
 		<form class="result" action="/foma_maven/findIdCon" method="post">
-				<%=m.getUsername()%>
-					<input type="text" name="find"<%-- value="<%=f %>" --%>>
-					<%-- <%=findIdMember %> --%>
-					<input type="hidden" name="find"> 
-					<button type="submit" value="친구 찾기">
-						<img src="images/spinner.png" />
+				<%-- <%=m.getUsername()%> --%>
+					<input type="text" name="find" value="<%=m.getUsername() %>">
+					<input type="hidden" name="find" > 
+					<button type="submit">
+					<!-- 이미지 수정 필요함! -->
+						<!-- <img src="images/spinner.png" /> -->
 					</button>
 				</form>
+				<%-- <%=findIdMember %> --%>
 				<br>
 				<%
 				}
@@ -134,7 +135,6 @@
 				<%
 				} else {
 				%>
-				아이디를 검색해주세요!
 				<%
 				}
 				%>
