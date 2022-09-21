@@ -421,17 +421,7 @@
 		</div>
 	</section>
 	<!-- Banner Section Ending Here -->
-	<footer class="footer">
-		<div class="bg-shape-style"></div>
-		<div class="container">
-			<div class="footer-bottom text-center">
-				<p>
-					&copy; 2019 <a href="http://www.bootstrapmb.com/"><span>Mezban</span></a>Design
-					by <a href="#"><span>FoxCoders</span></a>.
-				</p>
-			</div>
-		</div>
-	</footer>
+	
 	
 
 <%GoodBoardDesc agb = new GoodBoardDesc();
@@ -480,48 +470,29 @@ if(gbdo.size()>3){
 					
 					</div>
 				</div>
-			
-				<!-- 
-				<div class="card card-inner">
-					<div class="card-body">
-						<div class="row">
-							<div class="col-md-2">
-								<img src="https://image.ibb.co/jw55Ex/def_face.jpg"
-									class="img img-rounded img-fluid" />
-								<p class="text-secondary text-center">15 Minutes Ago</p>
-							</div>
-							<div class="col-md-10">
-								<p>
-									<a
-										href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Maniruzzaman
-											Akash</strong></a>
-								</p>
-								<p>Lorem Ipsum is simply dummy text of the pr make but also
-									the leap into electronic typesetting, remaining essentially
-									unchanged. It was popularised in the 1960s with the release of
-									Letraset sheets containing Lorem Ipsum passages, and more
-									recently with desktop publishing software like Aldus PageMaker
-									including versions of Lorem Ipsum.</p>
-								<p>
-									<a class="float-right btn btn-outline-primary ml-2"> <i
-										class="fa fa-reply"></i> Reply
-									</a> <a class="float-right btn text-white btn-danger"> <i
-										class="fa fa-heart"></i> Like
-									</a>
-								</p>
-							</div>
-						</div>
-					</div>
-					</div>
-					 -->
-				
+
 			</div>
 				<%} %>
+				
 		</div>
 		
+		</div>
+	</div>
 	</div>
 	
 	
+	<footer class="footer">
+		<div class="bg-shape-style"></div>
+		<div class="container">
+			<div class="footer-bottom text-center">
+				<p>
+					&copy; 2019 <a href="http://www.bootstrapmb.com/"><span>Mezban</span></a>Design
+					by <a href="#"><span>FoxCoders</span></a>.
+				</p>
+			</div>
+		</div>
+	</footer>
+	
 
 
 
@@ -529,28 +500,6 @@ if(gbdo.size()>3){
 
 
 
-	<!-- Food Catagory Section Start here -->
-	<!-- Food Services Section Start here -->
-	<!-- Food Services Section Ending here -->
-	<!-- Popular Food Section Start Here -->
-	<!-- Popular Food Section Ending Here -->
-	<!-- Food Apps Section Start here -->
-	<!-- Food Apps Section Ending here -->
-	<!-- Popular Food Section Style 2 Start Here -->
-	<!-- Popular Food Section Style 2 Ending Here -->
-	<!-- top Restaurants section start here -->
-	<!-- top Restaurants section ending here -->
-	<!-- Contact From Section Start Here -->
-	<!-- Contact From Section Ending Here -->
-	<!-- Popular Home Chef Section Start Here -->
-	<!-- Popular Home Chef Section Ending Here -->
-	<!-- Testimonial Section Start Here -->
-	<!-- Testimonial Section Ending Here -->
-	<!-- Blog Section Start here -->
-	<!-- Blog Section Ending here -->
-	<!-- Footer Section Start Here -->
-	<!-- Footer Section Ending Here -->
-	<!-- scrollToTop start here -->
 	<a href="#" class="scrollToTop"><i class="icofont-swoosh-up"></i></a>
 	<!-- scrollToTop ending here -->
 	<script src="assets/js/jquery.js"></script>
