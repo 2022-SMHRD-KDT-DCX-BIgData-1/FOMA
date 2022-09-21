@@ -88,6 +88,12 @@
   	<description></description>
   	<servlet-class>BoardListServlet.GoodBoardDesc</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>UploadServlet</servlet-name>
+  	<display-name>UploadServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.saeyan.controller.UploadServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
   	<url-pattern>/JoinCon</url-pattern>
@@ -143,6 +149,10 @@
   <servlet-mapping>
   	<servlet-name>GoodBoardDesc</servlet-name>
   	<url-pattern>/GoodBoardDesc</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UploadServlet</servlet-name>
+  	<url-pattern>/UploadServlet</url-pattern>
   </servlet-mapping>
 
  

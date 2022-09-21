@@ -58,7 +58,7 @@
     <artifactId>mybatis</artifactId>
     <version>3.5.7</version>
 </dependency>
-<!-- 파일올리기 cos -->
+<!-- 파일올리기 cos 오리알리책 저자 라이브러리 -->
 <dependency>
     <groupId>servlets.com</groupId>
     <artifactId>cos</artifactId>

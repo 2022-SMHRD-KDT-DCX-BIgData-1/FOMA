@@ -137,7 +137,7 @@
 									<select name="selectcode">
 										<option value="none">음식 검색</option>
 										<option value="lowsalt">저염식 검색</option>
-										<option value="lowcal">저칼로리 음식 검색</option>
+										<option value="lowcal">저칼로리 검색</option>
 									</select>
 								</div>
 								<input type="text" name="fd_name" placeholder="Enter your food name">
@@ -421,6 +421,8 @@
 		</div>
 	</section>
 	<!-- Banner Section Ending Here -->
+	
+	
 
 <%GoodBoardDesc agb = new GoodBoardDesc();
 agb.service(request, response);
@@ -448,12 +450,12 @@ if(gbdo.size()>3){
 					<div class="col-md-2">
 						<img src="https://image.ibb.co/jw55Ex/def_face.jpg"
 							class="img img-rounded img-fluid" />
-						<p class="text-secondary text-center"><%=gbdo.get(i).getName() %></p>
+						<p class="text-secondary text-center">닉네임 : <%=gbdo.get(i).getName() %></p>
 					</div>
 					<div class="col-md-10">
 						<p>
-							<a class="float-left"
-								href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>좋아요 : <%=gbdo.get(i).getGood()%></strong></a> <span class="float-right"><i
+							<a class="float-left" ><strong style="font-size: 15px;">현재 받은 좋아요 개수 : <%=gbdo.get(i).getGood()%></strong></a> 
+							<span class="float-right"><i
 								class="text-warning fa fa-star"></i></span> <span class="float-right"><i
 								class="text-warning fa fa-star"></i></span> <span class="float-right"><i
 								class="text-warning fa fa-star"></i></span> <span class="float-right"><i
@@ -462,57 +464,24 @@ if(gbdo.size()>3){
 						</p>
 						<div class="clearfix"></div>
 						
-						<p><a href="../../BoardServlet?command=board_view&num=<%=gbdo.get(i).getNum() %>">
+						<p style="font-size:30px; padding-top:20px;"><a href="../../BoardServlet?command=board_view&num=<%=gbdo.get(i).getNum() %>">게시글 제목 :
 						<%=gbdo.get(i).getTitle() %> </a></p>
 						
-						<p>
-							<a class="float-right btn btn-outline-primary ml-2"> <i
-								class="fa fa-reply"></i> Reply
-							</a> <a class="float-right btn text-white btn-danger"> <i
-								class="fa fa-heart"></i> Like
-							</a>
-						</p>
+					
 					</div>
 				</div>
-			
-				<!-- 
-				<div class="card card-inner">
-					<div class="card-body">
-						<div class="row">
-							<div class="col-md-2">
-								<img src="https://image.ibb.co/jw55Ex/def_face.jpg"
-									class="img img-rounded img-fluid" />
-								<p class="text-secondary text-center">15 Minutes Ago</p>
-							</div>
-							<div class="col-md-10">
-								<p>
-									<a
-										href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Maniruzzaman
-											Akash</strong></a>
-								</p>
-								<p>Lorem Ipsum is simply dummy text of the pr make but also
-									the leap into electronic typesetting, remaining essentially
-									unchanged. It was popularised in the 1960s with the release of
-									Letraset sheets containing Lorem Ipsum passages, and more
-									recently with desktop publishing software like Aldus PageMaker
-									including versions of Lorem Ipsum.</p>
-								<p>
-									<a class="float-right btn btn-outline-primary ml-2"> <i
-										class="fa fa-reply"></i> Reply
-									</a> <a class="float-right btn text-white btn-danger"> <i
-										class="fa fa-heart"></i> Like
-									</a>
-								</p>
-							</div>
-						</div>
-					</div>
-					</div>
-					 -->
-				
+
 			</div>
 				<%} %>
+				
 		</div>
-		<footer class="footer">
+		
+		</div>
+	</div>
+	</div>
+	
+	
+	<footer class="footer">
 		<div class="bg-shape-style"></div>
 		<div class="container">
 			<div class="footer-bottom text-center">
@@ -523,7 +492,7 @@ if(gbdo.size()>3){
 			</div>
 		</div>
 	</footer>
-	</div>
+	
 
 
 
@@ -531,28 +500,6 @@ if(gbdo.size()>3){
 
 
 
-	<!-- Food Catagory Section Start here -->
-	<!-- Food Services Section Start here -->
-	<!-- Food Services Section Ending here -->
-	<!-- Popular Food Section Start Here -->
-	<!-- Popular Food Section Ending Here -->
-	<!-- Food Apps Section Start here -->
-	<!-- Food Apps Section Ending here -->
-	<!-- Popular Food Section Style 2 Start Here -->
-	<!-- Popular Food Section Style 2 Ending Here -->
-	<!-- top Restaurants section start here -->
-	<!-- top Restaurants section ending here -->
-	<!-- Contact From Section Start Here -->
-	<!-- Contact From Section Ending Here -->
-	<!-- Popular Home Chef Section Start Here -->
-	<!-- Popular Home Chef Section Ending Here -->
-	<!-- Testimonial Section Start Here -->
-	<!-- Testimonial Section Ending Here -->
-	<!-- Blog Section Start here -->
-	<!-- Blog Section Ending here -->
-	<!-- Footer Section Start Here -->
-	<!-- Footer Section Ending Here -->
-	<!-- scrollToTop start here -->
 	<a href="#" class="scrollToTop"><i class="icofont-swoosh-up"></i></a>
 	<!-- scrollToTop ending here -->
 	<script src="assets/js/jquery.js"></script>

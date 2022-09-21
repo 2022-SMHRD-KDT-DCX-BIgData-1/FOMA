@@ -184,7 +184,7 @@ select * from board where num = #{num}
    <!-- 게시판 삭제  -->
      <delete id="deleteBoard" parameterType="com.saeyan.dto.BoardVO"   >
  DELETE FROM board WHERE num =#{num}
-  
+
   </delete>
   
   <!-- 게시판 업데이트 -->
@@ -244,7 +244,18 @@ select * from subboard where num = #{num}
  
   </select>
   
+   <!-- 이미지 등록  -->
+    <insert id="insertimage" parameterType="com.saeyan.dto.imageVO">
+
+  insert into image(name,title,fileName,uploadFilePath) values(#{name}, #{title},#{fileName},#{uploadFilePath})
+ 
+  </insert> 
   
+    <select id="selectimage" parameterType="com.saeyan.dto.imageVO" resultType = "com.saeyan.dto.imageVO">
+
+ select * from image where name =#{name} and title = #{title}
+ 
+  </select>
   
 
 </mapper>
