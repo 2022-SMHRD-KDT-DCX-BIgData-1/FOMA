@@ -175,8 +175,6 @@ select * from board where num = #{num}
   
   </update>
  
- 
- 
  <!--게시물 등록  -->
     <insert id="insertBoard" parameterType="com.saeyan.dto.BoardVO">
  <!-- 
