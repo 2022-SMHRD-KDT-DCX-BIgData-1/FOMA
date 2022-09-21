@@ -34,11 +34,11 @@
 <link rel="stylesheet" href="js/LikeFind.js" />
 
 
-<title>지병 음식추천</title>
+<title>FOMA 지병 음식추천</title>
 </head>
 <body>
 	<!--음식정보 출력 멤버 선언 -->
-                                             <%
+              <%
               ArrayList<FMember> f = (ArrayList<FMember>)session.getAttribute("selectFMember");
 			  %>  
 	<!-- preloader -->
@@ -176,12 +176,12 @@ int endindex = selectFMember.size()%10;
 							%>
 							<%-- <a href = "shop-single.jsp"> <%=	f.getFd_name()%></a>--%>
 								 
-							<form class="reselt" action="/foma_maven/SelectfdCon2" method="post">
+							<form class="result" action="/foma_maven/SelectfdCon2" method="post">
 								<%
-								/* String str = fd.getFd_name(); */
-								String str = selectFMember.get(i).getFd_name();
+								/* String st = fd.getFd_name(); */
+								String st = selectFMember.get(i).getFd_name();
 								%>
-								<input type="text" name="fd_name" value="<%=str%>">
+								<input type="text" name="fd_name" value="<%=st%>">
 								<!--같이 값을 보내줄 셀렉트코드를 히든값으로 지정한다. 한개검색  -->
 								<input type="hidden" name="selectcode" value="one"> <label style="margin-left:50px;">
 									영양소 정보 보기👉
@@ -512,6 +512,5 @@ int endindex = selectFMember.size()%10;
 	<script src="assets/js/lightcase.js"></script>
 	<script src="assets/js/jquery.counterup.min.js"></script>
 	<script src="assets/js/functions.js"></script>
-	
 </body>
 </html>

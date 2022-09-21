@@ -33,7 +33,7 @@ public class SelectfdCon2 extends HttpServlet {
 	      System.out.println("입력된 셀렉트코드 값 :"+ selectcode);
 	      
 	      if(request.getParameter("fd_category_big_name")!=null) {//카테고리값이 존재할때
-	      fd_category_big_name = request.getParameter("fd_category_big_name");//카테고리값 대입
+	    	  fd_category_big_name = request.getParameter("fd_category_big_name");//카테고리값 대입
 	      }
 	      fd_name = request.getParameter("fd_name");//입력된 검색어 대입
 	      if(fd_name.equals("") ) {//검색창에 빈칸이 입력될경우, 
@@ -42,7 +42,6 @@ public class SelectfdCon2 extends HttpServlet {
 	         //다시 검색페이지 이동
 	         response.sendRedirect("/foma_maven/template/test1_foodblog/recommendation2.jsp");
 	         System.out.println("빈칸 검색 결과, selectFMember 세션 삭제");
-	         return;
 	      }else {
 
 	      // 2. 수집된 데이터를 Member 객체에 담기
@@ -58,9 +57,9 @@ public class SelectfdCon2 extends HttpServlet {
 
 	    	  ArrayList<FMember> selectFMember =null;
 
-	    	  if(selectcode.equals("hbp")) { //고혈압
+	    	  if(selectcode.equals("hbp")||selectcode.equals("one")) { //고혈압
 	    		  selectFMember = (ArrayList<FMember>) dao.selectFMemberhbp(fd);// selectlist로 뽑아온 결과를 형변환 시켜준다.
-	    		  System.out.println("고혈압 쿼리보내기");   
+	    		  System.out.println("고혈압 쿼리보내기");
 	    	  }else if(selectcode.equals("diabe")){ //당뇨 
 	    		  selectFMember = (ArrayList<FMember>) dao.selectFMemberdiabe(fd);   
 	    		  System.out.println("당뇨 쿼리보내기");
@@ -74,31 +73,22 @@ public class SelectfdCon2 extends HttpServlet {
 	    		  selectFMember = (ArrayList<FMember>) dao.selectFMembermyoinfar(fd);// selectlist로 뽑아온 결과를 형변환 시켜준다.
 	    		  System.out.println("심근경색 쿼리보내기");
 	    	  }
-	    	  System.out.println("검색결과 개수제한 10개 , 들어온값 :"+selectFMember.size());// 검색결과 몇개인지 확인
-	    	  //뽑아온 결과 검증코드
-	    	  /*
-	      for (FMember f : selectFMember) {
+	    	  System.out.println("검색된 결과 :"+selectFMember.size());// 검색결과 몇개인지 확인
 
-	         System.out.println(f.getFd_name());
-	         System.out.println(f.getFd_category_big_name());
-	         System.out.println(f.getFd_intake_once());
-	      }*/
-
-	      if (selectFMember != null) {
-	         System.out.println("음식 검색 성공!");
-	         // 세션에 로그인 정보 저장, 로그인 정보가 유지되도록 세션에 저장
-
-	         // 1. 세션 객체 생성
-	         HttpSession session = request.getSession();
-	         // 2. 세션에 저장
-	         session.setAttribute("selectFMember", selectFMember);
-	         if(selectcode.equals("one")) {//받아온 검색 결과에 셀렉트코드가 one이면 상세검색창
-	            response.sendRedirect("/foma_maven/template/test1_foodblog/shop-single.jsp");
-
-	         }else {
-	         response.sendRedirect("/foma_maven/template/test1_foodblog/recommendation2.jsp");
-	         return;
-	         }
+	    	  if (selectFMember != null) {
+		         System.out.println("음식 검색 성공!");
+		         // 세션에 로그인 정보 저장, 로그인 정보가 유지되도록 세션에 저장
+	
+		         // 1. 세션 객체 생성
+		         HttpSession session = request.getSession();
+		         // 2. 세션에 저장
+		         session.setAttribute("selectFMember", selectFMember);
+		         System.out.println("selectcode가 무엇일까요?"+selectcode);
+		         if(selectcode.equals("one")) {
+		        	 response.sendRedirect("/foma_maven/template/test1_foodblog/shop-single.jsp");
+		         }else {
+		        	 response.sendRedirect("/foma_maven/template/test1_foodblog/recommendation2.jsp");
+		         }
 	         
 	//검증코드
 	         /* 
