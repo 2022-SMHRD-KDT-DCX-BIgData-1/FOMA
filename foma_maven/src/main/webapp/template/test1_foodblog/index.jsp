@@ -99,7 +99,7 @@
 								<li><a href="recommendation1.jsp">음식 분류별 추천</a></li>
 							</ul></li>
 
-						<li><a href="SNS.jsp">SNS</a>
+						<li><a href="">SNS</a>
 							<ul>
 								<li><a href="../../board_index.jsp">게시판</a></li>
 							</ul></li>

@@ -92,7 +92,7 @@
 								<li><a href="recommendation2.jsp">지병에 따른 추천</a></li>
 								<li><a href="recommendation1.jsp">음식 분류별 추천</a></li>
 							</ul></li>
-						<li><a href="SNS.jsp">SNS</a></li>
+						<li><a href="">SNS</a></li>
 						<li><a href="mypage.jsp">마이페이지</a>
 							<ul>
 								<li><a href="#">접속한 아이디 : ${loginMember.username}</a></li>
