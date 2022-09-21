@@ -136,9 +136,12 @@ List<imageVO> imgvo = (List<imageVO>)session.getAttribute("selectimage");
 	</header>
 
 
-	<div id="wrap" align="center">
+	<div id="wrap1" align="center">
+		<div class="title">
 		<h1>게시글 상세보기</h1>
-		<table>
+		</div>
+		</div>
+		<table class="table">
 			<tr>
 				<th>작성자</th>
 				<td><%=bd.get(0).getName() %></td>
@@ -242,7 +245,16 @@ List<imageVO> imgvo = (List<imageVO>)session.getAttribute("selectimage");
 		<input type="button" value="게시글 등록"
 			onclick="location.href='BoardServlet?command=board_write_form'">
 	 -->
-	
+	<footer class="footer">
+		<div class="bg-shape-style"></div>
+		<div class="container">
+			<div class="footer-bottom text-center">
+				<p>
+					F.O.M.A 조 나명훈 황윤정 김용선 신지은 박선우
+				</p>
+			</div>
+		</div>
+	</footer>
 	
 	
 	

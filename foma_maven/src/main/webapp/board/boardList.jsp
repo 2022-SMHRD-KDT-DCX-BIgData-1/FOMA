@@ -70,6 +70,7 @@
 	href="template/test1_foodblog/assets/css/style.css">
 <link rel="stylesheet"
 	href="template/test1_foodblog/assets/css/style2.css">
+<link rel="stylesheet" href="template/test1_foodblog/css/LikeFind.css">
 <link rel="shortcut icon"
 	href="template/test1_foodblog/assets/images/favicon.png"
 	type="image/png">
@@ -126,6 +127,7 @@
 	<%
 	List<BoardVO> bd = (List<BoardVO>) session.getAttribute("boardList");
 	Member member = (Member) session.getAttribute("loginMember");
+	/* List<imageVO> imgvo = (List<imageVO>)session.getAttribute("selectimage"); */
 	%>
 	<!--페이징 테스트  -->
 
@@ -177,12 +179,13 @@
 	</div>
 	<table class="list">
 		<tr>
-			<td colspan="5" style="border: white; text-align: right">
+			<td colspan="5" style="border: white;">
 				<%
 				if (member != null) {
-				%> 접속한 아이디 ; <%=member.getUsername()%><a
-				href="board/boardWrite.jsp">게시글 등록</a>
-			</td>
+				%> 접속한 아이디 ; <%=member.getUsername()%>
+			</td colspan="5" style="border: white;">
+			<td colspan="5" style="border: white;"><button type="button"
+					onclick="location.href='board/boardWrite.jsp'">게시글 등록</button></td>
 			<%
 			} else {
 			%>
@@ -206,6 +209,44 @@
 		if (bd != null) {
 			for (int i = pgstart; i < pgend; i++) {
 		%>
+		<div class="postPage">
+			<div class="post">
+				<div class="idPic">
+					<span>USER : <%=bd.get(i).getName()%>
+					</span>
+				</div>
+				<%-- <div class="options">
+					<ul class="images">
+						<%if(!imgvo.isEmpty()) {%>			
+		<img src = "fomaimages/<%=imgvo.get(0).getFileName()%>">	
+		<!--  
+			<img src = "<%=imgvo.get(0).getUploadFilePath()%>\<%=imgvo.get(0).getFileName()%>">	
+			-->
+		<%} %>
+					</ul>
+				</div> --%>
+				<div class="caption">
+					<span><a
+						href="BoardServlet?command=board_view&num=<%=bd.get(i).getNum()%>">
+							<%=bd.get(i).getTitle()%>
+					</a></span> <br>
+				</div>
+				<div class="comment">
+					<div class="commentList">
+						<ul>
+							조회수 :
+							<%=bd.get(i).getReadcount()%>
+							좋아요 :
+							<%=bd.get(i).getGood()%>
+						</ul>
+						<ul>
+							작성시간 :<%=bd.get(i).getWritedate()%>>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<tr class="record">
 			<td><%=bd.get(i).getNum()%></td>
 			<td><a
@@ -213,12 +254,11 @@
 					<%=bd.get(i).getTitle()%>
 			</a></td>
 			<td><%=bd.get(i).getName()%></td>
-
 			<td><%=bd.get(i).getWritedate()%>></td>
-
 			<td><%=bd.get(i).getReadcount()%></td>
 			<td><%=bd.get(i).getGood()%></td>
 		</tr>
+		<!-- <img src="fomaimages/google5.jpg"> -->
 		<%
 		}
 		%>

@@ -154,6 +154,16 @@
 		</div>
 	</div>
 	</form>
+	<footer class="footer">
+		<div class="bg-shape-style"></div>
+		<div class="container">
+			<div class="footer-bottom text-center">
+				<p>
+					F.O.M.A 조 나명훈 황윤정 김용선 신지은 박선우
+				</p>
+			</div>
+		</div>
+	</footer>
 	
 
 	<script>

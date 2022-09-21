@@ -51,3 +51,30 @@ a:HOVER {
 	width: 1000px;
 	margin: auto;
 }
+body {
+	background-image: url(../template/test1_foodblog/assets/css/bg-image/category-bg.jpg);
+	/* background-image: url(../images/img2.jpg); */
+	/* background-size: cover; */
+}
+.postPage{
+	margin: auto;
+	margin-top: 20px;
+}
+#wrap1 {
+	margin-top:100px;
+	height: 80px;
+	width: 1000px;
+	background: #fb524f;
+	border-radius: 10px;
+	margin: auto;
+}
+#wrap1 .title h1{
+	color: white;
+}
+#wrap1 .table{
+	width: 1000px
+}
+#wrap1 th{
+	background: #fb524f;
+	color: white;
+}
