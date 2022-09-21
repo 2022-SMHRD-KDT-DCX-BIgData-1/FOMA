@@ -190,10 +190,7 @@
 					</div>
 				</div>
 
-				<div style="position: absolute; left: 1440px; top: 800px">
-					<button style="width: 50px; border: none;"><</button>
-					<button style="width: 50px; border: none;">></button>
-				</div>
+				
 </div>
 </div>
 </div>
