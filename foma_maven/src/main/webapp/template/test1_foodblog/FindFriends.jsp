@@ -111,7 +111,7 @@
 				//세션에서 정보가 있다면 정보를 가져와서 출력하기
 				List<Member> findIdMember = (List<Member>) session.getAttribute("findIdMember");
 				%>
-				👉검색하신 내용이 <%=findIdMember.size() %>개 검색되었습니다.
+				
 				<%
 				//session객체에 id가 session 있으면
 				if (findIdMember != null) {
@@ -132,6 +132,9 @@
 				<%
 				}
 				%>
+				👉검색하신 내용이 
+				<%=findIdMember.size() %>
+				개 검색되었습니다.
 				<%
 				} else {
 				%>
