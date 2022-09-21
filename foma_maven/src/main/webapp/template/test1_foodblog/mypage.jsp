@@ -176,7 +176,7 @@
 								<span
 								class="about-item-name">
 								<a href="../../BoardServlet?command=board_view&num=<%=bvo.get(i).getNum() %>"><%=bvo.get(i).getName() %></a></span><span
-								class="about-item-detail"> <%=bvo.get(i).getGood() %> <span>0</span></span> <a href=""
+								class="about-item-detail">좋아요 : <%=bvo.get(i).getGood() %> </span> <a href=""
 								class="about-item-edit">Edit</a>	
 								</li>
 								<br>
