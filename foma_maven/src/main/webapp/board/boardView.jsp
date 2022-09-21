@@ -1,3 +1,4 @@
+<%@page import="com.saeyan.dto.imageVO"%>
 <%@page import="java.io.PrintWriter"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -27,6 +28,7 @@
 <%  List<BoardVO> bd = (List<BoardVO>)session.getAttribute("selectOneBoardByNum");
 List<SubBoardVO> sbd = (List<SubBoardVO>)session.getAttribute("selectAllSubBoards");
 Member lg = (Member)session.getAttribute("loginMember");
+List<imageVO> imgvo = (List<imageVO>)session.getAttribute("selectimage");
 
 %>
 
@@ -49,6 +51,7 @@ Member lg = (Member)session.getAttribute("loginMember");
 			<tr>
 				<th>제목</th>
 				<td colspan="3"><%=bd.get(0).getTitle() %></td>
+			
 			</tr>
 			<tr>
 				<th>내용</th>
@@ -56,8 +59,7 @@ Member lg = (Member)session.getAttribute("loginMember");
 			</tr>
 		</table>
 		<br>
-		
-		
+	
 		<form name ="" method = "post" action ="BoardGoodServlet">
 			<%if(lg!=null){ %>	
 		<input type="hidden" name="username" value="<%=lg.getUsername()%>">
@@ -74,6 +76,12 @@ Member lg = (Member)session.getAttribute("loginMember");
 		</form>
 		
 		<br>
+		<%if(!imgvo.isEmpty()){%>			
+		<img src = "fomaimages/<%=imgvo.get(0).getFileName()%>">	
+		<!--  
+			<img src = "<%=imgvo.get(0).getUploadFilePath()%>\<%=imgvo.get(0).getFileName()%>">	
+			-->
+		<%} %>
 		
 	<%if(sbd!=null) { for(SubBoardVO s: sbd){%>	
 		<form name="frm" method="post" action="SubBoardServlet">
