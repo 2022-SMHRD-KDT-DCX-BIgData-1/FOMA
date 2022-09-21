@@ -184,7 +184,7 @@ select * from board where num = #{num}
    <!-- 게시판 삭제  -->
      <delete id="deleteBoard" parameterType="com.saeyan.dto.BoardVO"   >
  DELETE FROM board WHERE num =#{num}
-  
+
   </delete>
   
   <!-- 게시판 업데이트 -->

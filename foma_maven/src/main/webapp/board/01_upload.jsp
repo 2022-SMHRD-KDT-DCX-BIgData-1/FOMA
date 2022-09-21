@@ -26,6 +26,6 @@
 	<br>
 	업로드 없이 게시판으로 복귀 하시겠습니까?
 	<input type="button" value="게시글 리스트"
-			onclick="location.href='BoardServlet?command=board_list'"> 
+			onclick="location.href='../BoardServlet?command=board_list'"> 
 </body>
 </html>
