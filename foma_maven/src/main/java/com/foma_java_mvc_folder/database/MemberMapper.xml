@@ -150,20 +150,24 @@ https://freefrdi.com/how-much-fat-for-keto/
  
   </select>
   
-  <!--게시판  -->
+  <!--게시판  리스트 전체검색 -->
 
  <select id="selectAllBoards" parameterType="com.saeyan.dto.BoardVO" resultType = "com.saeyan.dto.BoardVO">
 
  select * from board order by num desc
  
   </select>
-  
+  <!--게시물 뷰 하나검색  -->
   <select id="selectOneBoardByNum" parameterType="com.saeyan.dto.BoardVO" resultType = "com.saeyan.dto.BoardVO">
 
 select * from board where num = #{num}
  
   </select>
   
+  <!-- 게시판 작성자별 검색   -->
+  <select id="selectBoardsbyname" parameterType="com.saeyan.dto.BoardVO" resultType = "com.saeyan.dto.BoardVO">
+   select * from board where name = #{name} order by num desc
+</select>
   <!--게시판 접속회수 +1  -->
   
    <update id="updateReadCount" parameterType="com.saeyan.dto.BoardVO"   >

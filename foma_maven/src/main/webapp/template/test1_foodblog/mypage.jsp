@@ -1,7 +1,12 @@
+<%@page import="com.foma_java_mvc_folder.domain.Member"%>
+<%@page import="com.saeyan.dao.BoardDAO"%>
 <%@page import="java.util.List"%>
 <%@page import="com.foma_java_mvc_folder.domain.FMember"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" isELIgnored="false"%>
+	
+<%@page import="com.saeyan.dto.BoardVO"%>
+<%@page import="com.foma_java_mvc_folder.*"%>	
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page import="java.util.*"%>
 <!DOCTYPE html>
@@ -138,18 +143,49 @@
 						</div>
 					</div>
 				</div>
+			<%
+			Member member =  (Member)session.getAttribute("loginMember");
+			
+			BoardDAO bdao = new BoardDAO();
+			
+			boolean checkmemeber=false;
+		
+			int endbvosize =0;
+			
+			 List<BoardVO> bvo = null;
+			if(member!=null){
+				 bvo =  bdao.selectBoardsbyname((member.getUsername()));
+				 if(!bvo.isEmpty()&&bvo!=null){
+				 checkmemeber=true;
+				 endbvosize = bvo.size();
+				 }
+				}
+			%>
 
 				<div class="col-md-8 grid-margin stretch-card">
 					<div class="card">
 						<div class="card-body">
 							<p class="card-title font-weight-bold">나의 페이지</p>
 							<hr>
-							<img src="assets/images/blog/01.jpg"
-								style="width: 150px; height: 150px;"> <span
-								class="about-item-name">내일 수요일임</span><span
+							<%if(checkmemeber){
+								for(int i=0; i<endbvosize; i++){%>
+							<!--  
+								<img src="assets/images/blog/01.jpg"
+								style="width: 150px; height: 150px;"> 
+							-->	
+								<span
+								class="about-item-name">
+								<a href="../../BoardServlet?command=board_view&num=<%=bvo.get(i).getNum() %>"><%=bvo.get(i).getName() %></a></span><span
 								class="about-item-detail"> ♥ <span>0</span></span> <a href=""
-								class="about-item-edit">Edit</a>
-							</li>
+								class="about-item-edit">Edit</a>	
+								</li>
+								<br>
+								<br>
+								
+								<%}	}%>
+							
+						
+							
 						</div>
 					</div>
 				</div>

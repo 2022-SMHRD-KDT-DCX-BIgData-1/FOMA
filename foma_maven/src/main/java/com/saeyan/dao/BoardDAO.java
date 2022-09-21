@@ -37,6 +37,32 @@ public class BoardDAO {
 	
 	
 	   
+	public List<BoardVO> selectBoardsbyname(String username) {  //게시판 자기 이름으로 검색
+		//String sql = "select * from board order by num desc";
+		List<BoardVO> list = new ArrayList<BoardVO>();
+		BoardVO vo= new BoardVO();
+		vo.setName(username);
+		   SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
+		   SqlSession sqlSession = sqlSessionFactory.openSession();
+		   
+		  try {//검색결과를 리스트로 받아온다
+			  list = sqlSession.selectList("selectBoardsbyname", vo);
+			
+			  if (list != null) {
+				  System.out.println("가져온 좋아요 리스트 작성자 "+list.get(0).getName());
+		            sqlSession.commit();
+
+		         } else {
+		            sqlSession.rollback();
+		         }
+		      } finally {
+		         sqlSession.close();
+		      }
+	
+		  return list;
+	   }
+	
+	
 	public List<BoardVO> selectgoodBoardsdesc() {  //게시판 모든 글 검색
 		//String sql = "select * from board order by num desc";
 		List<BoardVO> list = new ArrayList<BoardVO>();

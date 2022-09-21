@@ -1,9 +1,12 @@
+<%@page import="com.foma_java_mvc_folder.domain.Member"%>
 <%@page import="java.io.PrintWriter"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@page import="java.util.List"%>			
 <%@page import="com.saeyan.dto.BoardVO"%>	
+
+<%@page import="com.foma_java_mvc_folder.*"%>	
 <%@page import="BoardListServlet.Myutil"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
@@ -116,8 +119,11 @@
 	</header>
 
 
-<%  List<BoardVO> bd = (List<BoardVO>)session.getAttribute("boardList");%>
+<%  List<BoardVO> bd = (List<BoardVO>)session.getAttribute("boardList");
+Member member = (Member)session.getAttribute("loginMember");
+%>
 <!--페이징 테스트  -->
+
 <%
 	request.setCharacterEncoding("utf-8");
 
@@ -165,10 +171,11 @@ int endindex = bd.size()%10;
 		<table class="list">
 			<tr>
 				<td colspan="5" style="border: white; text-align: right">
-				
-				<a href="board/boardWrite.jsp">게시글 등록</a></td>
-		
-		
+				<%if(member!=null){ %>
+				접속한 아이디 ; <%=member.getUsername() %><a href="board/boardWrite.jsp">게시글 등록</a></td>
+		<%} else{ %>
+		로그인 해야 글쓰기가 가능합니다</a></td>
+		<% }%>
 			</tr>
 			<tr>
 				<th>번호</th>

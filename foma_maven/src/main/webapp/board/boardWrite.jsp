@@ -1,6 +1,8 @@
+<%@page import="com.foma_java_mvc_folder.domain.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page import="com.foma_java_mvc_folder.*"%>	
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -19,10 +21,14 @@
 		<h1>게시글 등록</h1>
 		<form name="frm" method="post" action="../BoardServlet">
 			<input type="hidden" name="command" value="board_write">
+			<%Member member = (Member)session.getAttribute("loginMember"); %>
 			<table>
 				<tr>
 					<th>작성자</th>
-					<td><input type="text" name="name"> * 필수</td>
+					<%if(member!=null){ %>
+					
+					<td><%=member.getUsername() %><input type="hidden" name = "name" value="<%=member.getUsername() %>"></td>
+					<%} %>
 				</tr>
 				<tr>
 					<th>비밀번호</th>
