@@ -27,10 +27,13 @@
 <!-- cusyom scss -->
 <link rel="stylesheet" href="assets/css/style.css" />
 <link rel="stylesheet" href="assets/css/style2.css" />
+<link rel="stylesheet" type="text/css" href="../../css/pagekim.css">
 <link rel="stylesheet" href="assets/css/sickness.css" />
 <link href="assets/css/animate.css">
 <link rel="stylesheet" href="css/LikeFind.css" />
 <link rel="stylesheet" href="js/LikeFind.js" />
+
+
 <title>지병 음식추천</title>
 </head>
 <body>
@@ -179,9 +182,9 @@ int endindex = selectFMember.size()%10;
 								%>
 								<input type="text" name="fd_name" value="<%=str%>">
 								<!--같이 값을 보내줄 셀렉트코드를 히든값으로 지정한다. 한개검색  -->
-								<input type="hidden" name="selectcode" value="one"> <label>
+								<input type="hidden" name="selectcode" value="one"> <label style="margin-left:50px;">
 									영양소 정보 보기👉
-									<button type="submit">
+									<button type="submit" style="position:relative; left:20px;">
 										<i class="icofont-search-2"></i>
 									</button>
 								</label>
@@ -508,5 +511,6 @@ int endindex = selectFMember.size()%10;
 	<script src="assets/js/lightcase.js"></script>
 	<script src="assets/js/jquery.counterup.min.js"></script>
 	<script src="assets/js/functions.js"></script>
+	
 </body>
 </html>

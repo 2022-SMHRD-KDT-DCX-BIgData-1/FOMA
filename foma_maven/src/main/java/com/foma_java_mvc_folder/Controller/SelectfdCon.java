@@ -61,27 +61,12 @@ public class SelectfdCon extends HttpServlet {
    }else if(selectcode.equals("lowcal")) {//저칼로리
 		selectFMember = (ArrayList<FMember>) dao.selectFMemberlowcal(fd);// selectlist로 뽑아온 결과를 형변환 시켜준다.
 		System.out.println("저칼로리식 쿼리보내기");
-   }else if(selectcode.equals("hbp")) { //고혈압
-       selectFMember = (ArrayList<FMember>) dao.selectFMemberhbp(fd);// selectlist로 뽑아온 결과를 형변환 시켜준다.
-       System.out.println("고혈압 쿼리보내기");   
-   }else if(selectcode.equals("diabe")){ //당뇨 
-	   selectFMember = (ArrayList<FMember>) dao.selectFMemberdiabe(fd);   
-	   System.out.println("당뇨 쿼리보내기");
-   }else if(selectcode.equals("hyperlip")) { //고지혈증 
-	   selectFMember = (ArrayList<FMember>) dao.selectFMemberhyperlip(fd);// selectlist로 뽑아온 결과를 형변환 시켜준다.
-	   System.out.println("고지혈증 쿼리보내기");
-   }else if(selectcode.equals("obesity")) { //비만
-	   selectFMember = (ArrayList<FMember>) dao.selectFMemberobesity(fd);// selectlist로 뽑아온 결과를 형변환 시켜준다.
-	   System.out.println("비만 쿼리보내기");
-   }else if(selectcode.equals("myoinfar")) { //심근경색
-	   selectFMember = (ArrayList<FMember>) dao.selectFMembermyoinfar(fd);// selectlist로 뽑아온 결과를 형변환 시켜준다.
-	   System.out.println("심근경색 쿼리보내기");
    }else if(selectcode.equals("cate")) {      
 	   System.out.println("카테고리 : "+fd_category_big_name);
 	   selectFMember = (ArrayList<FMember>) dao.selectFMembercate(fd);// selectlist로 뽑아온 결과를 형변환 시켜준다.
 	   System.out.println("카테고리 검색쿼리 보내기");
    }
-   System.out.println("검색결과 개수제한 5개 , 들어온값 :"+selectFMember.size());// 검색결과 몇개인지 확인
+   System.out.println("검색결과 : 들어온값 :"+selectFMember.size());// 검색결과 몇개인지 확인
    //뽑아온 결과 검증코드
       /*
       for (FMember f : selectFMember) {

@@ -84,7 +84,7 @@
    <select id="selectFMember" parameterType="com.foma_java_mvc_folder.domain.FMember"  resultType = "com.foma_java_mvc_folder.domain.FMember">
 <!--비교식 쓰면 xml문법 오류가 생기므로 !cdata로 sql문 감싸기 , like 쿼리문을 검색시 '%'||#{searchKeyword}||'%' 로 감싸야함  -->
 
-   <![CDATA[select * from fmember where fd_name like '%'||#{fd_name}||'%'  and rownum<6]]>
+   <![CDATA[select * from fmember where fd_name like '%'||#{fd_name}||'%']]>
    
  
   </select>
@@ -92,14 +92,14 @@
 	<!-- 저염식 검색, 기준은 소금함량 300이하 -->
   <select id="selectFMemberlowsalt" parameterType="com.foma_java_mvc_folder.domain.FMember"  resultType = "com.foma_java_mvc_folder.domain.FMember">
 
-   <![CDATA[select * from fmember where fd_name like '%'||#{fd_name}||'%' and fd_ing_salt>-1 and fd_ing_salt<300  and rownum<6]]>
+   <![CDATA[select * from fmember where fd_name like '%'||#{fd_name}||'%' and fd_ing_salt>-1 and fd_ing_salt<300]]>
  
   </select>
   
 	<!-- 저칼로리 검색, 기준은 칼로리 300이하 -->
   <select id="selectFMemberlowcal" parameterType="com.foma_java_mvc_folder.domain.FMember"  resultType = "com.foma_java_mvc_folder.domain.FMember">
 
-   <![CDATA[select * from fmember where fd_name like '%'||#{fd_name}||'%' and fd_ing_cal>-1 and fd_ing_cal<300  and rownum<6]]>
+   <![CDATA[select * from fmember where fd_name like '%'||#{fd_name}||'%' and fd_ing_cal>-1 and fd_ing_cal<300]]>
  
   </select>
  
