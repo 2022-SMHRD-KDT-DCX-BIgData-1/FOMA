@@ -82,61 +82,22 @@
 	<!-- header section ending -->
 	
 	<!-- Page Header Section Start Here -->
-     <section class="page-header">
-        <div class="container">
-          <div class="pageTitle">
-            <h3>Add Friends</h3>
-            <hr>
-				<div class = "search-title">
-            		<form action="/foma_maven/findIdCon" method ="post">
-						<!-- <label>아이디</label> -->
-							<input type="text" name="find" placeholder="id 입력" />
-					        <button type="submit" id="search">
-					                <img src="images/search.png" />
-					              </button><br>
-								<!-- <input type="text" name="member_id" class ="btn-name" placeholder = "id 입력"> -->
-									<br>
-							<% String findIdMember = (String)session.getAttribute("findIdMember");%>
-							
-							<%
-							//세션에서 정보가 있다면 정보를 가져와서 출력하기					
-							if (findIdMember != null) {
-							%>
-							<form class="result" action="/foma_maven/findIdCon" method="post">
-								<%=findIdMember %>
-								<input type="text" name="find" value="<%=findIdMember %>">
-								<!--같이 값을 보내줄 셀렉트코드를 히든값으로 지정한다. 한개검색  -->
-								<input type="hidden" name="find" value="friend"> <label>
-									내 친구 찾기!
-									<button type="submit">
-										<img src="images/search.png" />
-									</button>
-								</label>
-							</form>
-							<br>
-							<%
-							}else {
-							%>
-							검색 결과가 출력됩니다
-							<%
-							}
-							%>
-							<%-- 
-							<%
-							}
-							%> --%>
-				</div>
-          	</div>
-        </div>
-	</section>
-	<!-- <div class ="btnSearch">
-		아이디 찾기 버튼
-		<input type="button" name="enter" value="찾기"  onClick="id_search()">
- 	</div> -->
- </form>
-              
-            
-    </section>
+     <table>
+     	<tr>
+     		<th>아이디</th>
+     		<td><input type="text" name="find" id="name" value="<% String username = request.getParameter("find");
+     				if (username != null) out.println(username);%>">
+     		</td>
+     		<td><input type="submit" value="친구찾기"></td>
+     	<tr>
+     		<td colspan="6">
+     			<p>이곳에 db에 입력된 친구들 리스트</p>
+     			<p>순번 아이디</p>
+     			
+     </table>
+     
+     
+     
     <!-- Page Header Section Ending Here -->
     <!-- Popular Home Chef Section Start Here -->
     <div class="FindingFriends">
