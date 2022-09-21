@@ -117,7 +117,7 @@
 				if (findIdMember != null) {
 					for (Member m : findIdMember) {
 				%>
-				
+			 	
 		<form class="result" action="/foma_maven/findIdCon" method="post">
 				<%-- <%=m.getUsername()%> --%>
 					<input type="text" name="find" value="<%=m.getUsername() %>">
