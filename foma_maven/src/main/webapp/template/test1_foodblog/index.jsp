@@ -150,15 +150,15 @@
 							<%
 							ArrayList<FMember> selectFMember = (ArrayList<FMember>) session.getAttribute("selectFMember");
 							%>
-							<%
+							<%						
 							int endfor =5;
-							if(selectFMember.size()<5){
-								endfor = selectFMember.size();
-							}
 							
 						
 							//세션에서 정보가 있다면 정보를 가져와서 출력하기					
 							if (selectFMember != null) {
+								if(selectFMember.size()<5){
+									endfor = selectFMember.size();
+								}
 								for (int i=0;i<endfor;i++) {
 							%>
 							<%-- <a href = "shop-single.jsp"> <%=	f.getFd_name()%></a>
