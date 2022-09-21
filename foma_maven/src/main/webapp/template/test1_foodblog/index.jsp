@@ -151,16 +151,22 @@
 							ArrayList<FMember> selectFMember = (ArrayList<FMember>) session.getAttribute("selectFMember");
 							%>
 							<%
+							int endfor =5;
+							if(selectFMember.size()<5){
+								endfor = selectFMember.size();
+							}
+							
+						
 							//세션에서 정보가 있다면 정보를 가져와서 출력하기					
 							if (selectFMember != null) {
-								for (FMember f : selectFMember) {
+								for (int i=0;i<endfor;i++) {
 							%>
 							<%-- <a href = "shop-single.jsp"> <%=	f.getFd_name()%></a>
 								 --%>
 							<form class="reselt" action="/foma_maven/SelectfdCon"
 								method="post">
 								<%
-								String str = f.getFd_name();
+								String str = selectFMember.get(i).getFd_name();
 								%>
 								<input type="text" name="fd_name" value="<%=str%>">
 								<!--같이 값을 보내줄 셀렉트코드를 히든값으로 지정한다. 한개검색  -->
