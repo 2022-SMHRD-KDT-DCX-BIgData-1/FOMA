@@ -7,11 +7,9 @@
 <title>게시글</title>
 </head>
 <body>
-
 <%
 response.sendRedirect("BoardServlet?command=board_list");
 %>
-
 
 </body>
 </html>
