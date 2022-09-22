@@ -177,7 +177,7 @@
 								//세션에서 정보가 있다면 정보를 봅아서 출력하기					
 								if (f != null) {
 								%>
-								<h4><%=f.get(0).getFd_name()%></h4>
+								<h4>🥑<%=f.get(0).getFd_name()%></h4>
 								<%
 								}
 								%>
@@ -199,10 +199,11 @@
 								<div class="title">
 									<!-- 음식 정보 출력단 -->
 									<!--음식 분류  -->
+									<br>
 									<h5>
-										<a href="#"><%=f.get(0).getFd_category_big_name()%></a>
+										<a href="#">🛒<%=f.get(0).getFd_category_big_name()%></a>
 									</h5>
-
+									<br>
 									<div class="type-of-food">
 										<span>✔️Type of food :</span> <a href="#"><%=f.get(0).getFd_general_name()%></a>
 										<%-- <a href="#"><%=f.get(0).getFd_category_small_name() %></a>
@@ -215,7 +216,7 @@
 								</div>
 								<div class="desc">
 									<!--음식 영양소 , 조건문을 통해 자료없음을 표시해줘야한다. -->
-									<table style="position: relative;">
+									<table style="position: relative; text-align: center;">
 										<tr>
 											<td>칼로리(kcal) :</td>
 											<td><%=Math.round(f.get(0).getFd_ing_cal())%></td>

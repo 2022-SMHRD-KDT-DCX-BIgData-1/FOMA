@@ -22,6 +22,7 @@ div {
 
 .title {
    text-align: center;
+   font-size: 25px;
 }
 
 .column {
@@ -38,7 +39,11 @@ div {
 
 table {
    text-align: center;
-   left: 220px;
+   left: 180px;
+   font-size: 25px;
+}
+h5{
+	font-size: 33px;
 }
 /*
 .column {
