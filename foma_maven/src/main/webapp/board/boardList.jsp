@@ -75,14 +75,14 @@
 	href="template/test1_foodblog/assets/images/favicon.png"
 	type="image/png">
 </head>
-<link rel="stylesheet" type="text/css" href="css/shopping.css">
-<link rel="stylesheet" type="text/css" href="css/pagekim.css">
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/shopping.css">
+<link rel="stylesheet" type="text/css" href="css/pagekim.css">
 <style type="text/css">
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
 </style>
@@ -121,7 +121,7 @@
 					<li><a href="template/test1_foodblog/mypage.jsp">마이페이지</a>
 						<ul>
 							<li><a href="#">접속한 아이디 : <%=member.getUsername() %></a></li>
-							<li><a href="../../Login.jsp">로그아웃</a></li>
+							<li><a href="Login.jsp">로그아웃</a></li>
 						</ul></li>
 				</ul>
 
@@ -135,42 +135,30 @@
 	</div>
 	</div>
 	</header>
-
-  <div class="container">
-  <div class="well">
-      <div class="media">
-      	<a class="pull-left" href="#">
-    		<img class="media-object" src="http://placekitten.com/150/150">
-  		</a>
-  		<div class="media-body">
-    		<h4 class="media-heading">Receta 1</h4>
-          <p class="text-right">By Francisco</p>
-          <p>내용</p>
-          <ul class="list-inline list-unstyled">
-  			<li><span><i class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
-            <li>|</li>
-            <span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
-            <li>|</li>
-            <li>
-               <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
-            </li>
-            <li>|</li>
-            <li>
-            <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
-              <span><i class="fa fa-facebook-square"></i></span>
-              <span><i class="fa fa-twitter-square"></i></span>
-              <span><i class="fa fa-google-plus-square"></i></span>
-            </li>
-			</ul>
-       </div>
-    </div>
-  </div>
-</div>
-       
+       <div id="wrap" align="center">
+		<div class="title">
+			<h1>게시글 리스트</h1>
+		</div>
+	</div>
+	<button class="button1" type="button" onclick="location.href='board/boardWrite.jsp'">게시글 등록</button>
+	<!-- <table class="list">
+		<tr>
+			<td colspan="5" style="border: white;"> -->
+				<%-- <%
+				if (member != null) {
+				%> 접속한 아이디 ; <%=member.getUsername()%>
+			</td colspan="5" style="border: white;">
+			<td colspan="5" style="border: white;"></td>
+			<%
+			} else {
+			%>
+			로그인 해야 글쓰기가 가능합니다
+			</a>
+			</td>
+			<%
+			}
+			%> --%>
+		</tr>
 	<!--페이징 테스트  -->
 
 	<%
@@ -214,75 +202,40 @@
 	%>
 
 	<!--페이징 테스트  -->
-	<div id="wrap" align="center">
-		<div class="title">
-			<h1>게시글 리스트</h1>
-		</div>
-	</div>
-	<table class="list">
-		<tr>
-			<td colspan="5" style="border: white;">
-				<%
-				if (member != null) {
-				%> 접속한 아이디 ; <%=member.getUsername()%>
-			</td colspan="5" style="border: white;">
-			<td colspan="5" style="border: white;"><button type="button"
-					onclick="location.href='board/boardWrite.jsp'">게시글 등록</button></td>
-			<%
-			} else {
-			%>
-			로그인 해야 글쓰기가 가능합니다
-			</a>
-			</td>
-			<%
-			}
-			%>
-		</tr>
-		<tr>
-			<th>번호</th>
-			<th>제목</th>
-			<th>작성자</th>
-			<th>작성일</th>
-			<th>조회</th>
-			<th>좋아요</th>
-		</tr>
+	
+
 		<%
 		//세션에서 정보가 있다면 정보를 가져와서 출력하기					
 		if (bd != null) {
 			for (int i = pgstart; i < pgend; i++) {
 		%>
-		<div class="postPage">
-			<div class="post">
-				<div class="idPic">
-					<span>USER : <%=bd.get(i).getName()%>
-					</span>
-				</div>
-				<%-- <div class="options">
-					<ul class="images">
-						<%if(!imgvo.isEmpty()) {%>			
-		<img src = "fomaimages/<%=imgvo.get(0).getFileName()%>">	
-		<!--  
-			<img src = "<%=imgvo.get(0).getUploadFilePath()%>\<%=imgvo.get(0).getFileName()%>">	
-			-->
-		<%} %>
-					</ul>
-				</div> --%>
-				<div class="caption">
-					<span><a
-						href="BoardServlet?command=board_view&num=<%=bd.get(i).getNum()%>">
-							<%=bd.get(i).getTitle()%>
-					</a></span> <br>
-				</div>
-				<div class="comment">
-					<div class="commentList">
-						<ul>
-							조회수 :
-							<%=bd.get(i).getReadcount()%>
-							좋아요 :
-							<%=bd.get(i).getGood()%>
-						</ul>
-						<ul>
-							작성시간 :<%=bd.get(i).getWritedate()%>>
+		<div class="container">
+			<div class="well">
+				<div class="media">
+					<a class="pull-left" href="#"> 
+						<% if (bd.get(i).getFileName().equals("none")) { %>
+						<img src="assets/images/음식 기본 이미지.jpg"> 
+						<% } else {%> 
+						<img src="<%=bd.get(i).getUploadFilePath()%><%=bd.get(i).getFileName()%>">
+						<%
+						}
+						%>
+					</a>
+					<div class="media-body">
+						<h6 class="media-heading"><%=bd.get(i).getName()%></h6>
+						<br>
+						<p>
+							<a
+								href="BoardServlet?command=board_view&num=<%=bd.get(i).getNum()%>">
+								<%=bd.get(i).getTitle()%>
+							</a>
+						</p>
+						<br>
+						<ul class="list-inline list-unstyled">
+							<span>👀 <%=bd.get(i).getReadcount()%></span>
+							<li>|</li>
+							<li><span>❤️ <%=bd.get(i).getGood()%></span></li>
+							<li>|</li>
 						</ul>
 					</div>
 				</div>
