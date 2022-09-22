@@ -227,7 +227,7 @@ List<imageVO> imgvo = (List<imageVO>)session.getAttribute("selectimage");
 				<td><input type="submit" value="댓글 등록"></td>
 			</tr>
 		
-		
+		</table>
 		</form>
 		
 	
