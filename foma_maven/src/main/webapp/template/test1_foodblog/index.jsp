@@ -463,9 +463,9 @@ if(gbdo.size()>3){
 
 						</p>
 						<div class="clearfix"></div>
-						<br><br>
+						<br>
 						
-						<p style="font-size:35px; font-family: "ralewat-Bold;" padding-top:20px;"><a href="../../BoardServlet?command=board_view&num=<%=gbdo.get(i).getNum() %>">게시글 제목 :
+						<p style="font-size:35px; padding-top:20px; font-family: 웰컴체 Regular;"><a href="../../BoardServlet?command=board_view&num=<%=gbdo.get(i).getNum() %>">인기글 제목 :
 						<%=gbdo.get(i).getTitle() %> </a></p>
 						
 					
