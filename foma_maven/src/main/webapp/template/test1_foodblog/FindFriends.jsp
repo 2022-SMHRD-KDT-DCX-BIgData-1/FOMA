@@ -92,61 +92,58 @@
 	<div class="container">
 		<div class="pageTitle">
 			<div class="search-title">
-				<h5>Add Friends</h5>
-	            <br>
-	            <form class="result" action="/foma_maven/findIdCon" method="post">
-	               <div class="codexcoder-selectoption">
-	                  <input type="text" name="find" placeholder="id 입력" />
-	                  <button type="submit" id="search">
-	                     <img src="images/search.png" />
-	                  </button>
-	                  <br>
-	               </div>
-	            </form>
-	            <br>
-	         </div>
-	      </div>
-	   </div>
-	   </section>
-	   <div class="result1">
-	      <p>✔️검색한 아이디 목록
-	      <p>
-	         <%
-	         //세션에서 정보가 있다면 정보를 가져와서 출력하기
-	         List<Member> findIdMember = (List<Member>) session.getAttribute("findIdMember");
-	         %>
+				<!-- <h5>Add Friends</h5> -->
+				<br>
+				<form class="result" action="/foma_maven/findIdCon" method="post">
+					<div class="codexcoder-selectoption">
+						<input type="text" name="find" placeholder="내 친구 id 입력" />
+						<button type="submit" id="search">
+							<img src="images/search.png" />
+						</button>
+						<br>
+					</div>
+				</form>
+				<br>
+			</div>
+		</div>
+	</div>
+	</section>
+	<div class="result1">
+		<p>✔️검색한 아이디 목록</p>
+			<%
+			//세션에서 정보가 있다면 정보를 가져와서 출력하기
+			List<Member> findIdMember = (List<Member>) session.getAttribute("findIdMember");
+			%>
 
-         <%
-         //session객체에 id가 session 있으면
-         if (findIdMember != null) {
-            for (Member m : findIdMember) {
-         %>
+			<%
+			//session객체에 id가 session 있으면
+			if (findIdMember != null) {
+				for (Member m : findIdMember) {
+			%>
 
-         <%-- <form class="result" action="/foma_maven/findIdCon" method="post">
-            <%=m.getUsername()%>
-               <input type="text" name="find" value="<%=m.getUsername() %>">
-               <input type="hidden" name="find" > 
-               <button type="submit">
-               <!-- 이미지 수정 필요함! -->
-                  <!-- <img src="images/spinner.png" /> -->
-               </button>
-            </form> --%>
-      <div class="result">
-         <span><%=m.getUsername()%></span>
-      </div>
-      <br>
-      <%
-      }
-      %>
-      👉검색하신 내용이
-      <%=findIdMember.size()%>
-      개 검색되었습니다.
-      <%
-      } else {
-      %>
-      <%
-      }
-      %>
+			<%-- <form class="result" action="/foma_maven/findIdCon" method="post">
+				<%=m.getUsername()%>
+					<input type="text" name="find" value="<%=m.getUsername() %>">
+					<input type="hidden" name="find" > 
+					<button type="submit">
+					<!-- 이미지 수정 필요함! -->
+						<!-- <img src="images/spinner.png" /> -->
+					</button>
+				</form> --%>
+		<div class="result">
+			<span><%=m.getUsername()%></span>
+		<br>
+		<%
+		}
+		%>
+		<p class="p2">👉검색결과 : <%=findIdMember.size()%>개 검색</p>
+		</div>
+		<%
+		} else {
+		%>
+		<%
+		}
+		%>
 		<!--페이징 테스트 : 친구찾기페이지 -->
 		<%-- <%
 

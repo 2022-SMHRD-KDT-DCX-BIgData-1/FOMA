@@ -237,7 +237,7 @@ List<imageVO> imgvo = (List<imageVO>)session.getAttribute("selectimage");
    }
    %>
 
-   <br>
+   <br> 
    <form name="frm" method="post" action="SubBoardServlet">
       <input type="hidden" name="num" value="<%=bd.get(0).getNum()%>">
       <input type="hidden" name="subcode" value="insert">
