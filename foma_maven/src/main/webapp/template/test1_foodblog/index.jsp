@@ -463,7 +463,7 @@
 						<br>
 						<p>
 							<a
-								href="BoardServlet?command=board_view&num=<%=gbdo.get(i).getNum()%>">
+								href="../../BoardServlet?command=board_view&num=<%=gbdo.get(i).getNum()%>">
 								<%=gbdo.get(i).getTitle()%>
 							</a>
 						</p>
