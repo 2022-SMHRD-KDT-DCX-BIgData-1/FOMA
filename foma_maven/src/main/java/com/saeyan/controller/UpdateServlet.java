@@ -25,13 +25,13 @@ import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
  * Servlet implementation class UploadServlet
  */
 //@WebServlet("/UploadServlet")
-public class UploadServlet extends HttpServlet {
+public class UpdateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public UploadServlet() {
+	public UpdateServlet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -75,8 +75,9 @@ public class UploadServlet extends HttpServlet {
 					new DefaultFileRenamePolicy());
 			// 업로드된 파일의 이름 얻기
 			String fileName = multi.getFilesystemName("uploadFile");
-		
-		      
+			
+			
+			
 			
 			if (fileName == null) { // 파일이 업로드 되지 않았을때
 				System.out.print("파일 업로드 되지 않았음");
@@ -119,7 +120,7 @@ public class UploadServlet extends HttpServlet {
 		bVo.setReadcount(0);
 		
 		BoardDAO bDao = BoardDAO.getInstance();
-		bDao.insertBoard(bVo);
+		bDao.updateBoard(bVo);
 		
 		
 		

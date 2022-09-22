@@ -34,6 +34,20 @@
 <title>FOMA-친구찾기</title>
 </head>
 <body>
+<%Member member =(Member) session.getAttribute("loginMember");
+%> 
+<%
+				if (member != null) {
+				%> 접속한 아이디 ; <%=member.getUsername()%>
+				<%
+			} else {
+			%>
+			로그인 해야 글쓰기가 가능합니다
+			</a>
+			</td>
+			<%
+			}
+			%>
 	<!-- preloader -->
 	<div class="preloader">
 		<div class="load loade">
@@ -71,7 +85,7 @@
 
 					<li><a href="mypage.jsp">마이페이지</a>
 						<ul>
-							<li><a href="#">접속한 아이디 : ${loginMember.username}</a></li>
+							<li><a href="#">접속한 아이디 :<%=member.getUsername() %></a></li>
 							<li><a href="../../Login.jsp">로그아웃</a></li>
 						</ul></li>
 				</ul>
@@ -138,7 +152,7 @@
 		<%
 		}
 		%>
-		<p class="p2">👉검색결과 : <%=findIdMember.size()%>개 검색</p>
+		<p class="p2" style="font-size: 25px">👉검색결과 : <%=findIdMember.size()%>개 검색</p>
 	</div>
 		<%
 		} else {
@@ -299,6 +313,7 @@
 	</div> -->
 	<!-- Popular Home Chef Section Ending Here -->
 	<!-- Footer Section Start Here -->
+<<<<<<< HEAD
 	
 	<div id='wrapper'>
   <div>
@@ -309,6 +324,18 @@
 	
 	
 	
+=======
+	<footer class="footer">
+		<div class="bg-shape-style"></div>
+		<div class="container">
+			<div class="footer-bottom text-center">
+				<p>
+					F.O.M.A 조 나명훈 황윤정 김용선 신지은 박선우
+				</p>
+			</div>
+		</div>
+	</footer>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-DCX-BIgData-1/FOMA.git
 	<!-- Footer Section Ending Here -->
 	<!-- scrollToTop start here -->
 	<a href="#" class="scrollToTop"><i class="icofont-swoosh-up"></i></a>

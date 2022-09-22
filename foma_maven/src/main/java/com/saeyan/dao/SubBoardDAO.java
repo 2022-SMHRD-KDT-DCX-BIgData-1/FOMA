@@ -10,7 +10,7 @@ import com.foma_java_mvc_folder.domain.FMember;
 import com.foma_java_mvc_folder.domain.Member;
 import com.saeyan.dto.GoodVO;
 import com.saeyan.dto.SubBoardVO;
-import com.saeyan.dto.imageVO;
+
 
 public class SubBoardDAO {
 	public void insertSubBoard(SubBoardVO bVo) { // 게시판 작성
@@ -36,47 +36,7 @@ public class SubBoardDAO {
 		}
 	}
 	
-	public void insertimage(imageVO vo) { // 게시판 작성
-//		String sql = "insert into board("
-//				+ "num, name, email, pass, title, content) "
-//				+ "values(board_seq.nextval, ?, ?, ?, ?, ?)";
-		System.out.println("이미지 dao 진입 받아온 이름	 :"+vo.getName()+"받아온 파일이름"+vo.getFileName());
-		SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
-		   SqlSession sqlSession = sqlSessionFactory.openSession();
-		int cnt = 0;
-		try {
-			// Mapper-insert 태그의 id, 매개변수
-			cnt = sqlSession.insert("insertimage", vo);
-
-			if (cnt > 0) {
-				sqlSession.commit();
-			} else {
-				sqlSession.rollback();
-			}
-
-		} finally {
-			sqlSession.close();
-		}
-	}
 	
-	public List<imageVO> selectimage(imageVO vo) {
-	      List<imageVO>selectimage = null;//리스트 선언
-	  	SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
-		   SqlSession sqlSession = sqlSessionFactory.openSession();
-	      try {//검색결과를 리스트로 받아온다
-	    	  
-	    	  selectimage = sqlSession.selectList("selectimage", vo);
-	         if (selectimage != null) {
-	            sqlSession.commit();
-
-	         } else {
-	            sqlSession.rollback();
-	         }
-	      } finally {
-	         sqlSession.close();
-	      }
-	      return selectimage;
-	   }
 	
 	public void deleteSubBoard(SubBoardVO bVo) { // 게시판 작성
 //		String sql = "insert into board("
