@@ -120,7 +120,7 @@
 
 					<li><a href="template/test1_foodblog/mypage.jsp">마이페이지</a>
 						<ul>
-							<li><a href="#">접속한 아이디 : </a></li>
+							<li><a href="#">접속한 아이디 : <%=member.getUsername() %></a></li>
 							<li><a href="../../Login.jsp">로그아웃</a></li>
 						</ul></li>
 				</ul>

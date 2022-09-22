@@ -33,6 +33,20 @@
 <title>FOMA-친구찾기</title>
 </head>
 <body>
+<%Member member =(Member) session.getAttribute("loginMember");
+%> 
+<%
+				if (member != null) {
+				%> 접속한 아이디 ; <%=member.getUsername()%>
+				<%
+			} else {
+			%>
+			로그인 해야 글쓰기가 가능합니다
+			</a>
+			</td>
+			<%
+			}
+			%>
 	<!-- preloader -->
 	<div class="preloader">
 		<div class="load loade">
@@ -70,7 +84,7 @@
 
 					<li><a href="mypage.jsp">마이페이지</a>
 						<ul>
-							<li><a href="#">접속한 아이디 : ${loginMember.username}</a></li>
+							<li><a href="#">접속한 아이디 :<%=member.getUsername() %></a></li>
 							<li><a href="../../Login.jsp">로그아웃</a></li>
 						</ul></li>
 				</ul>
