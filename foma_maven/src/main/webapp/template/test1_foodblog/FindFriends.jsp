@@ -301,9 +301,27 @@ int endindex = findIdMember.size()%10;
 					<!-- <span>14 mutual friends -->
 				</p>
 			</a>
+<<<<<<< HEAD
+        </p>
+        <div id="button-block">
+          <div id="confirm">Confirm</div>
+        </div>
+      </div>
+    </div>
+    <!-- Popular Home Chef Section Ending Here -->
+	<!-- Footer Section Start Here -->
+	<footer class="footer">
+		<div class="bg-shape-style"></div>
+		<div class="container">
+			<div class="footer-bottom text-center">
+				<p>
+					F.O.M.A 조 나명훈 황윤정 김용선 신지은 박선우
+				</p>
+=======
 			<div id="button-block">
 				<div id="confirm">Confirm</div>
 				<!-- <div id="delete">Delete Request</div> -->
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-DCX-BIgData-1/FOMA.git
 			</div>
 		</div>
 		<div id="fb">

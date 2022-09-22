@@ -77,7 +77,14 @@
 </head>
 <link rel="stylesheet" type="text/css" href="css/shopping.css">
 <link rel="stylesheet" type="text/css" href="css/pagekim.css">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css"/>
 <style type="text/css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
 </style>
 </head>
 <body>
@@ -113,7 +120,7 @@
 
 					<li><a href="template/test1_foodblog/mypage.jsp">마이페이지</a>
 						<ul>
-							<li><a href="#">접속한 아이디 : <%=member.getUsername() %></a></li>
+							<li><a href="#">접속한 아이디 : </a></li>
 							<li><a href="../../Login.jsp">로그아웃</a></li>
 						</ul></li>
 				</ul>
@@ -129,7 +136,41 @@
 	</div>
 	</header>
 
-
+  <div class="container">
+  <div class="well">
+      <div class="media">
+      	<a class="pull-left" href="#">
+    		<img class="media-object" src="http://placekitten.com/150/150">
+  		</a>
+  		<div class="media-body">
+    		<h4 class="media-heading">Receta 1</h4>
+          <p class="text-right">By Francisco</p>
+          <p>내용</p>
+          <ul class="list-inline list-unstyled">
+  			<li><span><i class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
+            <li>|</li>
+            <span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
+            <li>|</li>
+            <li>
+               <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+            </li>
+            <li>|</li>
+            <li>
+            <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+              <span><i class="fa fa-facebook-square"></i></span>
+              <span><i class="fa fa-twitter-square"></i></span>
+              <span><i class="fa fa-google-plus-square"></i></span>
+            </li>
+			</ul>
+       </div>
+    </div>
+  </div>
+</div>
+       
 	<!--페이징 테스트  -->
 
 	<%
@@ -248,7 +289,7 @@
 			</div>
 		</div>
 
-		<tr class="record">
+<!-- <tr class="record">
 			<td><%=bd.get(i).getNum()%></td>
 			<td><a
 				href="BoardServlet?command=board_view&num=<%=bd.get(i).getNum()%>">
@@ -258,7 +299,8 @@
 			<td><%=bd.get(i).getWritedate()%>></td>
 			<td><%=bd.get(i).getReadcount()%></td>
 			<td><%=bd.get(i).getGood()%></td>
-		</tr>
+		</tr> -->
+		
 		<!-- <img src="fomaimages/google5.jpg"> -->
 		<%
 		}
@@ -301,8 +343,7 @@
 	<div class="container">
 		<div class="footer-bottom text-center">
 			<p>
-				&copy; 2019 <a href="http://www.bootstrapmb.com/"><span>Mezban</span></a>Design
-				by <a href="#"><span>FoxCoders</span></a>.
+				F.O.M.A 조 나명훈 황윤정 김용선 신지은 박선우
 			</p>
 		</div>
 	</div>
