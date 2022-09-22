@@ -140,9 +140,10 @@
 										<option value="lowcal">저칼로리 검색</option>
 									</select>
 								</div>
-								<input type="text" name="fd_name" placeholder="Enter your food name">
-								 <a href="recommendation1.jsp"><button type="submit"></a>
-									<i class="icofont-search-2"></i>
+								<input type="text" name="fd_name"
+									placeholder="Enter your food name"> <a
+									href="recommendation1.jsp"><button type="submit"></a>
+								<i class="icofont-search-2"></i>
 								</button>
 								<br>
 							</form>
@@ -150,16 +151,15 @@
 							<%
 							ArrayList<FMember> selectFMember = (ArrayList<FMember>) session.getAttribute("selectFMember");
 							%>
-							<%						
-							int endfor =5;
-							
-						
+							<%
+							int endfor = 5;
+
 							//세션에서 정보가 있다면 정보를 가져와서 출력하기					
 							if (selectFMember != null) {
-								if(selectFMember.size()<5){
+								if (selectFMember.size() < 5) {
 									endfor = selectFMember.size();
 								}
-								for (int i=0;i<endfor;i++) {
+								for (int i = 0; i < endfor; i++) {
 							%>
 							<%-- <a href = "shop-single.jsp"> <%=	f.getFd_name()%></a>
 								 --%>
@@ -181,7 +181,7 @@
 							<%
 							}
 							%>
-							<a href = "recommendation1.jsp"><button>더보기</button></a>
+							<!-- <a href = "recommendation1.jsp"><button>더보기</button></a> -->
 							<%
 							} else {
 							%>
@@ -421,30 +421,64 @@
 		</div>
 	</section>
 	<!-- Banner Section Ending Here -->
-	
-	
 
-<%GoodBoardDesc agb = new GoodBoardDesc();
-agb.service(request, response);
-%>
-<% 
 
-List<BoardVO> gbdo = (List<BoardVO>) session.getAttribute("selectgoodBoardsdesc");
 
-int bgsize =0;
-if(gbdo.size()>3){
-	bgsize=3;
-}else{
-	bgsize=gbdo.size();
-}
-							%>
+	<%
+	GoodBoardDesc agb = new GoodBoardDesc();
+	agb.service(request, response);
+	%>
+	<%
+	List<BoardVO> gbdo = (List<BoardVO>) session.getAttribute("selectgoodBoardsdesc");
+
+	int bgsize = 0;
+	if (gbdo.size() > 3) {
+		bgsize = 3;
+	} else {
+		bgsize = gbdo.size();
+	}
+	%>
 
 
 
 	<div class="container">
 		<h2 class="text-center">✨인기글 TOP3✨</h2>
-		<%for(int i=0; i<bgsize; i++){ %>
-		<div class="card">
+		<%
+		for (int i = 0; i < bgsize; i++) {
+		%>
+		<div class="container">
+			<div class="well">
+				<div class="media">
+					<a class="pull-left" href="#"> 
+						<% if (gbdo.get(i).getFileName().equals("none")) { %>
+						<img src="assets/images/음식 기본 이미지.jpg"> 
+						<% } else {%> 
+						<img src="<%=gbdo.get(i).getUploadFilePath()%><%=gbdo.get(i).getFileName()%>">
+						<%
+						}
+						%>
+					</a>
+					<div class="media-body">
+						<h6 class="media-heading"><%=gbdo.get(i).getName()%></h6>
+						<br>
+						<p>
+							<a
+								href="BoardServlet?command=board_view&num=<%=gbdo.get(i).getNum()%>">
+								<%=gbdo.get(i).getTitle()%>
+							</a>
+						</p>
+						<br>
+						<ul class="list-inline list-unstyled">
+							<span>👀 <%=gbdo.get(i).getReadcount()%></span>
+							<li>|</li>
+							<li><span>❤️ <%=gbdo.get(i).getGood()%></span></li>
+							<li>|</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<%-- <div class="card">
 			<div class="card-body">
 				<div class="row">
 					<div class="col-md-2">
@@ -472,31 +506,28 @@ if(gbdo.size()>3){
 					</div>
 				</div>
 
-			</div>
-				<%} %>
-				
-		</div>
-		
-		</div>
+			</div> --%>
+		<%
+		}
+		%>
+
 	</div>
-	</div>
-	
-	
+
+
+
 	<footer class="footer">
 		<div class="bg-shape-style"></div>
 		<div class="container">
 			<div class="footer-bottom text-center">
-				<p>
-					F.O.M.A 조 나명훈 황윤정 김용선 신은지 박선우
-				</p>
+				<p>F.O.M.A 조 나명훈 황윤정 김용선 신지은 박선우</p>
 			</div>
 		</div>
 	</footer>
-	
 
 
 
-	
+
+
 
 
 

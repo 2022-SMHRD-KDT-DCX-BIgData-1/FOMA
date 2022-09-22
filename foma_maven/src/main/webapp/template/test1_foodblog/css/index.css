@@ -1,7 +1,8 @@
 @charset "EUC-KR";
 .container {
-	margin-bottom: 50px;
-	
+	/* margin-bottom: 50px; */
+	margin-bottom: 0px;
+	margin-top: 10px;
 }
 .footer .container{
 	margin-bottom: 0px;
@@ -35,4 +36,20 @@ body {
 	background-image: url(../assets/css/bg-image/category-bg.jpg);
 	/* background-image: url(../images/img2.jpg); */
 	/* background-size: cover; */
+}
+.container .pull-left img {
+	height: 150px;
+	width: 150px;
+}
+.container .media-body h6 {
+	font-size: 15px;
+}
+.container .media-body a {
+	font-size: 25px;
+}
+.container .media-body {
+	margin-left: 10px;
+}
+.container .media-body span {
+	margin-left: 2px;
 }

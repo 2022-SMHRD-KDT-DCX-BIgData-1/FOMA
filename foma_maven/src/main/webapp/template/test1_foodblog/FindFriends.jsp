@@ -153,7 +153,7 @@
 		<%
 		}
 		%>
-		<p class="p2" style="font-size: 25px">👉검색결과 : <%=findIdMember.size()%>개 검색</p>
+		<p class="p2" style="font-size: 25px; margin-top: 15px;">👉검색결과 : <%=findIdMember.size()%>개 검색</p>
 	</div>
 		<%
 		} else {
@@ -314,7 +314,7 @@
 	</div> -->
 	<!-- Popular Home Chef Section Ending Here -->
 	<!-- Footer Section Start Here -->
-	<footer class="footer">
+	<footer class="footer" style="bottom: 0px; /* position: absolute; */ width: -webkit-fill-available; ">
 		<div class="bg-shape-style"></div>
 		<div class="container">
 			<div class="footer-bottom text-center">

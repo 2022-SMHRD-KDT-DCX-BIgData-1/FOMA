@@ -318,11 +318,10 @@ div.post .addpostbut {
 .result1{
 	/* margin-left: 400px; */
 	/* width: 700px; */
-	
 	margin: auto;
 	margin-top: 20px;
 	text-align: -webkit-center;
-	
+	min-height: 550px;
 }
 .page-header{ 
 	padding: 0px;
@@ -366,7 +365,13 @@ body {
 	background-image: url(../assets/css/bg-image/category-bg.jpg);
 	/* background-image: url(../images/img2.jpg); */
 	/* background-size: cover; */
+	height: auto;
 }
-footer .footer :active {
-	margin-top:200px;
+/* body{
+  height: auto;
+  min-height: 100%;
+  padding-bottom: 100px;
+} */
+footer{
+  bottom: 0px;
 }
