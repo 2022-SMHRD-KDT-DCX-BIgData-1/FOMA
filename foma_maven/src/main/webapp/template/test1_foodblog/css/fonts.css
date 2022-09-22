@@ -4,6 +4,14 @@
  * Font Name: Lato, Raleway
  */
 /* Lato Hariline */
+
+ @font-face {
+    font-family: 'OTWelcomeBA';
+    src: url("../fonts/newRegular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+ 
 @font-face {
   font-family: 'Lato';
   font-weight: 100;
