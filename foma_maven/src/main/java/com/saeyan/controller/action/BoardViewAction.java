@@ -13,8 +13,6 @@ import com.saeyan.dao.BoardDAO;
 import com.saeyan.dao.SubBoardDAO;
 import com.saeyan.dto.BoardVO;
 import com.saeyan.dto.SubBoardVO;
-
-
 public class BoardViewAction implements Action {
 
 	@Override
