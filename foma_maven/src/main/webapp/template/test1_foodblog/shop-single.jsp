@@ -185,10 +185,14 @@
 								<div class="shop-item">
 									<div class="shop-thumb">
 										<!-- 
-															<img src="assets/images/popular-food/01.jpg"
-															 -->
+															<img src="assets/images/popular-food/01.jpg"										
+										}					 -->
+										<%if(!fdweb.fdselectweb(f.get(0).getFd_name()).isBlank()){%>
 										<img src="<%=fdweb.fdselectweb(f.get(0).getFd_name())%>"
-											alt="shop-single">
+										<% }else{	%>
+										<img src="https://image.ajunews.com/content/image/2018/07/25/20180725142544658121.jpg"/>
+											
+										<% }%>	alt="shop-single">
 									</div>
 								</div>
 							
