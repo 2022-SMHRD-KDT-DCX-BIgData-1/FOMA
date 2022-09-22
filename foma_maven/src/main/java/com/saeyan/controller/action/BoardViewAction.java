@@ -13,7 +13,7 @@ import com.saeyan.dao.BoardDAO;
 import com.saeyan.dao.SubBoardDAO;
 import com.saeyan.dto.BoardVO;
 import com.saeyan.dto.SubBoardVO;
-import com.saeyan.dto.imageVO;
+
 
 public class BoardViewAction implements Action {
 
@@ -33,10 +33,6 @@ List<BoardVO> selectOneBoardByNum = bDao.selectOneBoardByNum(num);
 
 String imgname= selectOneBoardByNum.get(0).getName();
 String imgtitle = selectOneBoardByNum.get(0).getTitle();
-
-imageVO vo = new imageVO();
-vo.setName(imgname);
-vo.setTitle(imgtitle);
 
 SubBoardDAO sdao = new SubBoardDAO();
 

@@ -17,7 +17,7 @@ import com.saeyan.*;
 import com.saeyan.dao.BoardDAO;
 import com.saeyan.dao.SubBoardDAO;
 import com.saeyan.dto.BoardVO;
-import com.saeyan.dto.imageVO;
+
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 

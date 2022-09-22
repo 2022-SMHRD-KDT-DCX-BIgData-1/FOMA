@@ -10,7 +10,7 @@ import com.foma_java_mvc_folder.domain.FMember;
 import com.foma_java_mvc_folder.domain.Member;
 import com.saeyan.dto.GoodVO;
 import com.saeyan.dto.SubBoardVO;
-import com.saeyan.dto.imageVO;
+
 
 public class SubBoardDAO {
 	public void insertSubBoard(SubBoardVO bVo) { // 게시판 작성
