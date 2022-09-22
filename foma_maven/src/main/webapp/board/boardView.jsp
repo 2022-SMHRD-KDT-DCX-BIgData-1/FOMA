@@ -197,17 +197,15 @@ List<imageVO> imgvo = (List<imageVO>)session.getAttribute("selectimage");
 		<input type="hidden" name="name" value="<%=s.getName() %>">
 		<input type="hidden" name="content" value="<%=s.getContent() %>">
 		<input type="hidden" name="writedate" value="<%=s.getWritedate() %>">
-		
-		<table>
 	
-		
-			
+		<table>
+
 		<tr action="">
 				<td><%=s.getName() %></td>
 				<td><%=s.getContent() %>
 				<td><%=s.getWritedate() %></td>
 				<td><input type="submit" value="댓글 삭제"></td>
-
+	<%}} %>
       <div class="title">
          <h1>게시글 상세보기</h1>
       </div>
