@@ -87,12 +87,15 @@
 				<div class="main-menu">
 					<ul>
 						<li><a href="FindFriends.jsp">친구찾기</a></li>
-						<li><a href="">추천식단</a>
+						<li><a href="#">추천식단</a>
 							<ul>
 								<li><a href="recommendation2.jsp">지병에 따른 추천</a></li>
 								<li><a href="recommendation1.jsp">음식 분류별 추천</a></li>
 							</ul></li>
-						<li><a href="">SNS</a></li>
+						<li><a href="#">SNS</a>
+							<ul>
+								<li><a href="../../board_index.jsp">게시판</a></li>
+							</ul></li>
 						<li><a href="mypage.jsp">마이페이지</a>
 							<ul>
 								<li><a href="#">접속한 아이디 : ${loginMember.username}</a></li>
@@ -167,17 +170,17 @@
 						<div class="card-body">
 							<p class="card-title font-weight-bold">나의 페이지</p>
 							<hr>
+							
 							<%if(checkmemeber){
 								for(int i=0; i<endbvosize; i++){%>
 							<!--  
 								<img src="assets/images/blog/01.jpg"
 								style="width: 150px; height: 150px;"> 
 							-->	
-								<span
-								class="about-item-name">
-								<a href="../../BoardServlet?command=board_view&num=<%=bvo.get(i).getNum() %>"><%=bvo.get(i).getName() %></a></span><span
-								class="about-item-detail">좋아요 : <%=bvo.get(i).getGood() %> </span> <a href=""
-								class="about-item-edit">Edit</a>	
+								<span>나의 작성글 : </span>
+								<span class="about-item-name"> <%=bvo.get(i).getTitle() %> </span>
+								<span class="about-item-detail">좋아요 ❤️ <%=bvo.get(i).getGood() %> 개 </span> 
+								<a href="../../BoardServlet?command=board_view&num=<%=bvo.get(i).getNum() %>" class="about-item-edit">Edit</a>	
 								</li>
 								<br>
 								<br>
