@@ -19,7 +19,7 @@
 
 	<div id="wrap" align="center">
 		<h1>게시글 수정</h1>
-		<form name="frm" method="post" action="BoardServlet">
+		<form name="frm" action="UpdateServlet" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="command" value="board_update"> <input
 				type="hidden" name="num" value="<%=bd.get(0).getNum() %>">
 			<table>
@@ -46,6 +46,10 @@
 				<tr>
 					<th>내용</th>
 					<td><textarea cols="70" rows="15" name="content"><%=bd.get(0).getContent()%></textarea></td>
+				</tr>
+				<tr>
+					<th> 파일 업로드</th>
+					<td><input type="file" name="uploadFile" value = "<%=bd.get(0).getFileName()%>"><br>기존 파일 : <%=bd.get(0).getFileName()%> </td>
 				</tr>
 			</table>
 			<br>

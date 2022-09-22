@@ -138,9 +138,10 @@
 
 	<div id="wrap" align="center">
 		<h1>게시글 등록</h1>
-		<form name="frm" method="post" action="../BoardServlet">
-			<input type="hidden" name="command" value="board_write">
+		
 	
+		<form name="frm" action="../UploadServlet" method="post" enctype="multipart/form-data">
+			<input type="hidden" name="command" value="board_write">
 			<table>
 				<tr>
 					<th>작성자</th>
@@ -171,6 +172,12 @@
 					<th>내용</th>
 					<td><textarea cols="70" rows="15" name="content"></textarea></td>
 				</tr>
+				<tr>
+					<th> 파일 업로드</th>
+					<td><input type="file" name="uploadFile"><br> </td>
+				</tr>
+				
+				
 			</table>
 			<br> <br> <input type="submit" value="등록"
 				onclick="return boardCheck()"> <input type="reset"

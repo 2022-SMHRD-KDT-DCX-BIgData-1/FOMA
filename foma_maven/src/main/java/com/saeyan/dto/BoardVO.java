@@ -14,9 +14,43 @@ public class BoardVO {
 	private int good;
 	
 	
+	private String fileName,uploadFilePath;
+	
 	
 		
 	
+	public String getFileName() {
+		return fileName;
+	}
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+
+	public String getUploadFilePath() {
+		return uploadFilePath;
+	}
+
+	public void setUploadFilePath(String uploadFilePath) {
+		this.uploadFilePath = uploadFilePath;
+	}
+
+	public BoardVO(int num, String name, String email, String pass, String title, String content, int readcount,
+			Timestamp writedate, int good, String fileName, String uploadFilePath) {
+		super();
+		this.num = num;
+		this.name = name;
+		this.email = email;
+		this.pass = pass;
+		this.title = title;
+		this.content = content;
+		this.readcount = readcount;
+		this.writedate = writedate;
+		this.good = good;
+		this.fileName = fileName;
+		this.uploadFilePath = uploadFilePath;
+	}
+
 	public int getGood() {
 		return good;
 	}

@@ -180,7 +180,7 @@ select * from board where num = #{num}
  <!-- 
   insert into board(num, name, email, pass, title, content) values(board_seq.nextval, #{name}, #{email}, #{pass}, #{title}, #{content});   
    -->
-  insert into board(num, name, email, pass, title, content ,readcount ,writedate,good) values(board_seq.nextval, #{name}, #{email}, #{pass}, #{title}, #{content},#{readcount},#{writedate},#{good})
+  insert into board(num, name, email, pass, title, content ,readcount ,writedate,good,fileName,uploadFilePath) values(board_seq.nextval, #{name}, #{email}, #{pass}, #{title}, #{content},#{readcount},#{writedate},#{good},#{fileName},#{uploadFilePath})
   </insert> 
   
    <!-- 게시판 삭제  -->
@@ -191,7 +191,7 @@ select * from board where num = #{num}
   
   <!-- 게시판 업데이트 -->
      <update id="updateBoard" parameterType="com.saeyan.dto.BoardVO"   >
- update board set name=#{name}, email=#{email},pass=#{pass},title=#{title},content=#{content},writedate=#{writedate} where num=#{num}
+ update board set name=#{name}, email=#{email},pass=#{pass},title=#{title},content=#{content},writedate=#{writedate},fileName=#{fileName},uploadFilePath=#{uploadFilePath} where num=#{num}
   
   </update>
  

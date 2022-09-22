@@ -94,6 +94,12 @@
   	<description></description>
   	<servlet-class>com.saeyan.controller.UploadServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>UpdateServlet</servlet-name>
+  	<display-name>UpdateServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.saeyan.controller.UpdateServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
   	<url-pattern>/JoinCon</url-pattern>
@@ -153,6 +159,10 @@
   <servlet-mapping>
   	<servlet-name>UploadServlet</servlet-name>
   	<url-pattern>/UploadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateServlet</servlet-name>
+  	<url-pattern>/UpdateServlet</url-pattern>
   </servlet-mapping>
 
  
