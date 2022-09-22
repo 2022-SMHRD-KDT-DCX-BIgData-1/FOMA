@@ -4,9 +4,9 @@
 <%@page import="com.foma_java_mvc_folder.domain.FMember"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" isELIgnored="false"%>
-	
+
 <%@page import="com.saeyan.dto.BoardVO"%>
-<%@page import="com.foma_java_mvc_folder.*"%>	
+<%@page import="com.foma_java_mvc_folder.*"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page import="java.util.*"%>
 <!DOCTYPE html>
@@ -146,98 +146,132 @@
 						</div>
 					</div>
 				</div>
-			<%
-			Member member =  (Member)session.getAttribute("loginMember");
-			
-			BoardDAO bdao = new BoardDAO();
-			
-			boolean checkmemeber=false;
-		
-			int endbvosize =0;
-			
-			 List<BoardVO> bvo = null;
-			if(member!=null){
-				 bvo =  bdao.selectBoardsbyname((member.getUsername()));
-				 if(!bvo.isEmpty()&&bvo!=null){
-				 checkmemeber=true;
-				 endbvosize = bvo.size();
-				 }
+				<%
+				Member member = (Member) session.getAttribute("loginMember");
+
+				BoardDAO bdao = new BoardDAO();
+
+				boolean checkmemeber = false;
+
+				int endbvosize = 0;
+
+				List<BoardVO> bvo = null;
+				if (member != null) {
+					bvo = bdao.selectBoardsbyname((member.getUsername()));
+					if (!bvo.isEmpty() && bvo != null) {
+						checkmemeber = true;
+						endbvosize = bvo.size();
+					}
 				}
-			%>
+				%>
 
 				<div class="col-md-8 grid-margin stretch-card">
 					<div class="card">
 						<div class="card-body">
 							<p class="card-title font-weight-bold">나의 페이지</p>
 							<hr>
-							
-							<%if(checkmemeber){
-								for(int i=0; i<endbvosize; i++){%>
+
+							<%
+							if (checkmemeber) {
+								for (int i = 0; i < endbvosize; i++) {
+							%>
+							<div class="container">
+								<div class="well">
+									<div class="media">
+										<a class="pull-left" href="#"> 
+										<% if (bvo.get(i).getFileName().equals("none")) { %>
+											<img src="assets/images/음식 기본 이미지.jpg"> 
+											<% } else { %> 
+											<img src="<%=bvo.get(i).getUploadFilePath()%><%=bvo.get(i).getFileName()%>">
+											<%
+											}
+											%>
+										</a>
+										<div class="media-body">
+											<h6 class="media-heading"><%=bvo.get(i).getName()%></h6>
+											<br>
+											<p>
+												<a
+													href="BoardServlet?command=board_view&num=<%=bvo.get(i).getNum()%>">
+													<%=bvo.get(i).getTitle()%>
+												</a>
+											</p>
+											<br>
+											<ul class="list-inline list-unstyled">
+												<span>👀 <%=bvo.get(i).getReadcount()%></span>
+												<li>|</li>
+												<li><span>❤️ <%=bvo.get(i).getGood()%></span></li>
+												<li>|</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
 							<!--  
 								<img src="assets/images/blog/01.jpg"
 								style="width: 150px; height: 150px;"> 
-							-->	
-								<span>나의 작성글 : </span>
+							-->
+							<%-- <span>나의 작성글 : </span>
 								<span class="about-item-name"> <%=bvo.get(i).getTitle() %> </span>
 								<span class="about-item-detail">좋아요 ❤️ <%=bvo.get(i).getGood() %> 개 </span> 
 								<a href="../../BoardServlet?command=board_view&num=<%=bvo.get(i).getNum() %>" class="about-item-edit">Edit</a>	
 								</li>
 								<br>
-								<br>
-								
-								<%}	}%>
-							
-						
-							
+								<br> --%>
+
+							<%
+							}
+							}
+							%>
+
+
+
 						</div>
 					</div>
 				</div>
 
-				
-</div>
-</div>
-</div>
 
-<footer class="footer">
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
 		<div class="bg-shape-style"></div>
 		<div class="container">
 			<div class="footer-bottom text-center">
-				<p>
-					F.O.M.A 조 나명훈 황윤정 김용선 신은지 박선우
-				</p>
+				<p>F.O.M.A 조 나명훈 황윤정 김용선 신은지 박선우</p>
 			</div>
 		</div>
 	</footer>
 
 
 
-				<!-- scrollToTop start here -->
-				<a href="#" class="scrollToTop"><i class="icofont-swoosh-up"></i></a>
-				<!-- scrollToTop ending here -->
-				<script src="assets/js/jquery.js"></script>
-				<script src="assets/js/waypoints.min.js"></script>
-				<script src="assets/js/bootstrap.min.js"></script>
-				<script src="assets/js/isotope.pkgd.min.js"></script>
-				<script src="assets/js/wow.min.js"></script>
-				<script src="assets/js/swiper.min.js"></script>
-				<script src="assets/js/lightcase.js"></script>
-				<script src="assets/js/jquery.counterup.min.js"></script>
-				<script src="assets/js/functions.js"></script>
-				<script src="js/jquery.js"></script>
-				<script src="js/jquery.migrate.js"></script>
-				<script src="scripts/bootstrap/bootstrap.min.js"></script>
-				<script>
-					var $target_end = $(".best-of-the-week");
-				</script>
-				<script src="scripts/jquery-number/jquery.number.min.js"></script>
-				<script src="scripts/owlcarousel/dist/owl.carousel.min.js"></script>
-				<script
-					src="scripts/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
-				<script src="scripts/easescroll/jquery.easeScroll.js"></script>
-				<script src="scripts/sweetalert/dist/sweetalert.min.js"></script>
-				<script src="scripts/toast/jquery.toast.min.js"></script>
-				<script src="js/demo.js"></script>
-				<script src="js/e-magz.js"></script>
+	<!-- scrollToTop start here -->
+	<a href="#" class="scrollToTop"><i class="icofont-swoosh-up"></i></a>
+	<!-- scrollToTop ending here -->
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/waypoints.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/isotope.pkgd.min.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<script src="assets/js/swiper.min.js"></script>
+	<script src="assets/js/lightcase.js"></script>
+	<script src="assets/js/jquery.counterup.min.js"></script>
+	<script src="assets/js/functions.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.migrate.js"></script>
+	<script src="scripts/bootstrap/bootstrap.min.js"></script>
+	<script>
+		var $target_end = $(".best-of-the-week");
+	</script>
+	<script src="scripts/jquery-number/jquery.number.min.js"></script>
+	<script src="scripts/owlcarousel/dist/owl.carousel.min.js"></script>
+	<script src="scripts/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+	<script src="scripts/easescroll/jquery.easeScroll.js"></script>
+	<script src="scripts/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="scripts/toast/jquery.toast.min.js"></script>
+	<script src="js/demo.js"></script>
+	<script src="js/e-magz.js"></script>
 </body>
 
 </html>

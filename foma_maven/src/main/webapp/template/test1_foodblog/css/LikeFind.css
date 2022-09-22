@@ -366,6 +366,7 @@ body {
 	/* background-image: url(../images/img2.jpg); */
 	/* background-size: cover; */
 	height: auto;
+	background-size: cover;
 }
 /* body{
   height: auto;
