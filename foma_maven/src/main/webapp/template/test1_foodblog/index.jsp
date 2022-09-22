@@ -201,7 +201,7 @@
 			<div class="food-box">
 				<div class="section-header">
 					<h3>🍏카테고리별 음식🍏</h3>
-					<h6>먹고싶은 음식 종류를 클릭해주세요</h6>
+					<h6>먹고싶은 음식 종류를 클릭해주세요👇</h6>
 
 
 					<!--음식 카테고리 종류 : 곡류 및 서류
@@ -442,7 +442,7 @@ if(gbdo.size()>3){
 
 
 	<div class="container">
-		<h2 class="text-center">게시판 추천 TOP3</h2>
+		<h2 class="text-center">✨인기글 TOP3✨</h2>
 		<%for(int i=0; i<bgsize; i++){ %>
 		<div class="card">
 			<div class="card-body">
@@ -452,9 +452,9 @@ if(gbdo.size()>3){
 							class="img img-rounded img-fluid" />
 						<p class="text-secondary text-center">닉네임 : <%=gbdo.get(i).getName() %></p>
 					</div>
-					<div class="col-md-10">
+					<div class="col-md-10"><br>
 						<p>
-							<a class="float-left" ><strong style="font-size: 15px;">현재 받은 좋아요 개수 : <%=gbdo.get(i).getGood()%></strong></a> 
+							<a class="float-left" ><strong style="font-size: 23px;">좋아요❤️ <%=gbdo.get(i).getGood()%>개</strong></a> 
 							<span class="float-right"><i
 								class="text-warning fa fa-star"></i></span> <span class="float-right"><i
 								class="text-warning fa fa-star"></i></span> <span class="float-right"><i
@@ -463,8 +463,9 @@ if(gbdo.size()>3){
 
 						</p>
 						<div class="clearfix"></div>
+						<br><br>
 						
-						<p style="font-size:30px; padding-top:20px;"><a href="../../BoardServlet?command=board_view&num=<%=gbdo.get(i).getNum() %>">게시글 제목 :
+						<p style="font-size:35px; font-family: "ralewat-Bold;" padding-top:20px;"><a href="../../BoardServlet?command=board_view&num=<%=gbdo.get(i).getNum() %>">게시글 제목 :
 						<%=gbdo.get(i).getTitle() %> </a></p>
 						
 					

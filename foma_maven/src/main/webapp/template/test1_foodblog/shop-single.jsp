@@ -27,7 +27,7 @@
 <link rel="stylesheet" href="assets/css/swiper.min.css">
 <!-- custom css -->
 <link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="shop.css">
+<link rel="stylesheet" href="css/shop.css">
 <title>FOMA-검색한 음식 표시</title>
 </head>
 
@@ -168,7 +168,7 @@
 		<div class="container">
 			<div class="section-wrapper">
 				<article>
-					<div class="row1">
+					<div class="rowshop">
 						<div class="column">
 							
 
@@ -215,7 +215,7 @@
 								</div>
 								<div class="desc">
 									<!--음식 영양소 , 조건문을 통해 자료없음을 표시해줘야한다. -->
-									<table style="position: relative;     left: 520px;">
+									<table style="position: relative;">
 										<tr>
 											<td>칼로리(kcal) :</td>
 											<td><%=Math.round(f.get(0).getFd_ing_cal())%></td>
