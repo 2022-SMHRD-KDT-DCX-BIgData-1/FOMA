@@ -203,7 +203,7 @@
 		<div class="container">
 			<div class="footer-bottom text-center">
 				<p>
-					F.O.M.A 조 나명훈 황윤정 김용선 신지은 박선우
+					F.O.M.A 조 나명훈 황윤정 김용선 신은지 박선우
 				</p>
 			</div>
 		</div>
