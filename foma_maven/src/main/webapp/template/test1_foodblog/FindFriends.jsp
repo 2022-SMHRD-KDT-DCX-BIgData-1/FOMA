@@ -137,7 +137,7 @@
 		<%
 		}
 		%>
-		<p class="p2">👉검색결과 : <%=findIdMember.size()%>개 검색</p>
+		<p class="p2" style="font-size: 25px">👉검색결과 : <%=findIdMember.size()%>개 검색</p>
 	</div>
 		<%
 		} else {
@@ -303,8 +303,7 @@
 		<div class="container">
 			<div class="footer-bottom text-center">
 				<p>
-					&copy; 2019 <a href="http://www.bootstrapmb.com/"><span>Mezban</span></a>Design
-					by <a href="#"><span>FoxCoders</span></a>.
+					F.O.M.A 조 나명훈 황윤정 김용선 신지은 박선우
 				</p>
 			</div>
 		</div>
