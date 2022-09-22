@@ -88,7 +88,11 @@
 
 </head>
 <body>
-
+<%
+	
+	Member member = (Member) session.getAttribute("loginMember");
+	
+	%>
 	<header class="header-section d-xl-block d-none">
 	<div class="container-fluid">
 		<div class="header-area">
@@ -115,9 +119,10 @@
 
 					<li><a href="../template/test1_foodblog/mypage.jsp">마이페이지</a>
 						<ul>
-							<li><a href="#">접속한 아이디 : ${loginMember.username}</a></li>
+							<li><a href="#">접속한 아이디 : <%=member.getUsername()%></a></li>
 							<li><a href="../../Login.jsp">로그아웃</a></li>
 						</ul></li>
+						
 				</ul>
 
 			</div>
@@ -135,9 +140,7 @@
 		<h1>게시글 등록</h1>
 		<form name="frm" method="post" action="../BoardServlet">
 			<input type="hidden" name="command" value="board_write">
-			<%
-			Member member = (Member) session.getAttribute("loginMember");
-			%>
+	
 			<table>
 				<tr>
 					<th>작성자</th>

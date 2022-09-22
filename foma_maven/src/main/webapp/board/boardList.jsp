@@ -81,6 +81,12 @@
 </style>
 </head>
 <body>
+
+	<%
+	List<BoardVO> bd = (List<BoardVO>) session.getAttribute("boardList");
+	Member member = (Member) session.getAttribute("loginMember");
+	/* List<imageVO> imgvo = (List<imageVO>)session.getAttribute("selectimage"); */
+	%>
 	<header class="header-section d-xl-block d-none">
 	<div class="container-fluid">
 		<div class="header-area">
@@ -107,7 +113,7 @@
 
 					<li><a href="template/test1_foodblog/mypage.jsp">마이페이지</a>
 						<ul>
-							<li><a href="#">접속한 아이디 : ${loginMember.username}</a></li>
+							<li><a href="#">접속한 아이디 : <%=member.getUsername() %></a></li>
 							<li><a href="../../Login.jsp">로그아웃</a></li>
 						</ul></li>
 				</ul>
@@ -124,11 +130,6 @@
 	</header>
 
 
-	<%
-	List<BoardVO> bd = (List<BoardVO>) session.getAttribute("boardList");
-	Member member = (Member) session.getAttribute("loginMember");
-	/* List<imageVO> imgvo = (List<imageVO>)session.getAttribute("selectimage"); */
-	%>
 	<!--페이징 테스트  -->
 
 	<%
