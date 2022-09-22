@@ -214,7 +214,7 @@
 				<div class="media">
 					<a class="pull-left" href="#"> 
 						<% if (bd.get(i).getFileName().equals("none")) { %>
-						<img src="assets/images/음식 기본 이미지.jpg"> 
+						<img src="css/음식 기본 이미지.jpg"> 
 						<% } else {%> 
 						<img src="<%=bd.get(i).getUploadFilePath()%><%=bd.get(i).getFileName()%>">
 						<%

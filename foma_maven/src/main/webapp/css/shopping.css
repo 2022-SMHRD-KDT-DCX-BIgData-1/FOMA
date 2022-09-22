@@ -7,7 +7,7 @@ body{
    margin: 0;
    margin-left: auto;
    margin-right: auto;
-   margin-top:100px;
+   margin-top:50px;
 }
 
 h1 {
@@ -52,7 +52,7 @@ a:HOVER {
 }
 #wrap {
    height: 80px;
-   width: 1000px;
+   width: 800px;
    background: #fb524f;
    border-radius: 10px;
 }
