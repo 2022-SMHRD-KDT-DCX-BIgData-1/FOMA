@@ -109,7 +109,7 @@
 	</div>
 	</section>
 	<div class="result1">
-		<p>✔️검색한 아이디 목록</p>
+		<p class="p1">✔️검색한 아이디 목록</p>
 			<%
 			//세션에서 정보가 있다면 정보를 가져와서 출력하기
 			List<Member> findIdMember = (List<Member>) session.getAttribute("findIdMember");
@@ -132,100 +132,22 @@
 				</form> --%>
 		<div class="result">
 			<span><%=m.getUsername()%></span>
-		<br>
+			<br>
+		</div>
 		<%
 		}
 		%>
 		<p class="p2">👉검색결과 : <%=findIdMember.size()%>개 검색</p>
-		</div>
+	</div>
 		<%
 		} else {
 		%>
 		<%
 		}
 		%>
-		<!--페이징 테스트 : 친구찾기페이지 -->
-		<%-- <%
-
-int pgstart =0;
-int pgend = 0;
-String paging="";
-if(findIdMember!=null){
-	request.setCharacterEncoding("utf-8");
-
-	// 파라미터로 넘어온 페이지 번호(JSP에서 page는 예약어로 변수명으로 사용 불가)
-	String pageNum = request.getParameter("page");
-	int current_page = 1;
-	if(pageNum != null) {
-		current_page = Integer.parseInt(pageNum);
-	}
-	
-	Myutil util = new Myutil();
-	//datacount: 총데이터수 / rows: 한화면에 출력할 목록수 / total_page: 전체페이지수 
-	//pagecount: int로 rows랑 datacount를 받는 변수? datacount/rows+(datacount%rows>0?1:0)
-	int dataCount = findIdMember.size();
-	int rows = 10;
-	int total_page = util.pageCount(rows, dataCount);
-	if(current_page > total_page) {
-		current_page = total_page;
-	}
-	//listUrl: 링크를 설정할 주소
-	String listUrl = "FindFriends.jsp";
-	paging = util.paging(current_page, total_page, listUrl);
-	
-	pgstart = (current_page*10)-10;
-	pgend = 10;
-	
-int endindex = findIdMember.size()%10;
-	
-	if(findIdMember.size()>10){//목록이 10개 이상
-
-		if(findIdMember.size()-(current_page*10)>0){//남아있는 목록이 10개 이상일경우
-			pgend =(current_page*10);
-		}else{
-			pgend = (current_page*10)-10 + endindex;
-		}
-	}else{
-		pgend = findIdMember.size();
-	}
-}
-%>
-<%
-				int endfriend = 10;
-				//session객체에 id가 session 있으면
-				if (findIdMember != null) {
-					/* 페이징 */
-					if(findIdMember.size()<6){
-						endfriend = findIdMember.size();
-					}
-					for (Member m : findIdMember) {
-				%>
-			 	
-		<form class="result" action="/foma_maven/findIdCon" method="post">
-				<%=m.getUsername()%>
-					<input type="text" name="find" value="<%=m.getUsername() %>">
-					<input type="hidden" name="find" > 
-					<button type="submit">
-					<!-- 이미지 수정 필요함! -->
-						<!-- <img src="images/spinner.png" /> -->
-					</button>
-				</form>
-				<%=findIdMember %>
-				<br>
-				<%
-				}
-				%>
-				👉검색하신 내용이 
-				<%=findIdMember.size() %>
-				개 검색되었습니다.
-				<%
-				} else {
-				%>
-				<%
-				}
-				%> --%>
+		
 	</div>
-	<div class="container1">
+	<!-- <div class="container1"> -->
 		<!-- 페이징 처리 테스트 -->
 		<%-- <div style="padding-top: 	20px;">
 	
@@ -279,9 +201,7 @@ int endindex = findIdMember.size()%10;
 				     			아이디를 검색해주세요! --%>
 		<%-- <%}%> --%>
 		<!-- </table> -->
-	</div>
-	</div>
-	</div>
+	<!-- </div> -->
 
 
 	<!-- Page Header Section Ending Here -->
@@ -379,15 +299,15 @@ int endindex = findIdMember.size()%10;
 	<!-- Popular Home Chef Section Ending Here -->
 	<!-- Footer Section Start Here -->
 	<footer class="footer">
-	<div class="bg-shape-style"></div>
-	<div class="container">
-		<div class="footer-bottom text-center">
-			<p>
-				&copy; 2019 <a href="http://www.bootstrapmb.com/"><span>Mezban</span></a>Design
-				by <a href="#"><span>FoxCoders</span></a>.
-			</p>
+		<div class="bg-shape-style"></div>
+		<div class="container">
+			<div class="footer-bottom text-center">
+				<p>
+					&copy; 2019 <a href="http://www.bootstrapmb.com/"><span>Mezban</span></a>Design
+					by <a href="#"><span>FoxCoders</span></a>.
+				</p>
+			</div>
 		</div>
-	</div>
 	</footer>
 	<!-- Footer Section Ending Here -->
 	<!-- scrollToTop start here -->

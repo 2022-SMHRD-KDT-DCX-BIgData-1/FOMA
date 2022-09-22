@@ -305,7 +305,7 @@ div.post .addpostbut {
 
 /* footer starts */
 footer.footer {
-	position: fixed;
+	/* position: static; */
 	left:0;
 	/* margin-top: 550px; */
 	bottom: 0;
@@ -351,14 +351,18 @@ footer.footer {
 	width: 600px;
 	margin: auto;
 }
+.result1 .p1{
+	font-size: 25px;
+}
 .result1 .result{
 	/* margin-left: 400px; */
 	width: 200px;
-	height: 20px;
+	height: 35px;
 	/* margin: auto; */
 	margin-top: 10px;
 	border: 1px solid black;
 	border-radius: 5px;
+	font-size: 25px;
 }
 .result1 .result span{
 	margin-left: 10px;
