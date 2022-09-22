@@ -39,14 +39,13 @@ vo.setName(imgname);
 vo.setTitle(imgtitle);
 
 SubBoardDAO sdao = new SubBoardDAO();
-List<imageVO>imgvo= sdao.selectimage(vo);
 
 
 
 List<SubBoardVO> selectAllSubBoards = bDao.selectAllSubBoards(num);//리플
 		
         HttpSession session = request.getSession();
-        session.setAttribute("selectimage", imgvo);
+      
         session.setAttribute("selectOneBoardByNum", selectOneBoardByNum);
         session.setAttribute("selectAllSubBoards", selectAllSubBoards);
         
