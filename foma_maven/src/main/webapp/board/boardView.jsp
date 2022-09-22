@@ -91,7 +91,6 @@
 <%  List<BoardVO> bd = (List<BoardVO>)session.getAttribute("selectOneBoardByNum");
 List<SubBoardVO> sbd = (List<SubBoardVO>)session.getAttribute("selectAllSubBoards");
 Member lg = (Member)session.getAttribute("loginMember");
-List<imageVO> imgvo = (List<imageVO>)session.getAttribute("selectimage");
 
 %>
 
@@ -212,14 +211,7 @@ List<imageVO> imgvo = (List<imageVO>)session.getAttribute("selectimage");
    </div>
    <br>
    <div class="image">
-      <%if(!imgvo.isEmpty()) {%>
-      <img src="fomaimages/<%=imgvo.get(0).getFileName()%>">
-      <!--  
-         <img src = "<%=imgvo.get(0).getUploadFilePath()%>\<%=imgvo.get(0).getFileName()%>">   
-         -->
-      <%
-      }
-      %>
+   
    </div>
    <br>
    <table id="showlike">
