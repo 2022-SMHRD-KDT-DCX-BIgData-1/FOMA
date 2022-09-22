@@ -30,7 +30,7 @@ table td,th {
 }
 
 th {
-   background: #b8e994; /* 배경색 */
+   background: #FFCCBC; /* 배경색 */
 }
 
 .image img{
@@ -67,6 +67,7 @@ body {
    background-image: url(../template/test1_foodblog/assets/css/bg-image/category-bg.jpg);
    /* background-image: url(../images/img2.jpg); */
    /* background-size: cover; */
+   background-size: cover;
 }
 .postPage{
    margin: auto;
@@ -114,7 +115,7 @@ body {
 }
 
 #comm{
-   background: #b8e994;
+   background: #FFCCBC;
    width: 900px;
    border-collapse: collapse;
    font-size: 12px; /* 글꼴 크기 */
@@ -123,4 +124,7 @@ body {
    margin-right: auto;
    font-family: 강원교육모두 Bold;
    text-align: center;
+}
+.cont1 {
+	min-width: 600px;
 }
