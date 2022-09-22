@@ -26,6 +26,7 @@
 <link rel="stylesheet" href="assets/css/swiper.min.css" />
 <!-- cusyom scss -->
 <link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/style3.css" />
 <link rel="stylesheet" href="assets/css/sickness.css" />
 <link href="assets/css/animate.css">
 <link rel="stylesheet" href="css/LikeFind.css" />
@@ -298,17 +299,16 @@
 	</div> -->
 	<!-- Popular Home Chef Section Ending Here -->
 	<!-- Footer Section Start Here -->
-	<footer class="footer">
-		<div class="bg-shape-style"></div>
-		<div class="container">
-			<div class="footer-bottom text-center">
-				<p>
-					&copy; 2019 <a href="http://www.bootstrapmb.com/"><span>Mezban</span></a>Design
-					by <a href="#"><span>FoxCoders</span></a>.
-				</p>
-			</div>
-		</div>
-	</footer>
+	
+	<div id='wrapper'>
+  <div>
+    content
+  </div>
+</div>
+<footer></footer>
+	
+	
+	
 	<!-- Footer Section Ending Here -->
 	<!-- scrollToTop start here -->
 	<a href="#" class="scrollToTop"><i class="icofont-swoosh-up"></i></a>
