@@ -182,7 +182,7 @@
 										<% if (bvo.get(i).getFileName().equals("none")) { %>
 											<img src="assets/images/음식 기본 이미지.jpg"> 
 											<% } else { %> 
-											<img src="<%=bvo.get(i).getUploadFilePath()%><%=bvo.get(i).getFileName()%>"onerror="this.src='css/음식 기본 이미지.jpg'">
+											<img src="<%=bvo.get(i).getUploadFilePath()%><%=bvo.get(i).getFileName()%>" onerror="this.src='assets/images/음식 기본 이미지.jpg'">
 											<%
 											}
 											%>
