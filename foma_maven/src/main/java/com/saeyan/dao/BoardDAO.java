@@ -40,6 +40,7 @@ public class BoardDAO {
 	public List<BoardVO> selectBoardsbyname(String username) {  //게시판 자기 이름으로 검색
 		//String sql = "select * from board order by num desc";
 		List<BoardVO> list = new ArrayList<BoardVO>();
+		list=null;
 		BoardVO vo= new BoardVO();
 		vo.setName(username);
 		   SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
@@ -49,8 +50,7 @@ public class BoardDAO {
 			  list = sqlSession.selectList("selectBoardsbyname", vo);
 			
 			  if (list != null) {
-				  System.out.println("가져온 좋아요 리스트 작성자 "+list.get(0).getName());
-		            sqlSession.commit();
+				     sqlSession.commit();
 
 		         } else {
 		            sqlSession.rollback();

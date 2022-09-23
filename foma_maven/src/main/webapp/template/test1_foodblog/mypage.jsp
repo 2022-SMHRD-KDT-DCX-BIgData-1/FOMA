@@ -148,21 +148,30 @@
 				</div>
 				<%
 				Member member = (Member) session.getAttribute("loginMember");
-
+				
 				BoardDAO bdao = new BoardDAO();
 
 				boolean checkmemeber = false;
 
 				int endbvosize = 0;
+				String str="";
+				String str2="";
 
-				List<BoardVO> bvo = null;
+				List<BoardVO> bvo = new ArrayList<>();
 				if (member != null) {
-					bvo = bdao.selectBoardsbyname((member.getUsername()));
+					str=member.getUsername();
+					
+						if(bdao.selectBoardsbyname(str)!=null){
+					bvo = bdao.selectBoardsbyname(str);
+					if(bvo.size()!=0){
 					if (!bvo.isEmpty() && bvo != null) {
 						checkmemeber = true;
 						endbvosize = bvo.size();
 					}
+					}
+						}
 				}
+				
 				%>
 
 				<div class="col-md-8 grid-margin stretch-card">
@@ -175,6 +184,7 @@
 							if (checkmemeber) {
 								for (int i = 0; i < endbvosize; i++) {
 							%>
+						
 							<div class="container">
 								<div class="well">
 									<div class="media">
@@ -202,6 +212,7 @@
 												<li>|</li>
 												<li><span>❤️ <%=bvo.get(i).getGood()%></span></li>
 												<li>|</li>
+											
 											</ul>
 										</div>
 									</div>
