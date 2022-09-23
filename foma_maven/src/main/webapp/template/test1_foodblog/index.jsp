@@ -453,7 +453,7 @@
 						<% if (gbdo.get(i).getFileName().equals("none")) { %>
 						<img src="assets/images/음식 기본 이미지.jpg"> 
 						<% } else {%> 
-						<img src="<%=gbdo.get(i).getUploadFilePath()%><%=gbdo.get(i).getFileName()%>">
+						<img src="<%=gbdo.get(i).getUploadFilePath()%><%=gbdo.get(i).getFileName()%>"  onerror="this.src='assets/images/음식 기본 이미지.jpg'">
 						<%
 						}
 						%>
